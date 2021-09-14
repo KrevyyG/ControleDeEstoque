@@ -95,7 +95,7 @@ namespace ProjTesteForm
                     {
                         dr.Close();
                         cmd.Dispose();
-                        sql = "INSERT INTO BOTIJAO (KGBOTIJ) VALUES ("+kgBotij+")";
+                        sql = "INSERT INTO BOTIJAO (KGBOTIJ) VALUES ("+ kgBotij +")";
                         cmd = new SqlCommand(sql, conexao);
                         retorno = cmd.ExecuteNonQuery();
                         if (retorno > 0)
@@ -114,6 +114,33 @@ namespace ProjTesteForm
                     {
                         MessageBox.Show("Erro no comando sql: " + ex.Message);
                     }
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql" + ex.Message);
+            }
+        }
+
+        public void ConsultarBotijao(int idBotij)
+        {
+            AbrirConexaoBotijao();
+            string sql;
+            try
+            {
+                sql = "SELECT * FROM BOTIJAO WHERE ID = " + idBotij;
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    Menu.KgBotij = dr["KGBOTIJ"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Registro não encontrado");
                 }
                 dr.Close();
                 cmd.Dispose();

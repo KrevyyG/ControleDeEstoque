@@ -30,18 +30,14 @@ namespace ProjTesteForm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnCentro = new System.Windows.Forms.Panel();
             this.pnRmvUsuario = new System.Windows.Forms.Panel();
             this.btnRotRmvCarregarUsu = new System.Windows.Forms.Button();
@@ -217,14 +213,16 @@ namespace ProjTesteForm
             this.btnFecharRotAltBotij = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pnConsBotij = new System.Windows.Forms.Panel();
-            this.gridConsBotij = new System.Windows.Forms.DataGridView();
-            this.gridIdConsBotij = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridKgConsBotij = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gridUserConsBotij = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbConsIdBotij = new System.Windows.Forms.ComboBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel26 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsKgBotij = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.btnRotConsBotij = new System.Windows.Forms.Button();
             this.btnFecharRotConsBotij = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pnAdcBotij = new System.Windows.Forms.Panel();
-            this.label60 = new System.Windows.Forms.Label();
             this.btnFecharRotAdcBotij = new System.Windows.Forms.PictureBox();
             this.btnRotAdcBotij = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -294,7 +292,6 @@ namespace ProjTesteForm
             this.pnAltBotij.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotAltBotij)).BeginInit();
             this.pnConsBotij.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridConsBotij)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotConsBotij)).BeginInit();
             this.pnAdcBotij.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotAdcBotij)).BeginInit();
@@ -349,7 +346,7 @@ namespace ProjTesteForm
             this.pnRmvUsuario.Controls.Add(this.btnFecharRotRmvUsuario);
             this.pnRmvUsuario.Controls.Add(this.label28);
             this.pnRmvUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnRmvUsuario.Location = new System.Drawing.Point(0, 2298);
+            this.pnRmvUsuario.Location = new System.Drawing.Point(0, 2144);
             this.pnRmvUsuario.Name = "pnRmvUsuario";
             this.pnRmvUsuario.Size = new System.Drawing.Size(460, 143);
             this.pnRmvUsuario.TabIndex = 20;
@@ -525,7 +522,7 @@ namespace ProjTesteForm
             this.pnAltUsuario.Controls.Add(this.btnFecharRotAltUsuario);
             this.pnAltUsuario.Controls.Add(this.label27);
             this.pnAltUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAltUsuario.Location = new System.Drawing.Point(0, 2126);
+            this.pnAltUsuario.Location = new System.Drawing.Point(0, 1972);
             this.pnAltUsuario.Name = "pnAltUsuario";
             this.pnAltUsuario.Size = new System.Drawing.Size(460, 172);
             this.pnAltUsuario.TabIndex = 19;
@@ -758,7 +755,7 @@ namespace ProjTesteForm
             this.pnConsUsuario.Controls.Add(this.btnFecharRotConsUsuario);
             this.pnConsUsuario.Controls.Add(this.label26);
             this.pnConsUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnConsUsuario.Location = new System.Drawing.Point(0, 1974);
+            this.pnConsUsuario.Location = new System.Drawing.Point(0, 1820);
             this.pnConsUsuario.Name = "pnConsUsuario";
             this.pnConsUsuario.Size = new System.Drawing.Size(460, 152);
             this.pnConsUsuario.TabIndex = 18;
@@ -914,7 +911,7 @@ namespace ProjTesteForm
             this.pnAdcUsuario.Controls.Add(this.btnFecharRotAdcUsuario);
             this.pnAdcUsuario.Controls.Add(this.label25);
             this.pnAdcUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAdcUsuario.Location = new System.Drawing.Point(0, 1801);
+            this.pnAdcUsuario.Location = new System.Drawing.Point(0, 1647);
             this.pnAdcUsuario.Name = "pnAdcUsuario";
             this.pnAdcUsuario.Size = new System.Drawing.Size(460, 173);
             this.pnAdcUsuario.TabIndex = 17;
@@ -1097,7 +1094,7 @@ namespace ProjTesteForm
             this.pnConsLote.Controls.Add(this.btnFecharRotConsLote);
             this.pnConsLote.Controls.Add(this.label24);
             this.pnConsLote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnConsLote.Location = new System.Drawing.Point(0, 1425);
+            this.pnConsLote.Location = new System.Drawing.Point(0, 1271);
             this.pnConsLote.Name = "pnConsLote";
             this.pnConsLote.Size = new System.Drawing.Size(460, 376);
             this.pnConsLote.TabIndex = 16;
@@ -1105,24 +1102,24 @@ namespace ProjTesteForm
             // gridConsLote
             // 
             this.gridConsLote.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsLote.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.gridConsLote.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridConsLote.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.gridConsLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridConsLote.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridConsLote.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridConsLote.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridConsLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridConsLote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
@@ -1130,25 +1127,25 @@ namespace ProjTesteForm
             this.dataGridViewTextBoxColumn6,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridConsLote.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridConsLote.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridConsLote.GridColor = System.Drawing.Color.White;
             this.gridConsLote.Location = new System.Drawing.Point(15, 41);
             this.gridConsLote.Name = "gridConsLote";
             this.gridConsLote.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.gridConsLote.RowHeadersVisible = false;
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsLote.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.gridConsLote.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridConsLote.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.gridConsLote.Size = new System.Drawing.Size(442, 320);
             this.gridConsLote.TabIndex = 19;
@@ -1226,7 +1223,7 @@ namespace ProjTesteForm
             this.pnAltLote.Controls.Add(this.btnFecharRotAltLote);
             this.pnAltLote.Controls.Add(this.label23);
             this.pnAltLote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAltLote.Location = new System.Drawing.Point(0, 1334);
+            this.pnAltLote.Location = new System.Drawing.Point(0, 1180);
             this.pnAltLote.Name = "pnAltLote";
             this.pnAltLote.Size = new System.Drawing.Size(460, 91);
             this.pnAltLote.TabIndex = 15;
@@ -1428,7 +1425,7 @@ namespace ProjTesteForm
             this.pnAdcLote.Controls.Add(this.btnFecharRotAdcLote);
             this.pnAdcLote.Controls.Add(this.label22);
             this.pnAdcLote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAdcLote.Location = new System.Drawing.Point(0, 1216);
+            this.pnAdcLote.Location = new System.Drawing.Point(0, 1062);
             this.pnAdcLote.Name = "pnAdcLote";
             this.pnAdcLote.Size = new System.Drawing.Size(460, 118);
             this.pnAdcLote.TabIndex = 14;
@@ -1591,7 +1588,7 @@ namespace ProjTesteForm
             this.pnConsEstoque.Controls.Add(this.btnFecharRotConsEstoque);
             this.pnConsEstoque.Controls.Add(this.label21);
             this.pnConsEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnConsEstoque.Location = new System.Drawing.Point(0, 836);
+            this.pnConsEstoque.Location = new System.Drawing.Point(0, 682);
             this.pnConsEstoque.Name = "pnConsEstoque";
             this.pnConsEstoque.Size = new System.Drawing.Size(460, 380);
             this.pnConsEstoque.TabIndex = 13;
@@ -1599,24 +1596,24 @@ namespace ProjTesteForm
             // gridConsEstoque
             // 
             this.gridConsEstoque.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsEstoque.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.gridConsEstoque.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gridConsEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.gridConsEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridConsEstoque.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridConsEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridConsEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gridConsEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridConsEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -1626,25 +1623,25 @@ namespace ProjTesteForm
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridConsEstoque.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridConsEstoque.DefaultCellStyle = dataGridViewCellStyle7;
             this.gridConsEstoque.GridColor = System.Drawing.Color.White;
             this.gridConsEstoque.Location = new System.Drawing.Point(10, 42);
             this.gridConsEstoque.Name = "gridConsEstoque";
             this.gridConsEstoque.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.gridConsEstoque.RowHeadersVisible = false;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsEstoque.RowsDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.gridConsEstoque.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.gridConsEstoque.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.gridConsEstoque.Size = new System.Drawing.Size(447, 320);
             this.gridConsEstoque.TabIndex = 19;
@@ -1732,7 +1729,7 @@ namespace ProjTesteForm
             this.pnRmvEstoque.Controls.Add(this.btnFecharRotRmvEstoque);
             this.pnRmvEstoque.Controls.Add(this.label20);
             this.pnRmvEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnRmvEstoque.Location = new System.Drawing.Point(0, 725);
+            this.pnRmvEstoque.Location = new System.Drawing.Point(0, 571);
             this.pnRmvEstoque.Name = "pnRmvEstoque";
             this.pnRmvEstoque.Size = new System.Drawing.Size(460, 111);
             this.pnRmvEstoque.TabIndex = 12;
@@ -1965,7 +1962,7 @@ namespace ProjTesteForm
             this.pnAdcEstoque.Controls.Add(this.label14);
             this.pnAdcEstoque.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnAdcEstoque.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnAdcEstoque.Location = new System.Drawing.Point(0, 587);
+            this.pnAdcEstoque.Location = new System.Drawing.Point(0, 433);
             this.pnAdcEstoque.Name = "pnAdcEstoque";
             this.pnAdcEstoque.Size = new System.Drawing.Size(460, 138);
             this.pnAdcEstoque.TabIndex = 11;
@@ -2236,7 +2233,7 @@ namespace ProjTesteForm
             this.pnRmvBotij.Controls.Add(this.btnRotRmvBotij);
             this.pnRmvBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnRmvBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnRmvBotij.Location = new System.Drawing.Point(0, 498);
+            this.pnRmvBotij.Location = new System.Drawing.Point(0, 344);
             this.pnRmvBotij.Name = "pnRmvBotij";
             this.pnRmvBotij.Size = new System.Drawing.Size(460, 89);
             this.pnRmvBotij.TabIndex = 10;
@@ -2372,7 +2369,7 @@ namespace ProjTesteForm
             this.pnAltBotij.Controls.Add(this.label10);
             this.pnAltBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnAltBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnAltBotij.Location = new System.Drawing.Point(0, 374);
+            this.pnAltBotij.Location = new System.Drawing.Point(0, 220);
             this.pnAltBotij.Name = "pnAltBotij";
             this.pnAltBotij.Size = new System.Drawing.Size(460, 124);
             this.pnAltBotij.TabIndex = 9;
@@ -2495,83 +2492,109 @@ namespace ProjTesteForm
             // 
             // pnConsBotij
             // 
-            this.pnConsBotij.Controls.Add(this.gridConsBotij);
+            this.pnConsBotij.Controls.Add(this.cbConsIdBotij);
+            this.pnConsBotij.Controls.Add(this.label61);
+            this.pnConsBotij.Controls.Add(this.flowLayoutPanel26);
+            this.pnConsBotij.Controls.Add(this.txtConsKgBotij);
+            this.pnConsBotij.Controls.Add(this.label62);
+            this.pnConsBotij.Controls.Add(this.label63);
+            this.pnConsBotij.Controls.Add(this.btnRotConsBotij);
             this.pnConsBotij.Controls.Add(this.btnFecharRotConsBotij);
             this.pnConsBotij.Controls.Add(this.label7);
             this.pnConsBotij.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnConsBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnConsBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnConsBotij.Location = new System.Drawing.Point(0, 152);
+            this.pnConsBotij.Location = new System.Drawing.Point(0, 133);
             this.pnConsBotij.Name = "pnConsBotij";
-            this.pnConsBotij.Size = new System.Drawing.Size(460, 222);
+            this.pnConsBotij.Size = new System.Drawing.Size(460, 87);
             this.pnConsBotij.TabIndex = 8;
             // 
-            // gridConsBotij
+            // cbConsIdBotij
             // 
-            this.gridConsBotij.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsBotij.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle45;
-            this.gridConsBotij.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.gridConsBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridConsBotij.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridConsBotij.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
-            this.gridConsBotij.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridConsBotij.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.gridIdConsBotij,
-            this.gridKgConsBotij,
-            this.gridUserConsBotij});
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridConsBotij.DefaultCellStyle = dataGridViewCellStyle47;
-            this.gridConsBotij.GridColor = System.Drawing.Color.White;
-            this.gridConsBotij.Location = new System.Drawing.Point(86, 42);
-            this.gridConsBotij.Name = "gridConsBotij";
-            this.gridConsBotij.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.gridConsBotij.RowHeadersVisible = false;
-            dataGridViewCellStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsBotij.RowsDefaultCellStyle = dataGridViewCellStyle48;
-            this.gridConsBotij.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridConsBotij.Size = new System.Drawing.Size(305, 150);
-            this.gridConsBotij.TabIndex = 18;
+            this.cbConsIdBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.cbConsIdBotij.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbConsIdBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbConsIdBotij.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbConsIdBotij.ForeColor = System.Drawing.Color.White;
+            this.cbConsIdBotij.FormattingEnabled = true;
+            this.cbConsIdBotij.Location = new System.Drawing.Point(133, 40);
+            this.cbConsIdBotij.Name = "cbConsIdBotij";
+            this.cbConsIdBotij.Size = new System.Drawing.Size(50, 24);
+            this.cbConsIdBotij.TabIndex = 98;
+            this.cbConsIdBotij.TabStop = false;
             // 
-            // gridIdConsBotij
+            // label61
             // 
-            this.gridIdConsBotij.HeaderText = "ID";
-            this.gridIdConsBotij.Name = "gridIdConsBotij";
-            this.gridIdConsBotij.ReadOnly = true;
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.White;
+            this.label61.Location = new System.Drawing.Point(319, 48);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(22, 16);
+            this.label61.TabIndex = 45;
+            this.label61.Text = "Kg";
             // 
-            // gridKgConsBotij
+            // flowLayoutPanel26
             // 
-            this.gridKgConsBotij.HeaderText = "Botijão (Kg)";
-            this.gridKgConsBotij.Name = "gridKgConsBotij";
-            this.gridKgConsBotij.ReadOnly = true;
+            this.flowLayoutPanel26.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel26.Location = new System.Drawing.Point(290, 63);
+            this.flowLayoutPanel26.Name = "flowLayoutPanel26";
+            this.flowLayoutPanel26.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel26.TabIndex = 44;
             // 
-            // gridUserConsBotij
+            // txtConsKgBotij
             // 
-            this.gridUserConsBotij.HeaderText = "Ult. Usuário Resp.";
-            this.gridUserConsBotij.Name = "gridUserConsBotij";
-            this.gridUserConsBotij.ReadOnly = true;
+            this.txtConsKgBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsKgBotij.ForeColor = System.Drawing.Color.White;
+            this.txtConsKgBotij.Location = new System.Drawing.Point(290, 48);
+            this.txtConsKgBotij.MaxLength = 2;
+            this.txtConsKgBotij.Name = "txtConsKgBotij";
+            this.txtConsKgBotij.ReadOnly = true;
+            this.txtConsKgBotij.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsKgBotij.Size = new System.Drawing.Size(23, 13);
+            this.txtConsKgBotij.TabIndex = 43;
+            this.txtConsKgBotij.TabStop = false;
+            this.txtConsKgBotij.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.Color.White;
+            this.label62.Location = new System.Drawing.Point(202, 48);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(82, 16);
+            this.label62.TabIndex = 42;
+            this.label62.Text = "Kg do Botijão:";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.White;
+            this.label63.Location = new System.Drawing.Point(48, 48);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(79, 16);
+            this.label63.TabIndex = 39;
+            this.label63.Text = "ID do Botijão:";
+            // 
+            // btnRotConsBotij
+            // 
+            this.btnRotConsBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.btnRotConsBotij.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRotConsBotij.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRotConsBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
+            this.btnRotConsBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRotConsBotij.ForeColor = System.Drawing.Color.White;
+            this.btnRotConsBotij.Location = new System.Drawing.Point(354, 44);
+            this.btnRotConsBotij.Name = "btnRotConsBotij";
+            this.btnRotConsBotij.Size = new System.Drawing.Size(75, 23);
+            this.btnRotConsBotij.TabIndex = 38;
+            this.btnRotConsBotij.TabStop = false;
+            this.btnRotConsBotij.Text = "Consultar";
+            this.btnRotConsBotij.UseVisualStyleBackColor = false;
+            this.btnRotConsBotij.Click += new System.EventHandler(this.btnRotConsBotij_Click);
             // 
             // btnFecharRotConsBotij
             // 
@@ -2599,7 +2622,6 @@ namespace ProjTesteForm
             // 
             // pnAdcBotij
             // 
-            this.pnAdcBotij.Controls.Add(this.label60);
             this.pnAdcBotij.Controls.Add(this.btnFecharRotAdcBotij);
             this.pnAdcBotij.Controls.Add(this.btnRotAdcBotij);
             this.pnAdcBotij.Controls.Add(this.label4);
@@ -2612,19 +2634,8 @@ namespace ProjTesteForm
             this.pnAdcBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnAdcBotij.Location = new System.Drawing.Point(0, 39);
             this.pnAdcBotij.Name = "pnAdcBotij";
-            this.pnAdcBotij.Size = new System.Drawing.Size(460, 113);
+            this.pnAdcBotij.Size = new System.Drawing.Size(460, 94);
             this.pnAdcBotij.TabIndex = 7;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.White;
-            this.label60.Location = new System.Drawing.Point(7, 29);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(430, 16);
-            this.label60.TabIndex = 18;
-            this.label60.Text = "Só é permitido o cadastro de botijões de 2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg, 90Kg";
             // 
             // btnFecharRotAdcBotij
             // 
@@ -2646,7 +2657,7 @@ namespace ProjTesteForm
             this.btnRotAdcBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAdcBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAdcBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotAdcBotij.Location = new System.Drawing.Point(166, 62);
+            this.btnRotAdcBotij.Location = new System.Drawing.Point(289, 48);
             this.btnRotAdcBotij.Name = "btnRotAdcBotij";
             this.btnRotAdcBotij.Size = new System.Drawing.Size(75, 23);
             this.btnRotAdcBotij.TabIndex = 16;
@@ -2659,7 +2670,7 @@ namespace ProjTesteForm
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(124, 66);
+            this.label4.Location = new System.Drawing.Point(247, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 16);
             this.label4.TabIndex = 15;
@@ -2668,7 +2679,7 @@ namespace ProjTesteForm
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(95, 81);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(218, 67);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel2.TabIndex = 14;
@@ -2678,7 +2689,7 @@ namespace ProjTesteForm
             this.txtAdcKgBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcKgBotij.ForeColor = System.Drawing.Color.White;
-            this.txtAdcKgBotij.Location = new System.Drawing.Point(95, 66);
+            this.txtAdcKgBotij.Location = new System.Drawing.Point(218, 52);
             this.txtAdcKgBotij.MaxLength = 2;
             this.txtAdcKgBotij.Name = "txtAdcKgBotij";
             this.txtAdcKgBotij.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2693,7 +2704,7 @@ namespace ProjTesteForm
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 66);
+            this.label3.Location = new System.Drawing.Point(130, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 12;
@@ -3355,7 +3366,6 @@ namespace ProjTesteForm
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotAltBotij)).EndInit();
             this.pnConsBotij.ResumeLayout(false);
             this.pnConsBotij.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridConsBotij)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotConsBotij)).EndInit();
             this.pnAdcBotij.ResumeLayout(false);
             this.pnAdcBotij.PerformLayout();
@@ -3425,10 +3435,6 @@ namespace ProjTesteForm
         private System.Windows.Forms.Panel pnConsBotij;
         private System.Windows.Forms.PictureBox btnFecharRotConsBotij;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView gridConsBotij;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridIdConsBotij;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridKgConsBotij;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gridUserConsBotij;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.TextBox txtAltIdBotij;
         private System.Windows.Forms.Label label8;
@@ -3596,6 +3602,12 @@ namespace ProjTesteForm
         private System.Windows.Forms.ComboBox cbAltIdUsu;
         private System.Windows.Forms.ComboBox cbRmvIdUsu;
         private System.Windows.Forms.Button btnRotRmvCarregarUsu;
-        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.ComboBox cbConsIdBotij;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel26;
+        private System.Windows.Forms.TextBox txtConsKgBotij;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Button btnRotConsBotij;
     }
 }

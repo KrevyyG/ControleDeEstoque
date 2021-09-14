@@ -248,6 +248,7 @@ namespace ProjTesteForm
             txtAltConfirSenhaUsu.Text = "";
             txtRmvNomeCompUsu.Text = "";
             txtRmvNomeUsuUsu.Text = "";
+            txtConsKgBotij.Text = "";
         }
         #endregion
 
@@ -308,10 +309,41 @@ namespace ProjTesteForm
 
         #region Região da rotina Consultar Botijão
         // Botão para abrir rotina de consulta de botijões
+
+        public void CarregarCbBotijCons()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM BOTIJAO ORDER BY ID";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbConsIdBotij.DataSource = dt;
+                    cbConsIdBotij.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox!");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
         private void btnConsBotij_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
             MostrarRotinas(pnConsBotij);
+            CarregarCbBotijCons();
             CamposPadrao();
         }
 
@@ -510,7 +542,6 @@ namespace ProjTesteForm
         #endregion
 
         #region Região de Usuários
-
         // Abrir/Fechar submenu
         private void btnUsu_Click(object sender, EventArgs e)
         {
@@ -551,6 +582,7 @@ namespace ProjTesteForm
 
 
         //Metodo para carregar ComboBox de Consulta de Usuario
+
         public void CarregarCbUsuCons()
         {
 
@@ -604,7 +636,6 @@ namespace ProjTesteForm
 
         #region Região da rotina Alterar usuários
         //Abrir rotina para alteração de usuários
-
         public void CarregarCbUsuAlt()
         {
 
@@ -664,7 +695,6 @@ namespace ProjTesteForm
         #endregion
 
         #region Região da rotina Remover usuários
-        //Abrir rotina para exclusão de usuários
 
         public void CarregarCbUsuRmv()
         {
@@ -694,6 +724,8 @@ namespace ProjTesteForm
                 MessageBox.Show("Erro no comando sql" + ex.Message);
             }
         }
+
+        //Abrir rotina para exclusão de usuários
         private void btnRmvUsu_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
@@ -727,5 +759,11 @@ namespace ProjTesteForm
 
         #endregion
 
+        private void btnRotConsBotij_Click(object sender, EventArgs e)
+        {
+            Botijao consBotij = new Botijao(int.Parse(cbConsIdBotij.Text));
+            consBotij.ConsultarBotijao(int.Parse(cbConsIdBotij.Text));
+            txtConsKgBotij.Text = KgBotij;
+        }
     }
 }
