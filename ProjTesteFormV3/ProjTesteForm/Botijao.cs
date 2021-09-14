@@ -94,12 +94,12 @@ namespace ProjTesteForm
                         retorno = cmd.ExecuteNonQuery();
                         if (retorno > 0)
                         {
-                            MessageBox.Show("Cadastro efetuado");
+                            MessageBox.Show("Cadastro efetuado!");
                             Menu.KgBotij = "";
                         }
                         else
                         {
-                            MessageBox.Show("Cadastro não realizado");
+                            MessageBox.Show("Cadastro não realizado!");
                             Menu.KgBotij = kgBotij.ToString();
                         }
                         cmd.Dispose();
@@ -134,7 +134,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Registro não encontrado");
+                    MessageBox.Show("Registro não encontrado!");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -171,12 +171,12 @@ namespace ProjTesteForm
                         retorno = cmd.ExecuteNonQuery();
                         if (retorno > 0)
                         {
-                            MessageBox.Show("Cadastro efetuado");
+                            MessageBox.Show("Alteração efetuada!");
                             Menu.KgBotij = "";
                         }
                         else
                         {
-                            MessageBox.Show("Cadastro não realizado");
+                            MessageBox.Show("Alteração não realizada!");
                             Menu.KgBotij = kgBotij.ToString();
                         }
                         cmd.Dispose();
@@ -192,6 +192,33 @@ namespace ProjTesteForm
             catch (SqlException ex)
             {
                 MessageBox.Show("Erro no comando sql" + ex.Message);
+            }
+        }
+
+        public void RemoverBotijao(int idBotij)
+        {
+            string sql;
+            int retorno;
+            AbrirConexaoBotijao();
+            try
+            {
+                sql = "DELETE BOTIJAO WHERE ID = " + idBotij;
+                cmd = new SqlCommand(sql, conexao);
+                retorno = cmd.ExecuteNonQuery();
+                if (retorno > 0)
+                {
+                    MessageBox.Show("Registro excluído");
+                }
+                else
+                {
+                    MessageBox.Show("Registro não excluído");
+                }
+                Menu.KgBotij = "";
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("ERRO:" + ex.Message);
             }
         }
     }

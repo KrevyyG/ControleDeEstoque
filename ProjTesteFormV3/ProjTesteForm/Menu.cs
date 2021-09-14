@@ -408,14 +408,60 @@ namespace ProjTesteForm
             pnAltBotij.Visible = false;
         }
 
+        private void btnRotAltBotij_Click(object sender, EventArgs e)
+        {
+            if (txtAltKgBotij.Text != "2" && txtAltKgBotij.Text != "5" && txtAltKgBotij.Text != "8" && txtAltKgBotij.Text != "13" && txtAltKgBotij.Text != "20" && txtAltKgBotij.Text != "45" && txtAltKgBotij.Text != "90")
+            {
+                MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
+                txtAltKgBotij.Text = "";
+            }
+            else
+            {
+                Botijao altBotij = new Botijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
+                altBotij.AlterarBotijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
+                txtAltKgBotij.Text = KgBotij;
+            }
+        }
+
         #endregion
 
         #region Região da rotina Remover Botijão
+
+        public void CarregarCbBotijRmv()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM BOTIJAO ORDER BY ID";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbRmvIdBotij.DataSource = dt;
+                    cbRmvIdBotij.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox!");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
         // Botão para abrir rotina de exclusão de botijões
         private void btnRmvBotij_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
             MostrarRotinas(pnRmvBotij);
+            CarregarCbBotijRmv();
             CamposPadrao();
         }
 
@@ -424,6 +470,22 @@ namespace ProjTesteForm
         {
             pnRmvBotij.Visible = false;
         }
+
+        private void btnRotRmvCarregarBotij_Click(object sender, EventArgs e)
+        {
+            Botijao consBotij = new Botijao(int.Parse(cbRmvIdBotij.Text));
+            consBotij.ConsultarBotijao(int.Parse(cbRmvIdBotij.Text));
+            txtRmvKgBotij.Text = KgBotij;
+        }
+
+        private void btnRotRmvBotij_Click(object sender, EventArgs e)
+        {
+            Botijao rmvBotij = new Botijao(int.Parse(cbRmvIdBotij.Text));
+            rmvBotij.RemoverBotijao(int.Parse(cbRmvIdBotij.Text));
+            txtRmvKgBotij.Text = KgBotij;
+            CarregarCbBotijRmv();
+        }
+
         #endregion
 
         #endregion
@@ -795,23 +857,12 @@ namespace ProjTesteForm
 
 
 
-        #endregion
+
 
         #endregion
 
-        private void btnRotAltBotij_Click(object sender, EventArgs e)
-        {
-            if (txtAltKgBotij.Text != "2" && txtAltKgBotij.Text != "5" && txtAltKgBotij.Text != "8" && txtAltKgBotij.Text != "13" && txtAltKgBotij.Text != "20" && txtAltKgBotij.Text != "45" && txtAltKgBotij.Text != "90")
-            {
-                MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
-                txtAltKgBotij.Text = "";
-            }
-            else
-            {
-                Botijao altBotij = new Botijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
-                altBotij.AlterarBotijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
-                txtAltKgBotij.Text = KgBotij;
-            }
-        }
+        #endregion
+
+        
     }
 }
