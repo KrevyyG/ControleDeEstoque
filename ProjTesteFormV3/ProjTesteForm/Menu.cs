@@ -21,7 +21,6 @@ namespace ProjTesteForm
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            //txt que mostra usuário logado
             try
             {
                 conexao.Open();
@@ -30,6 +29,8 @@ namespace ProjTesteForm
             {
                 MessageBox.Show("Erro na conexão: " + ex.Message);
             }
+
+            //txt que mostra usuário logado
             txtUsuMenu.Text = SessaoSistema.UsuLoginSessao;
         }
 
@@ -410,16 +411,23 @@ namespace ProjTesteForm
 
         private void btnRotAltBotij_Click(object sender, EventArgs e)
         {
-            if (txtAltKgBotij.Text != "2" && txtAltKgBotij.Text != "5" && txtAltKgBotij.Text != "8" && txtAltKgBotij.Text != "13" && txtAltKgBotij.Text != "20" && txtAltKgBotij.Text != "45" && txtAltKgBotij.Text != "90")
+            if (SessaoSistema.UsuLoginSessao == "GERENTE")
             {
-                MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
-                txtAltKgBotij.Text = "";
+                if (txtAltKgBotij.Text != "2" && txtAltKgBotij.Text != "5" && txtAltKgBotij.Text != "8" && txtAltKgBotij.Text != "13" && txtAltKgBotij.Text != "20" && txtAltKgBotij.Text != "45" && txtAltKgBotij.Text != "90")
+                {
+                    MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
+                    txtAltKgBotij.Text = "";
+                }
+                else
+                {
+                    Botijao altBotij = new Botijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
+                    altBotij.AlterarBotijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
+                    txtAltKgBotij.Text = KgBotij;
+                }
             }
             else
             {
-                Botijao altBotij = new Botijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
-                altBotij.AlterarBotijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
-                txtAltKgBotij.Text = KgBotij;
+                MessageBox.Show("Apenas o usuário GERENTE \npode realizar alterações!");
             }
         }
 
@@ -480,10 +488,17 @@ namespace ProjTesteForm
 
         private void btnRotRmvBotij_Click(object sender, EventArgs e)
         {
-            Botijao rmvBotij = new Botijao(int.Parse(cbRmvIdBotij.Text));
-            rmvBotij.RemoverBotijao(int.Parse(cbRmvIdBotij.Text));
-            txtRmvKgBotij.Text = KgBotij;
-            CarregarCbBotijRmv();
+            if (SessaoSistema.UsuLoginSessao == "GERENTE")
+            {
+                Botijao rmvBotij = new Botijao(int.Parse(cbRmvIdBotij.Text));
+                rmvBotij.RemoverBotijao(int.Parse(cbRmvIdBotij.Text));
+                txtRmvKgBotij.Text = KgBotij;
+                CarregarCbBotijRmv();
+            }
+            else
+            {
+                MessageBox.Show("Apenas o usuário GERENTE \npode realizar exclusões!");
+            }  
         }
 
         #endregion
@@ -645,6 +660,12 @@ namespace ProjTesteForm
 
         #region Região de Usuários
         // Abrir/Fechar submenu
+
+        public static string NomeCompUsu { get; set; }
+        public static string NmUsuUsu { get; set; }
+        public static string SenhaUsu { get; set; }
+        public static string ConfSenhaUsu { get; set; }
+
         private void btnUsu_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(pnSubUsu);
@@ -671,18 +692,25 @@ namespace ProjTesteForm
 
         private void btnRotAdcUsu_Click(object sender, EventArgs e)
         {
-            Usuarios adcusu = new Usuarios(txtAdcNmCompUsu.Text, txtAdcNmUsuUsu.Text, txtAdcSenhaUsu.Text);
-            adcusu.CadastrarUsuario(txtAdcNmCompUsu.Text, txtAdcNmUsuUsu.Text, txtAdcSenhaUsu.Text, txtAdcConfirSenhaUsu.Text);
+            if (txtAdcNmCompUsu.Text == "" || txtAdcNmUsuUsu.Text == "" || txtAdcSenhaUsu.Text == "")
+            {
+                MessageBox.Show("Todsos os campos \nsão obrigatórios!");
+            }
+            else
+            {
+                Usuarios adcusu = new Usuarios(txtAdcNmCompUsu.Text, txtAdcNmUsuUsu.Text, txtAdcSenhaUsu.Text);
+                adcusu.CadastrarUsuario(txtAdcNmCompUsu.Text, txtAdcNmUsuUsu.Text, txtAdcSenhaUsu.Text, txtAdcConfirSenhaUsu.Text);
+                txtAdcNmCompUsu.Text = NomeCompUsu;
+                txtAdcNmUsuUsu.Text = NmUsuUsu;
+                txtAdcSenhaUsu.Text = SenhaUsu;
+                txtAdcConfirSenhaUsu.Text = ConfSenhaUsu;
+            }
+            
         }
         #endregion
 
         #region Região da rotina Consultar usuários
         //Abrir rotina para consulta de usuários
-
-        public static string NomeCompUsu { get; set; }
-        public static string NmUsuUsu { get; set; }
-
-
         //Metodo para carregar ComboBox de Consulta de Usuario
 
         public void CarregarCbUsuCons()
@@ -790,8 +818,28 @@ namespace ProjTesteForm
         }
         private void btnRotAltUsu_Click(object sender, EventArgs e)
         {
-            Usuarios altUsu = new Usuarios(int.Parse(cbAltIdUsu.Text), txtAltNomeCompUsu.Text, txtAltNomeUsuUsu.Text, txtAltSenhaUsu.Text);
-            altUsu.AlterarUsuario(int.Parse(cbAltIdUsu.Text), txtAltNomeCompUsu.Text, txtAltNomeUsuUsu.Text, txtAltSenhaUsu.Text, txtAltConfirSenhaUsu.Text);
+            if (SessaoSistema.UsuLoginSessao == "GERENTE")
+            {
+                if (txtAltNomeCompUsu.Text == "" || txtAltNomeUsuUsu.Text == "" || txtAltSenhaUsu.Text == "")
+                {
+                    MessageBox.Show("Todos os campos \nsão obrigatórios!");
+                }
+                else
+                {
+                    Usuarios altUsu = new Usuarios(int.Parse(cbAltIdUsu.Text), txtAltNomeCompUsu.Text, txtAltNomeUsuUsu.Text, txtAltSenhaUsu.Text);
+                    altUsu.AlterarUsuario(int.Parse(cbAltIdUsu.Text), txtAltNomeCompUsu.Text, txtAltNomeUsuUsu.Text, txtAltSenhaUsu.Text, txtAltConfirSenhaUsu.Text);
+                    txtAltNomeCompUsu.Text = NomeCompUsu;
+                    txtAltNomeUsuUsu.Text = NmUsuUsu;
+                    txtAltSenhaUsu.Text = SenhaUsu;
+                    txtAltConfirSenhaUsu.Text = ConfSenhaUsu;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Apenas o usuário GERENTE \npode realizar alterações!");
+            }
+            
+            
         }
 
         #endregion
@@ -850,19 +898,24 @@ namespace ProjTesteForm
         }
         private void btnRotRmvUsu_Click(object sender, EventArgs e)
         {
-            Usuarios rmvusu = new Usuarios(int.Parse(cbRmvIdUsu.Text));
-            rmvusu.RemoverUsuario(int.Parse(cbRmvIdUsu.Text));
-            CarregarCbUsuRmv();
+
+            if (SessaoSistema.UsuLoginSessao == "GERENTE")
+            {
+                Usuarios rmvusu = new Usuarios(int.Parse(cbRmvIdUsu.Text));
+                rmvusu.RemoverUsuario(int.Parse(cbRmvIdUsu.Text));
+                CarregarCbUsuRmv();
+                txtRmvNomeCompUsu.Text = NomeCompUsu;
+                txtRmvNomeUsuUsu.Text = NmUsuUsu;
+            }
+            else
+            {
+                MessageBox.Show("Apenas o usuário GERENTE \npode realizar exclusões!");
+            }
+            
         }
-
-
-
-
-
         #endregion
 
         #endregion
-
         
     }
 }

@@ -107,12 +107,20 @@ namespace ProjTesteForm
                 if (dr.HasRows)
                 {
                     MessageBox.Show("Nome de Usuário ja utilizado!");
+                    Menu.NomeCompUsu = nome;
+                    Menu.NmUsuUsu = nmusu;
+                    Menu.SenhaUsu = senha;
+                    Menu.ConfSenhaUsu = confSenha;
                 }
                 else
                 {
                     if (senha != confSenha)
                     {
                         MessageBox.Show("Senhas não correspondem!");
+                        Menu.NomeCompUsu = nome;
+                        Menu.NmUsuUsu = nmusu;
+                        Menu.SenhaUsu = senha;
+                        Menu.ConfSenhaUsu = confSenha;
                     }
                     else
                     {
@@ -126,6 +134,10 @@ namespace ProjTesteForm
                             MessageBox.Show("Cadastro efetuado!");
                             Menu menu = new Menu();
                             menu.CamposPadrao();
+                            Menu.NomeCompUsu = "";
+                            Menu.NmUsuUsu = "";
+                            Menu.SenhaUsu = "";
+                            Menu.ConfSenhaUsu = "";
                         }
                         else
                         {
@@ -195,16 +207,28 @@ namespace ProjTesteForm
                         if (dr.HasRows)
                         {
                             MessageBox.Show("Nome de Usuário ja utilizado!");
+                            Menu.NomeCompUsu = nome;
+                            Menu.NmUsuUsu = nmusu;
+                            Menu.SenhaUsu = senha;
+                            Menu.ConfSenhaUsu = confSenha;
                         }
                         else
                         {
                             if (senha == "")
                             {
                                 MessageBox.Show("Digite a mesma senha ou uma \nnova senha para continuar!");
+                                Menu.NomeCompUsu = nome;
+                                Menu.NmUsuUsu = nmusu;
+                                Menu.SenhaUsu = senha;
+                                Menu.ConfSenhaUsu = confSenha;
                             }
                             else if (senha != confSenha)
                             {
                                 MessageBox.Show("Senhas não correspondem!");
+                                Menu.NomeCompUsu = nome;
+                                Menu.NmUsuUsu = nmusu;
+                                Menu.SenhaUsu = senha;
+                                Menu.ConfSenhaUsu = confSenha;
                             }
                             else
                             {
@@ -217,24 +241,43 @@ namespace ProjTesteForm
                                 {
                                     MessageBox.Show("Alteração efetuada!");
                                     Menu menu = new Menu();
-                                    menu.CamposPadrao();
+                                    Menu.NomeCompUsu = "";
+                                    Menu.NmUsuUsu = "";
+                                    Menu.SenhaUsu = "";
+                                    Menu.ConfSenhaUsu = "";
                                 }
                                 else
                                 {
                                     MessageBox.Show("Alteração não realizada!");
+                                    Menu.NomeCompUsu = nome;
+                                    Menu.NmUsuUsu = nmusu;
+                                    Menu.SenhaUsu = senha;
+                                    Menu.ConfSenhaUsu = confSenha;
                                 }
                             }
                         }
+                    }
+                    else if (Menu.NmUsuUsu == "GERENTE")
+                    {
+                        MessageBox.Show("Não é possível alterar \no usuário GERENTE");
                     }
                     else
                     {
                         if (senha == "")
                         {
                             MessageBox.Show("Digite a mesma senha ou uma \nnova senha para continuar!");
+                            Menu.NomeCompUsu = nome;
+                            Menu.NmUsuUsu = nmusu;
+                            Menu.SenhaUsu = senha;
+                            Menu.ConfSenhaUsu = confSenha;
                         }
                         else if (senha != confSenha)
                         {
                             MessageBox.Show("Senhas não correspondem!");
+                            Menu.NomeCompUsu = nome;
+                            Menu.NmUsuUsu = nmusu;
+                            Menu.SenhaUsu = senha;
+                            Menu.ConfSenhaUsu = confSenha;
                         }
                         else
                         {
@@ -246,10 +289,18 @@ namespace ProjTesteForm
                             if (retorno > 0)
                             {
                                 MessageBox.Show("Alteração efetuada");
+                                Menu.NomeCompUsu = "";
+                                Menu.NmUsuUsu = "";
+                                Menu.SenhaUsu = "";
+                                Menu.ConfSenhaUsu = "";
                             }
                             else
                             {
                                 MessageBox.Show("Alteração não realizada!");
+                                Menu.NomeCompUsu = nome;
+                                Menu.NmUsuUsu = nmusu;
+                                Menu.SenhaUsu = senha;
+                                Menu.ConfSenhaUsu = confSenha;
                             }
                         }
                     }
@@ -275,26 +326,43 @@ namespace ProjTesteForm
             AbrirConexaoUsu();
             try
             {
-                sql = "DELETE USUARIO WHERE ID = "+ id;
+                sql = "SELECT * FROM USUARIO WHERE ID = '" + id + "'";
                 cmd = new SqlCommand(sql, conexao);
-                retorno = cmd.ExecuteNonQuery();
-                if (retorno > 0)
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
                 {
-                    MessageBox.Show("Registro excluído!");
-                    Menu menu = new Menu();
-                    menu.CamposPadrao();
+                    dr.Read();
+                    Menu.NmUsuUsu = dr["NOMEUSU"].ToString();
+                    if (Menu.NmUsuUsu != "GERENTE")
+                    {
+                        sql = "DELETE USUARIO WHERE ID = " + id;
+                        cmd = new SqlCommand(sql, conexao);
+                        retorno = cmd.ExecuteNonQuery();
+                        if (retorno > 0)
+                        {
+                            MessageBox.Show("Registro excluído!");
+                            Menu menu = new Menu();
+                            Menu.NomeCompUsu = "";
+                            Menu.NmUsuUsu = "";
+                            Menu.SenhaUsu = "";
+                            Menu.ConfSenhaUsu = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro não excluído!");
+                        }
+                        cmd.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não é possível excluir \no usuário GERENTE");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Registro não excluído!");
-                }
-                cmd.Dispose();
             }
             catch (SqlException ex)
             {
                 MessageBox.Show("ERRO:" + ex.Message);
             }
         }
-
     }
 }
