@@ -255,6 +255,9 @@ namespace ProjTesteForm
 
 
         // Abrir/Fechar submenu
+
+        public static string KgBotij { get; set; }
+
         private void btnBotij_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
@@ -280,7 +283,17 @@ namespace ProjTesteForm
         // Botão para adicionar botijão
         private void btnRotAdcBotij_Click(object sender, EventArgs e)
         {
-            
+            if (txtAdcKgBotij.Text != "2" && txtAdcKgBotij.Text != "5" && txtAdcKgBotij.Text != "8" && txtAdcKgBotij.Text != "13" && txtAdcKgBotij.Text != "20" && txtAdcKgBotij.Text != "45" && txtAdcKgBotij.Text != "90")
+            {
+                MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
+                txtAdcKgBotij.Text = "";
+            }
+            else
+            {
+                Botijao adcBotij = new Botijao();
+                adcBotij.AdicionarBotijao(int.Parse(txtAdcKgBotij.Text));
+                txtAdcKgBotij.Text = KgBotij;
+            }
         }
 
         // Comando para permitir apenas números no txt de adicionar botijões
@@ -415,6 +428,11 @@ namespace ProjTesteForm
 
         #region Região da rotina Adicionar lote
         // Abrir rotina para adição de lote
+
+        public static string KgBotijLote { get; set; }
+        public static string QtdeEnvLote { get; set; }
+        public static string DataLote { get; set; }
+
         private void btnAdcLote_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
@@ -426,6 +444,40 @@ namespace ProjTesteForm
         {
             pnAdcLote.Visible = false;
         }
+
+        private void txtAdcKgBotijLote_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAdcQtdeBotijLote_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnRotAdcLote_Click(object sender, EventArgs e)
+        {
+            if (txtAdcKgBotijLote.Text == "" || txtAdcQtdeBotijLote.Text == "" || maskAdcDtLote.Text == "  /  /")
+            {
+                MessageBox.Show("Todos os campos são de \npreenchimento obrigatório!");
+            }
+            else
+            {
+                Lote adcLote = new Lote();
+                adcLote.AdicionarLote(int.Parse(txtAdcKgBotijLote.Text), int.Parse(txtAdcQtdeBotijLote.Text), maskAdcDtLote.Text, SessaoSistema.UsuLoginSessao);
+                txtAdcKgBotijLote.Text = KgBotijLote;
+                txtAdcQtdeBotijLote.Text = QtdeEnvLote;
+                maskAdcDtLote.Text = DataLote;
+
+            }
+        }
+
         #endregion
 
         #region Região da rotina Alteração lote
@@ -486,12 +538,8 @@ namespace ProjTesteForm
 
         private void btnRotAdcUsu_Click(object sender, EventArgs e)
         {
-            string nome = txtAdcNmCompUsu.Text;
-            string nmusu = txtAdcNmUsuUsu.Text;
-            string senha = txtAdcSenhaUsu.Text;
-            string confSenha = txtAdcConfirSenhaUsu.Text;
-            Usuarios adcusu = new Usuarios(nome, nmusu, senha);
-            adcusu.CadastrarUsuario(nome, nmusu, senha, confSenha);
+            Usuarios adcusu = new Usuarios(txtAdcNmCompUsu.Text, txtAdcNmUsuUsu.Text, txtAdcSenhaUsu.Text);
+            adcusu.CadastrarUsuario(txtAdcNmCompUsu.Text, txtAdcNmUsuUsu.Text, txtAdcSenhaUsu.Text, txtAdcConfirSenhaUsu.Text);
         }
         #endregion
 
@@ -673,8 +721,11 @@ namespace ProjTesteForm
             CarregarCbUsuRmv();
         }
 
+
+
         #endregion
 
         #endregion
+
     }
 }

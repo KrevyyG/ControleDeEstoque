@@ -12,7 +12,7 @@ namespace ProjTesteForm
 
         public int IdUsu { get; }
         public string Nome { get; private set; }
-        public string NomeUsu { get; private set; }
+        public string NomeUsu { get; internal set; }
         public string SenhaUsu { get; private set; }
 
         public Usuarios()
@@ -40,7 +40,7 @@ namespace ProjTesteForm
             SenhaUsu = senha;
         }
 
-        public void AbrirConexao()
+        public void AbrirConexaoUsu()
         {
             try
             {
@@ -54,7 +54,7 @@ namespace ProjTesteForm
 
         public void ValidarLogin(string nomeusu, string senhausu)
         {
-            AbrirConexao();
+            AbrirConexaoUsu();
             string sql;
             try
             {  
@@ -98,7 +98,7 @@ namespace ProjTesteForm
         {
             string sql;
             int retorno;
-            AbrirConexao();
+            AbrirConexaoUsu();
             try
             {
                 sql = "SELECT * FROM USUARIO WHERE NOMEUSU = '" + nmusu + "'";
@@ -124,6 +124,8 @@ namespace ProjTesteForm
                         if (retorno > 0)
                         {
                             MessageBox.Show("Cadastro efetuado");
+                            Menu menu = new Menu();
+                            menu.CamposPadrao();
                         }
                         else
                         {
@@ -143,7 +145,7 @@ namespace ProjTesteForm
 
         public void ConsultarUsuario(int id)
         {
-            AbrirConexao();
+            AbrirConexaoUsu();
             string sql;
             try
             {
@@ -173,7 +175,7 @@ namespace ProjTesteForm
         {
             string sql;
             int retorno;
-            AbrirConexao();
+            AbrirConexaoUsu();
             try
             {
                 sql = "SELECT * FROM USUARIO WHERE ID = '" + id + "'";
@@ -214,6 +216,8 @@ namespace ProjTesteForm
                                 if (retorno > 0)
                                 {
                                     MessageBox.Show("Alteração efetuada");
+                                    Menu menu = new Menu();
+                                    menu.CamposPadrao();
                                 }
                                 else
                                 {
@@ -268,7 +272,7 @@ namespace ProjTesteForm
         {
             string sql;
             int retorno;
-            AbrirConexao();
+            AbrirConexaoUsu();
             try
             {
                 sql = "DELETE USUARIO WHERE ID = "+ id;
@@ -277,13 +281,13 @@ namespace ProjTesteForm
                 if (retorno > 0)
                 {
                     MessageBox.Show("Registro excluído");
+                    Menu menu = new Menu();
+                    menu.CamposPadrao();
                 }
                 else
                 {
                     MessageBox.Show("Registro não excluído");
                 }
-                Menu.NomeCompUsu = "";
-                Menu.NmUsuUsu = "";
                 cmd.Dispose();
             }
             catch (SqlException ex)

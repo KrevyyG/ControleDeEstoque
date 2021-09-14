@@ -22,8 +22,6 @@ C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV2\ProjTesteFo
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV2\ProjTesteForm\obj\Debug\ProjTesteForm.csproj.CoreCompileInputs.cache
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV2\ProjTesteForm\obj\Debug\ProjTesteForm.exe
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV2\ProjTesteForm\obj\Debug\ProjTesteForm.pdb
-C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\bin\Debug\ControleDeEstoque.mdf
-C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\bin\Debug\ControleDeEstoque_log.ldf
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\bin\Debug\ProjTesteForm.exe.config
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\bin\Debug\ProjTesteForm.exe
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\bin\Debug\ProjTesteForm.pdb
@@ -35,3 +33,5 @@ C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteFo
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\obj\Debug\ProjTesteForm.csproj.CoreCompileInputs.cache
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\obj\Debug\ProjTesteForm.exe
 C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\obj\Debug\ProjTesteForm.pdb
+C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\bin\Debug\ControleDeEstoque.mdf
+C:\Users\Acer\OneDrive\Documentos\Projetos\ProjInter\ProjTesteFormV3\ProjTesteForm\bin\Debug\ControleDeEstoque_log.ldf
