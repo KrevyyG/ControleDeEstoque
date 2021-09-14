@@ -32,16 +32,10 @@ namespace ProjTesteForm
             IdBotij = id;
         }
 
-        public Botijao(int kgbotij, string nmusu)
+        public Botijao(int idBotij, int kgbotij)
         {
+            IdBotij = idBotij;
             KgBotij = kgbotij;
-            NmUsu = nmusu;
-        }
-        public Botijao(int id, int kgbotij, string nmusu)
-        {
-            IdBotij = id;
-            KgBotij = kgbotij;
-            NmUsu = nmusu;
         }
 
         public Botijao(int idBotij, int qtdeBotij, int idLote, string nmusu)
@@ -141,6 +135,56 @@ namespace ProjTesteForm
                 else
                 {
                     MessageBox.Show("Registro não encontrado");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql" + ex.Message);
+            }
+        }
+
+        public void AlterarBotijao(int idBotij, int kgBotij)
+        {
+            AbrirConexaoBotijao();
+            string sql;
+            try
+            {
+                sql = "SELECT * FROM BOTIJAO WHERE KGBOTIJ = " + kgBotij;
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    MessageBox.Show("Botijão de " + kgBotij + "Kg já cadastrado!");
+                    Menu.KgBotij = "";
+                }
+                else
+                {
+                    int retorno;
+                    try
+                    {
+                        dr.Close();
+                        cmd.Dispose();
+                        sql = "UPDATE BOTIJAO SET KGBOTIJ = "+ kgBotij + "WHERE ID = "+ idBotij;
+                        cmd = new SqlCommand(sql, conexao);
+                        retorno = cmd.ExecuteNonQuery();
+                        if (retorno > 0)
+                        {
+                            MessageBox.Show("Cadastro efetuado");
+                            Menu.KgBotij = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cadastro não realizado");
+                            Menu.KgBotij = kgBotij.ToString();
+                        }
+                        cmd.Dispose();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro no comando sql: " + ex.Message);
+                    }
                 }
                 dr.Close();
                 cmd.Dispose();

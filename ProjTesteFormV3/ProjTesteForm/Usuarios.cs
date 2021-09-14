@@ -123,13 +123,13 @@ namespace ProjTesteForm
                         retorno = cmd.ExecuteNonQuery();
                         if (retorno > 0)
                         {
-                            MessageBox.Show("Cadastro efetuado");
+                            MessageBox.Show("Cadastro efetuado!");
                             Menu menu = new Menu();
                             menu.CamposPadrao();
                         }
                         else
                         {
-                            MessageBox.Show("Cadastro não realizado");
+                            MessageBox.Show("Cadastro não realizado!");
                         }
                     }
                 }
@@ -160,7 +160,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Registro não encontrado");
+                    MessageBox.Show("Registro não encontrado!");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -215,7 +215,7 @@ namespace ProjTesteForm
                                 retorno = cmd.ExecuteNonQuery();
                                 if (retorno > 0)
                                 {
-                                    MessageBox.Show("Alteração efetuada");
+                                    MessageBox.Show("Alteração efetuada!");
                                     Menu menu = new Menu();
                                     menu.CamposPadrao();
                                 }
@@ -280,13 +280,13 @@ namespace ProjTesteForm
                 retorno = cmd.ExecuteNonQuery();
                 if (retorno > 0)
                 {
-                    MessageBox.Show("Registro excluído");
+                    MessageBox.Show("Registro excluído!");
                     Menu menu = new Menu();
                     menu.CamposPadrao();
                 }
                 else
                 {
-                    MessageBox.Show("Registro não excluído");
+                    MessageBox.Show("Registro não excluído!");
                 }
                 cmd.Dispose();
             }

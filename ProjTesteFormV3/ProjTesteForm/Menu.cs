@@ -352,14 +352,53 @@ namespace ProjTesteForm
         {
             pnConsBotij.Visible = false;
         }
+
+        private void btnRotConsBotij_Click(object sender, EventArgs e)
+        {
+            Botijao consBotij = new Botijao(int.Parse(cbConsIdBotij.Text));
+            consBotij.ConsultarBotijao(int.Parse(cbConsIdBotij.Text));
+            txtConsKgBotij.Text = KgBotij;
+        }
+
         #endregion
 
         #region Região da rotina Alterar Botijão
+
+        public void CarregarCbBotijAlt()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM BOTIJAO ORDER BY ID";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbAltIdBotij.DataSource = dt;
+                    cbAltIdBotij.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox!");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
         // Botão para abrir rotina de alterações de botijões
         private void btnAltBotij_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
             MostrarRotinas(pnAltBotij);
+            CarregarCbBotijAlt();
             CamposPadrao();
         }
 
@@ -368,6 +407,7 @@ namespace ProjTesteForm
         {
             pnAltBotij.Visible = false;
         }
+
         #endregion
 
         #region Região da rotina Remover Botijão
@@ -759,11 +799,19 @@ namespace ProjTesteForm
 
         #endregion
 
-        private void btnRotConsBotij_Click(object sender, EventArgs e)
+        private void btnRotAltBotij_Click(object sender, EventArgs e)
         {
-            Botijao consBotij = new Botijao(int.Parse(cbConsIdBotij.Text));
-            consBotij.ConsultarBotijao(int.Parse(cbConsIdBotij.Text));
-            txtConsKgBotij.Text = KgBotij;
+            if (txtAltKgBotij.Text != "2" && txtAltKgBotij.Text != "5" && txtAltKgBotij.Text != "8" && txtAltKgBotij.Text != "13" && txtAltKgBotij.Text != "20" && txtAltKgBotij.Text != "45" && txtAltKgBotij.Text != "90")
+            {
+                MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
+                txtAltKgBotij.Text = "";
+            }
+            else
+            {
+                Botijao altBotij = new Botijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
+                altBotij.AlterarBotijao(int.Parse(cbAltIdBotij.Text), int.Parse(txtAltKgBotij.Text));
+                txtAltKgBotij.Text = KgBotij;
+            }
         }
     }
 }
