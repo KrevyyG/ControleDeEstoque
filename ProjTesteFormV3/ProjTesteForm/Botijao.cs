@@ -80,7 +80,7 @@ namespace ProjTesteForm
                 if (dr.HasRows)
                 {
                     MessageBox.Show("Botijão de "+ kgBotij +"Kg já cadastrado!");
-                    Menu.KgBotij = "";
+                    Menu.KgBotij = string.Empty;
                 }
                 else
                 {
@@ -95,7 +95,7 @@ namespace ProjTesteForm
                         if (retorno > 0)
                         {
                             MessageBox.Show("Cadastro efetuado!");
-                            Menu.KgBotij = "";
+                            Menu.KgBotij = string.Empty;
                         }
                         else
                         {
@@ -157,7 +157,7 @@ namespace ProjTesteForm
                 if (dr.HasRows)
                 {
                     MessageBox.Show("Botijão de " + kgBotij + "Kg já cadastrado!");
-                    Menu.KgBotij = "";
+                    Menu.KgBotij = string.Empty;
                 }
                 else
                 {
@@ -172,7 +172,7 @@ namespace ProjTesteForm
                         if (retorno > 0)
                         {
                             MessageBox.Show("Alteração efetuada!");
-                            Menu.KgBotij = "";
+                            Menu.KgBotij = string.Empty;
                         }
                         else
                         {
@@ -213,7 +213,7 @@ namespace ProjTesteForm
                 {
                     MessageBox.Show("Registro não excluído");
                 }
-                Menu.KgBotij = "";
+                Menu.KgBotij = string.Empty;
                 cmd.Dispose();
             }
             catch (SqlException ex)

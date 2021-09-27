@@ -191,6 +191,7 @@ namespace ProjTesteForm
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pnRmvBotij = new System.Windows.Forms.Panel();
+            this.btnRotRmvCarregarBotij = new System.Windows.Forms.Button();
             this.cbRmvIdBotij = new System.Windows.Forms.ComboBox();
             this.label55 = new System.Windows.Forms.Label();
             this.flowLayoutPanel30 = new System.Windows.Forms.FlowLayoutPanel();
@@ -260,7 +261,6 @@ namespace ProjTesteForm
             this.btnAdcBotij = new System.Windows.Forms.Button();
             this.btnBotij = new System.Windows.Forms.Button();
             this.pnSeparador = new System.Windows.Forms.Panel();
-            this.btnRotRmvCarregarBotij = new System.Windows.Forms.Button();
             this.pnCentro.SuspendLayout();
             this.pnRmvUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotRmvUsuario)).BeginInit();
@@ -422,6 +422,7 @@ namespace ProjTesteForm
             this.txtRmvNomeUsuUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtRmvNomeUsuUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRmvNomeUsuUsu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRmvNomeUsuUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRmvNomeUsuUsu.ForeColor = System.Drawing.Color.White;
             this.txtRmvNomeUsuUsu.Location = new System.Drawing.Point(113, 108);
             this.txtRmvNomeUsuUsu.MaxLength = 10;
@@ -455,6 +456,7 @@ namespace ProjTesteForm
             // 
             this.txtRmvNomeCompUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtRmvNomeCompUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRmvNomeCompUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRmvNomeCompUsu.ForeColor = System.Drawing.Color.White;
             this.txtRmvNomeCompUsu.Location = new System.Drawing.Point(113, 78);
             this.txtRmvNomeCompUsu.MaxLength = 40;
@@ -786,6 +788,7 @@ namespace ProjTesteForm
             this.txtConsNmUsuUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtConsNmUsuUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsNmUsuUsu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConsNmUsuUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtConsNmUsuUsu.ForeColor = System.Drawing.Color.White;
             this.txtConsNmUsuUsu.Location = new System.Drawing.Point(113, 103);
             this.txtConsNmUsuUsu.MaxLength = 10;
@@ -819,6 +822,7 @@ namespace ProjTesteForm
             // 
             this.txtConsNomeCompUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtConsNomeCompUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsNomeCompUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtConsNomeCompUsu.ForeColor = System.Drawing.Color.White;
             this.txtConsNomeCompUsu.Location = new System.Drawing.Point(113, 75);
             this.txtConsNomeCompUsu.MaxLength = 40;
@@ -2232,6 +2236,23 @@ namespace ProjTesteForm
             this.pnRmvBotij.Size = new System.Drawing.Size(460, 115);
             this.pnRmvBotij.TabIndex = 10;
             // 
+            // btnRotRmvCarregarBotij
+            // 
+            this.btnRotRmvCarregarBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.btnRotRmvCarregarBotij.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRotRmvCarregarBotij.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRotRmvCarregarBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
+            this.btnRotRmvCarregarBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRotRmvCarregarBotij.ForeColor = System.Drawing.Color.White;
+            this.btnRotRmvCarregarBotij.Location = new System.Drawing.Point(271, 41);
+            this.btnRotRmvCarregarBotij.Name = "btnRotRmvCarregarBotij";
+            this.btnRotRmvCarregarBotij.Size = new System.Drawing.Size(93, 23);
+            this.btnRotRmvCarregarBotij.TabIndex = 106;
+            this.btnRotRmvCarregarBotij.TabStop = false;
+            this.btnRotRmvCarregarBotij.Text = "Carregar dados";
+            this.btnRotRmvCarregarBotij.UseVisualStyleBackColor = false;
+            this.btnRotRmvCarregarBotij.Click += new System.EventHandler(this.btnRotRmvCarregarBotij_Click);
+            // 
             // cbRmvIdBotij
             // 
             this.cbRmvIdBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
@@ -2240,7 +2261,7 @@ namespace ProjTesteForm
             this.cbRmvIdBotij.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRmvIdBotij.ForeColor = System.Drawing.Color.White;
             this.cbRmvIdBotij.FormattingEnabled = true;
-            this.cbRmvIdBotij.Location = new System.Drawing.Point(161, 40);
+            this.cbRmvIdBotij.Location = new System.Drawing.Point(198, 40);
             this.cbRmvIdBotij.Name = "cbRmvIdBotij";
             this.cbRmvIdBotij.Size = new System.Drawing.Size(50, 24);
             this.cbRmvIdBotij.TabIndex = 100;
@@ -2251,7 +2272,7 @@ namespace ProjTesteForm
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.White;
-            this.label55.Location = new System.Drawing.Point(346, 48);
+            this.label55.Location = new System.Drawing.Point(230, 81);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(22, 16);
             this.label55.TabIndex = 37;
@@ -2260,7 +2281,7 @@ namespace ProjTesteForm
             // flowLayoutPanel30
             // 
             this.flowLayoutPanel30.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel30.Location = new System.Drawing.Point(317, 63);
+            this.flowLayoutPanel30.Location = new System.Drawing.Point(201, 96);
             this.flowLayoutPanel30.Name = "flowLayoutPanel30";
             this.flowLayoutPanel30.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel30.TabIndex = 36;
@@ -2269,8 +2290,9 @@ namespace ProjTesteForm
             // 
             this.txtRmvKgBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtRmvKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRmvKgBotij.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRmvKgBotij.ForeColor = System.Drawing.Color.White;
-            this.txtRmvKgBotij.Location = new System.Drawing.Point(317, 48);
+            this.txtRmvKgBotij.Location = new System.Drawing.Point(201, 81);
             this.txtRmvKgBotij.MaxLength = 2;
             this.txtRmvKgBotij.Name = "txtRmvKgBotij";
             this.txtRmvKgBotij.ReadOnly = true;
@@ -2284,7 +2306,7 @@ namespace ProjTesteForm
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.White;
-            this.label56.Location = new System.Drawing.Point(229, 48);
+            this.label56.Location = new System.Drawing.Point(113, 81);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(82, 16);
             this.label56.TabIndex = 34;
@@ -2319,7 +2341,7 @@ namespace ProjTesteForm
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(76, 48);
+            this.label9.Location = new System.Drawing.Point(113, 48);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 16);
             this.label9.TabIndex = 31;
@@ -2333,7 +2355,7 @@ namespace ProjTesteForm
             this.btnRotRmvBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotRmvBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotRmvBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotRmvBotij.Location = new System.Drawing.Point(248, 78);
+            this.btnRotRmvBotij.Location = new System.Drawing.Point(271, 76);
             this.btnRotRmvBotij.Name = "btnRotRmvBotij";
             this.btnRotRmvBotij.Size = new System.Drawing.Size(75, 23);
             this.btnRotRmvBotij.TabIndex = 30;
@@ -2433,6 +2455,7 @@ namespace ProjTesteForm
             this.txtAltKgBotij.Size = new System.Drawing.Size(23, 13);
             this.txtAltKgBotij.TabIndex = 3;
             this.txtAltKgBotij.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAltKgBotij.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltKgBotij_KeyPress);
             // 
             // label6
             // 
@@ -2480,7 +2503,7 @@ namespace ProjTesteForm
             this.pnConsBotij.Controls.Add(this.btnRotConsBotij);
             this.pnConsBotij.Controls.Add(this.btnFecharRotConsBotij);
             this.pnConsBotij.Controls.Add(this.label7);
-            this.pnConsBotij.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnConsBotij.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnConsBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnConsBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnConsBotij.Location = new System.Drawing.Point(0, 133);
@@ -2525,6 +2548,7 @@ namespace ProjTesteForm
             // 
             this.txtConsKgBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtConsKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsKgBotij.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtConsKgBotij.ForeColor = System.Drawing.Color.White;
             this.txtConsKgBotij.Location = new System.Drawing.Point(290, 48);
             this.txtConsKgBotij.MaxLength = 2;
@@ -2607,7 +2631,7 @@ namespace ProjTesteForm
             this.pnAdcBotij.Controls.Add(this.txtAdcKgBotij);
             this.pnAdcBotij.Controls.Add(this.label3);
             this.pnAdcBotij.Controls.Add(this.label2);
-            this.pnAdcBotij.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnAdcBotij.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pnAdcBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnAdcBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnAdcBotij.Location = new System.Drawing.Point(0, 39);
@@ -3283,23 +3307,6 @@ namespace ProjTesteForm
             this.pnSeparador.Name = "pnSeparador";
             this.pnSeparador.Size = new System.Drawing.Size(134, 31);
             this.pnSeparador.TabIndex = 1;
-            // 
-            // btnRotRmvCarregarBotij
-            // 
-            this.btnRotRmvCarregarBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.btnRotRmvCarregarBotij.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRotRmvCarregarBotij.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRotRmvCarregarBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
-            this.btnRotRmvCarregarBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRotRmvCarregarBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotRmvCarregarBotij.Location = new System.Drawing.Point(134, 78);
-            this.btnRotRmvCarregarBotij.Name = "btnRotRmvCarregarBotij";
-            this.btnRotRmvCarregarBotij.Size = new System.Drawing.Size(93, 23);
-            this.btnRotRmvCarregarBotij.TabIndex = 106;
-            this.btnRotRmvCarregarBotij.TabStop = false;
-            this.btnRotRmvCarregarBotij.Text = "Carregar dados";
-            this.btnRotRmvCarregarBotij.UseVisualStyleBackColor = false;
-            this.btnRotRmvCarregarBotij.Click += new System.EventHandler(this.btnRotRmvCarregarBotij_Click);
             // 
             // Menu
             // 

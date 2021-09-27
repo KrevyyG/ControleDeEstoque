@@ -218,38 +218,38 @@ namespace ProjTesteForm
         #region Definir campos como padrão
         public void CamposPadrao()
         {
-            txtAdcKgBotij.Text = "";
-            txtAltKgBotij.Text = "";
-            txtRmvKgBotij.Text = "";
-            txtAdcIdLoteEstoque.Text = "";
-            txtAdcKgBotijEstoque.Text = "";
-            txtAdcIdBotijEstoque.Text = "";
-            txtAdcKgBotijEstoque.Text = "";
+            txtAdcKgBotij.Text = string.Empty;
+            txtAltKgBotij.Text = string.Empty;
+            txtRmvKgBotij.Text = string.Empty;
+            txtAdcIdLoteEstoque.Text = string.Empty;
+            txtAdcKgBotijEstoque.Text = string.Empty;
+            txtAdcIdBotijEstoque.Text = string.Empty;
+            txtAdcKgBotijEstoque.Text = string.Empty;
             rdbAbtQtdeSBotijSim.Checked = false;
             rdbAbtQtdeSBotijNao.Checked = false;
-            txtRmvKgBotijEstoque.Text = "";
-            txtRmvQtdeEstoque.Text = "";
+            txtRmvKgBotijEstoque.Text = string.Empty;
+            txtRmvQtdeEstoque.Text = string.Empty;
             rdbRetBotijSim.Checked = false;
             rdbRetBotijNao.Checked = false;
-            txtAdcKgBotijLote.Text = "";
-            txtAdcQtdeBotijLote.Text = "";
-            maskAdcDtLote.Text = "";
-            txtAltKgBotijLote.Text = "";
-            txtAltQtdeLote.Text = "";
-            txtAltDtLote.Text = "";
-            txtAdcNmCompUsu.Text = "";
-            txtAdcNmUsuUsu.Text = "";
-            txtAdcSenhaUsu.Text = "";
-            txtAdcConfirSenhaUsu.Text = "";
-            txtConsNomeCompUsu.Text = "";
-            txtConsNmUsuUsu.Text = "";
-            txtAltNomeCompUsu.Text = "";
-            txtAltNomeUsuUsu.Text = "";
-            txtAltSenhaUsu.Text = "";
-            txtAltConfirSenhaUsu.Text = "";
-            txtRmvNomeCompUsu.Text = "";
-            txtRmvNomeUsuUsu.Text = "";
-            txtConsKgBotij.Text = "";
+            txtAdcKgBotijLote.Text = string.Empty;
+            txtAdcQtdeBotijLote.Text = string.Empty;
+            maskAdcDtLote.Text = string.Empty;
+            txtAltKgBotijLote.Text = string.Empty;
+            txtAltQtdeLote.Text = string.Empty;
+            txtAltDtLote.Text = string.Empty;
+            txtAdcNmCompUsu.Text = string.Empty;
+            txtAdcNmUsuUsu.Text = string.Empty;
+            txtAdcSenhaUsu.Text = string.Empty;
+            txtAdcConfirSenhaUsu.Text = string.Empty;
+            txtConsNomeCompUsu.Text = string.Empty;
+            txtConsNmUsuUsu.Text = string.Empty;
+            txtAltNomeCompUsu.Text = string.Empty;
+            txtAltNomeUsuUsu.Text = string.Empty;
+            txtAltSenhaUsu.Text = string.Empty;
+            txtAltConfirSenhaUsu.Text = string.Empty;
+            txtRmvNomeCompUsu.Text = string.Empty;
+            txtRmvNomeUsuUsu.Text = string.Empty;
+            txtConsKgBotij.Text = string.Empty;
         }
         #endregion
 
@@ -262,7 +262,6 @@ namespace ProjTesteForm
 
         private void btnBotij_Click(object sender, EventArgs e)
         {
-            EsconderSubMenu();
             MostrarSubMenu(pnSubBotij);
         }
 
@@ -428,6 +427,14 @@ namespace ProjTesteForm
             else
             {
                 MessageBox.Show("Apenas o usuário GERENTE \npode realizar alterações!");
+            }
+        }
+
+        private void txtAltKgBotij_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
             }
         }
 
@@ -916,6 +923,6 @@ namespace ProjTesteForm
         #endregion
 
         #endregion
-        
+
     }
 }

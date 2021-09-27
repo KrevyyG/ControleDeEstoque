@@ -134,10 +134,10 @@ namespace ProjTesteForm
                             MessageBox.Show("Cadastro efetuado!");
                             Menu menu = new Menu();
                             menu.CamposPadrao();
-                            Menu.NomeCompUsu = "";
-                            Menu.NmUsuUsu = "";
-                            Menu.SenhaUsu = "";
-                            Menu.ConfSenhaUsu = "";
+                            Menu.NomeCompUsu = string.Empty;
+                            Menu.NmUsuUsu = string.Empty;
+                            Menu.SenhaUsu = string.Empty;
+                            Menu.ConfSenhaUsu = string.Empty;
                         }
                         else
                         {
@@ -241,10 +241,10 @@ namespace ProjTesteForm
                                 {
                                     MessageBox.Show("Alteração efetuada!");
                                     Menu menu = new Menu();
-                                    Menu.NomeCompUsu = "";
-                                    Menu.NmUsuUsu = "";
-                                    Menu.SenhaUsu = "";
-                                    Menu.ConfSenhaUsu = "";
+                                    Menu.NomeCompUsu = string.Empty;
+                                    Menu.NmUsuUsu = string.Empty;
+                                    Menu.SenhaUsu = string.Empty;
+                                    Menu.ConfSenhaUsu = string.Empty;
                                 }
                                 else
                                 {
@@ -289,10 +289,10 @@ namespace ProjTesteForm
                             if (retorno > 0)
                             {
                                 MessageBox.Show("Alteração efetuada");
-                                Menu.NomeCompUsu = "";
-                                Menu.NmUsuUsu = "";
-                                Menu.SenhaUsu = "";
-                                Menu.ConfSenhaUsu = "";
+                                Menu.NomeCompUsu = string.Empty;
+                                Menu.NmUsuUsu = string.Empty;
+                                Menu.SenhaUsu = string.Empty;
+                                Menu.ConfSenhaUsu = string.Empty;
                             }
                             else
                             {
@@ -335,6 +335,8 @@ namespace ProjTesteForm
                     Menu.NmUsuUsu = dr["NOMEUSU"].ToString();
                     if (Menu.NmUsuUsu != "GERENTE")
                     {
+                        cmd.Dispose();
+                        dr.Close();
                         sql = "DELETE USUARIO WHERE ID = " + id;
                         cmd = new SqlCommand(sql, conexao);
                         retorno = cmd.ExecuteNonQuery();
@@ -342,10 +344,10 @@ namespace ProjTesteForm
                         {
                             MessageBox.Show("Registro excluído!");
                             Menu menu = new Menu();
-                            Menu.NomeCompUsu = "";
-                            Menu.NmUsuUsu = "";
-                            Menu.SenhaUsu = "";
-                            Menu.ConfSenhaUsu = "";
+                            Menu.NomeCompUsu = string.Empty;
+                            Menu.NmUsuUsu = string.Empty;
+                            Menu.SenhaUsu = string.Empty;
+                            Menu.ConfSenhaUsu = string.Empty;
                         }
                         else
                         {
