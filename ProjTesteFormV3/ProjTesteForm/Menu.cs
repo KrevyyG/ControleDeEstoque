@@ -250,6 +250,9 @@ namespace ProjTesteForm
             txtRmvNomeCompUsu.Text = string.Empty;
             txtRmvNomeUsuUsu.Text = string.Empty;
             txtConsKgBotij.Text = string.Empty;
+            txtConsKgBotijLote.Text = string.Empty;
+            txtConsQtdeLote.Text = string.Empty;
+            txtConsDtLote.Text = string.Empty;
         }
         #endregion
 
@@ -576,6 +579,10 @@ namespace ProjTesteForm
 
         #region Região de Lote
 
+        public static string KgBotijaoLote { get; set; }
+        public static string QtdeBotijLote { get; set; }
+        public static string DataBotijLote { get; set; }
+
         // Abrir/Fechar submenu
         private void btnLote_Click(object sender, EventArgs e)
         {
@@ -637,16 +644,57 @@ namespace ProjTesteForm
         #endregion
 
         #region Região da rotina Alteração lote
+
         // Abrir rotina para alteração de lote
         private void btnAltLote_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
             MostrarRotinas(pnAltLote);
             CamposPadrao();
+            CarregarCbLoteAlt();
         }
         private void btnFecharRotAltLote_Click(object sender, EventArgs e)
         {
             pnAltLote.Visible = false;
+        }
+
+        public void CarregarCbLoteAlt()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM LOTE ORDER BY ID DESC";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbAltIdLote.DataSource = dt;
+                    cbAltIdLote.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox!");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
+        private void btnRotAltCarregarLote_Click(object sender, EventArgs e)
+        {
+
+            Lote lote = new Lote(int.Parse(cbAltIdLote.Text));
+            lote.ConsultarLote(int.Parse(cbAltIdLote.Text));
+            txtAltKgBotijLote.Text = KgBotijaoLote;
+            txtAltQtdeLote.Text = QtdeBotijLote;
+            txtAltDtLote.Text = DataBotijLote;
         }
         #endregion
 
@@ -656,12 +704,52 @@ namespace ProjTesteForm
         {
             EsconderSubMenu();
             MostrarRotinas(pnConsLote);
+            CarregarCbLoteCons();
             CamposPadrao();
         }
         private void btnFecharRotConsLote_Click(object sender, EventArgs e)
         {
             pnConsLote.Visible = false;
         }
+
+        public void CarregarCbLoteCons()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM LOTE ORDER BY ID DESC";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbConsIdLote.DataSource = dt;
+                    cbConsIdLote.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox!");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
+        private void btnRotConsLote_Click(object sender, EventArgs e)
+        {
+            Lote lote = new Lote(int.Parse(cbConsIdLote.Text));
+            lote.ConsultarLote(int.Parse(cbConsIdLote.Text));
+            txtConsKgBotijLote.Text = KgBotijaoLote;
+            txtConsQtdeLote.Text = QtdeBotijLote;
+            txtConsDtLote.Text = DataBotijLote;
+        }
+
         #endregion
         #endregion
 

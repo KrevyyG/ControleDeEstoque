@@ -104,5 +104,34 @@ namespace ProjTesteForm
             }
 
         }
+
+        public void ConsultarLote(int idLote)
+        {
+            string sql;
+            try
+            {
+                AbrirConexaoLote();
+                sql = "SELECT * FROM LOTE WHERE ID = " + idLote;
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    Menu.KgBotijaoLote = dr["KGBOTIJENV"].ToString();
+                    Menu.QtdeBotijLote = dr["QTDEENV"].ToString();
+                    Menu.DataBotijLote = dr["DATARECEB"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Registro não encontrado!!!");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql" + ex.Message);
+            }
+        }
     }
 }
