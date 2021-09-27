@@ -102,7 +102,7 @@ namespace ProjTesteForm
             this.btnRotAltCarregarLote = new System.Windows.Forms.Button();
             this.cbAltIdLote = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel32 = new System.Windows.Forms.FlowLayoutPanel();
-            this.maskConsDtLote = new System.Windows.Forms.MaskedTextBox();
+            this.maskAltDtLote = new System.Windows.Forms.MaskedTextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.btnRotAltLote = new System.Windows.Forms.Button();
             this.label38 = new System.Windows.Forms.Label();
@@ -252,8 +252,6 @@ namespace ProjTesteForm
             this.btnBotij = new System.Windows.Forms.Button();
             this.pnSeparador = new System.Windows.Forms.Panel();
             this.cbConsIdLote = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtConsDtLote = new System.Windows.Forms.MaskedTextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.btnRotConsLote = new System.Windows.Forms.Button();
             this.label64 = new System.Windows.Forms.Label();
@@ -264,6 +262,8 @@ namespace ProjTesteForm
             this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtConsKgBotijLote = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.maskConsDtLote = new System.Windows.Forms.MaskedTextBox();
             this.pnCentro.SuspendLayout();
             this.pnRmvUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotRmvUsuario)).BeginInit();
@@ -1095,9 +1095,9 @@ namespace ProjTesteForm
             // 
             // pnConsLote
             // 
-            this.pnConsLote.Controls.Add(this.cbConsIdLote);
             this.pnConsLote.Controls.Add(this.flowLayoutPanel4);
-            this.pnConsLote.Controls.Add(this.txtConsDtLote);
+            this.pnConsLote.Controls.Add(this.maskConsDtLote);
+            this.pnConsLote.Controls.Add(this.cbConsIdLote);
             this.pnConsLote.Controls.Add(this.label60);
             this.pnConsLote.Controls.Add(this.btnRotConsLote);
             this.pnConsLote.Controls.Add(this.label64);
@@ -1145,7 +1145,7 @@ namespace ProjTesteForm
             this.pnAltLote.Controls.Add(this.btnRotAltCarregarLote);
             this.pnAltLote.Controls.Add(this.cbAltIdLote);
             this.pnAltLote.Controls.Add(this.flowLayoutPanel32);
-            this.pnAltLote.Controls.Add(this.maskConsDtLote);
+            this.pnAltLote.Controls.Add(this.maskAltDtLote);
             this.pnAltLote.Controls.Add(this.label42);
             this.pnAltLote.Controls.Add(this.btnRotAltLote);
             this.pnAltLote.Controls.Add(this.label38);
@@ -1203,19 +1203,19 @@ namespace ProjTesteForm
             this.flowLayoutPanel32.Size = new System.Drawing.Size(68, 1);
             this.flowLayoutPanel32.TabIndex = 78;
             // 
-            // maskConsDtLote
+            // maskAltDtLote
             // 
-            this.maskConsDtLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.maskConsDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskConsDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskConsDtLote.ForeColor = System.Drawing.Color.White;
-            this.maskConsDtLote.Location = new System.Drawing.Point(392, 76);
-            this.maskConsDtLote.Mask = "00/00/0000";
-            this.maskConsDtLote.Name = "maskConsDtLote";
-            this.maskConsDtLote.Size = new System.Drawing.Size(68, 14);
-            this.maskConsDtLote.TabIndex = 77;
-            this.maskConsDtLote.TabStop = false;
-            this.maskConsDtLote.ValidatingType = typeof(System.DateTime);
+            this.maskAltDtLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.maskAltDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskAltDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskAltDtLote.ForeColor = System.Drawing.Color.White;
+            this.maskAltDtLote.Location = new System.Drawing.Point(392, 76);
+            this.maskAltDtLote.Mask = "00/00/0000";
+            this.maskAltDtLote.Name = "maskAltDtLote";
+            this.maskAltDtLote.Size = new System.Drawing.Size(68, 14);
+            this.maskAltDtLote.TabIndex = 77;
+            this.maskAltDtLote.TabStop = false;
+            this.maskAltDtLote.ValidatingType = typeof(System.DateTime);
             // 
             // label42
             // 
@@ -3266,30 +3266,6 @@ namespace ProjTesteForm
             this.cbConsIdLote.TabIndex = 120;
             this.cbConsIdLote.TabStop = false;
             // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(389, 92);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(68, 1);
-            this.flowLayoutPanel4.TabIndex = 119;
-            // 
-            // txtConsDtLote
-            // 
-            this.txtConsDtLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.txtConsDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConsDtLote.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtConsDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsDtLote.ForeColor = System.Drawing.Color.White;
-            this.txtConsDtLote.Location = new System.Drawing.Point(389, 79);
-            this.txtConsDtLote.Mask = "00/00/0000";
-            this.txtConsDtLote.Name = "txtConsDtLote";
-            this.txtConsDtLote.ReadOnly = true;
-            this.txtConsDtLote.Size = new System.Drawing.Size(68, 14);
-            this.txtConsDtLote.TabIndex = 118;
-            this.txtConsDtLote.TabStop = false;
-            this.txtConsDtLote.ValidatingType = typeof(System.DateTime);
-            // 
             // label60
             // 
             this.label60.AutoSize = true;
@@ -3408,6 +3384,28 @@ namespace ProjTesteForm
             this.label67.Size = new System.Drawing.Size(82, 16);
             this.label67.TabIndex = 108;
             this.label67.Text = "Kg do Botijão:";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(389, 91);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(68, 1);
+            this.flowLayoutPanel4.TabIndex = 122;
+            // 
+            // maskConsDtLote
+            // 
+            this.maskConsDtLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.maskConsDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskConsDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskConsDtLote.ForeColor = System.Drawing.Color.White;
+            this.maskConsDtLote.Location = new System.Drawing.Point(389, 78);
+            this.maskConsDtLote.Mask = "00/00/0000";
+            this.maskConsDtLote.Name = "maskConsDtLote";
+            this.maskConsDtLote.Size = new System.Drawing.Size(68, 14);
+            this.maskConsDtLote.TabIndex = 121;
+            this.maskConsDtLote.TabStop = false;
+            this.maskConsDtLote.ValidatingType = typeof(System.DateTime);
             // 
             // Menu
             // 
@@ -3650,7 +3648,7 @@ namespace ProjTesteForm
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Button btnRotAdcUsu;
         private System.Windows.Forms.MaskedTextBox maskAdcDtLote;
-        private System.Windows.Forms.MaskedTextBox maskConsDtLote;
+        private System.Windows.Forms.MaskedTextBox maskAltDtLote;
         private System.Windows.Forms.Button btnRotRmvUsu;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel28;
@@ -3705,8 +3703,6 @@ namespace ProjTesteForm
         private System.Windows.Forms.Button btnRotAltCarregarLote;
         private System.Windows.Forms.ComboBox cbAltIdLote;
         private System.Windows.Forms.ComboBox cbConsIdLote;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.MaskedTextBox txtConsDtLote;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Button btnRotConsLote;
         private System.Windows.Forms.Label label64;
@@ -3717,5 +3713,7 @@ namespace ProjTesteForm
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel19;
         private System.Windows.Forms.TextBox txtConsKgBotijLote;
         private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.MaskedTextBox maskConsDtLote;
     }
 }

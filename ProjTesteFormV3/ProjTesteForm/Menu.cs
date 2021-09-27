@@ -236,7 +236,7 @@ namespace ProjTesteForm
             maskAdcDtLote.Text = string.Empty;
             txtAltKgBotijLote.Text = string.Empty;
             txtAltQtdeLote.Text = string.Empty;
-            maskConsDtLote.Text = string.Empty;
+            maskAltDtLote.Text = string.Empty;
             txtAdcNmCompUsu.Text = string.Empty;
             txtAdcNmUsuUsu.Text = string.Empty;
             txtAdcSenhaUsu.Text = string.Empty;
@@ -252,7 +252,7 @@ namespace ProjTesteForm
             txtConsKgBotij.Text = string.Empty;
             txtConsKgBotijLote.Text = string.Empty;
             txtConsQtdeLote.Text = string.Empty;
-            txtConsDtLote.Text = string.Empty;
+            maskConsDtLote.Text = string.Empty;
         }
         #endregion
 
@@ -626,7 +626,7 @@ namespace ProjTesteForm
 
         private void btnRotAdcLote_Click(object sender, EventArgs e)
         {
-            if (txtAdcKgBotijLote.Text == "" || txtAdcQtdeBotijLote.Text == "" || maskAdcDtLote.Text == "  /  /")
+            if (txtAdcKgBotijLote.Text == string.Empty || txtAdcQtdeBotijLote.Text == string.Empty || maskAdcDtLote.Text == "  /  /")
             {
                 MessageBox.Show("Todos os campos são de \npreenchimento obrigatório!");
             }
@@ -692,15 +692,22 @@ namespace ProjTesteForm
             lote.ConsultarLote(int.Parse(cbAltIdLote.Text));
             txtAltKgBotijLote.Text = KgBotijaoLote;
             txtAltQtdeLote.Text = QtdeBotijLote;
-            maskConsDtLote.Text = DataBotijLote;
+            maskAltDtLote.Text = DataBotijLote;
         }
         private void btnRotAltLote_Click(object sender, EventArgs e)
         {
-            Lote lote = new Lote(int.Parse(cbAltIdLote.Text), int.Parse(txtAltKgBotijLote.Text), int.Parse(txtAltQtdeLote.Text), maskConsDtLote.Text, SessaoSistema.UsuLoginSessao);
-            lote.AlterarLote(int.Parse(cbAltIdLote.Text), int.Parse(txtAltKgBotijLote.Text), int.Parse(txtAltQtdeLote.Text), maskConsDtLote.Text, SessaoSistema.UsuLoginSessao);
-            txtAdcKgBotijLote.Text = KgBotijLote;
-            txtAdcQtdeBotijLote.Text = QtdeEnvLote;
-            maskAdcDtLote.Text = DataLote;
+            if (txtAltKgBotijLote.Text == string.Empty || txtAltQtdeLote.Text == string.Empty || maskAltDtLote.Text == "  /  /")
+            {
+                MessageBox.Show("Todos os campos são de \npreenchimento obrigatório!");
+            }
+            else
+            {
+                Lote lote = new Lote(int.Parse(cbAltIdLote.Text), int.Parse(txtAltKgBotijLote.Text), int.Parse(txtAltQtdeLote.Text), maskAltDtLote.Text, SessaoSistema.UsuLoginSessao);
+                lote.AlterarLote(int.Parse(cbAltIdLote.Text), int.Parse(txtAltKgBotijLote.Text), int.Parse(txtAltQtdeLote.Text), maskAltDtLote.Text, SessaoSistema.UsuLoginSessao);
+                txtAltKgBotijLote.Text = KgBotijLote;
+                txtAltQtdeLote.Text = QtdeEnvLote;
+                maskAltDtLote.Text = DataLote;
+            }     
         }
         #endregion
 
@@ -753,7 +760,7 @@ namespace ProjTesteForm
             lote.ConsultarLote(int.Parse(cbConsIdLote.Text));
             txtConsKgBotijLote.Text = KgBotijaoLote;
             txtConsQtdeLote.Text = QtdeBotijLote;
-            txtConsDtLote.Text = DataBotijLote;
+            maskConsDtLote.Text = DataBotijLote;
         }
 
         #endregion
