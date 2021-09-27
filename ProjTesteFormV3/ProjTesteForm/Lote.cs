@@ -63,33 +63,46 @@ namespace ProjTesteForm
             string sql;
             int retorno;
             AbrirConexaoLote();
+
             try
             {
-                sql = "INSERT INTO LOTE (KGBOTIJENV, QTDEENV, DATARECEB, USURESP) VALUES (" + kgBotij + ", " + qtdeEnv + ", '" + dataAtual + "', '" + nmUsu + "')";
+                sql = "SELECT * FROM BOTIJAO WHERE KGBOTIJ = " + kgBotij;
                 cmd = new SqlCommand(sql, conexao);
-                retorno = cmd.ExecuteNonQuery();
-                if (retorno > 0)
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
                 {
-                    MessageBox.Show("Cadastro efetuado");
-                    Menu.KgBotijLote = "";
-                    Menu.QtdeEnvLote = "";
-                    Menu.DataLote = "  /  /";
+                    dr.Close();
+                    cmd.Dispose();
+                    sql = "INSERT INTO LOTE (KGBOTIJENV, QTDEENV, DATARECEB, USURESP) VALUES (" + kgBotij + ", " + qtdeEnv + ", '" + dataAtual + "', '" + nmUsu + "')";
+                    cmd = new SqlCommand(sql, conexao);
+                    retorno = cmd.ExecuteNonQuery();
+                    if (retorno > 0)
+                    {
+                        MessageBox.Show("Cadastro efetuado !!!");
+                        Menu.KgBotijLote = string.Empty;
+                        Menu.QtdeEnvLote = string.Empty;
+                        Menu.DataLote = string.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cadastro não realizado !!!");
+                        Menu.KgBotijLote = kgBotij.ToString();
+                        Menu.QtdeEnvLote = qtdeEnv.ToString();
+                        Menu.DataLote = dataAtual;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Cadastro não realizado");
-                    Menu.KgBotijLote = kgBotij.ToString();
-                    Menu.QtdeEnvLote = qtdeEnv.ToString();
-                    Menu.DataLote = dataAtual;
+                    MessageBox.Show("Permitido apenas o cadastro de lote \npara botijões previamente cadastrados!");
                 }
+                dr.Close();
                 cmd.Dispose();
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro no comando sql: " + ex.Message);
+                MessageBox.Show("Erro no comando sql" + ex.Message);
             }
 
         }
-
     }
 }
