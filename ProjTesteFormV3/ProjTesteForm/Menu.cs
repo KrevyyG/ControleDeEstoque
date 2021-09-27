@@ -236,7 +236,7 @@ namespace ProjTesteForm
             maskAdcDtLote.Text = string.Empty;
             txtAltKgBotijLote.Text = string.Empty;
             txtAltQtdeLote.Text = string.Empty;
-            txtAltDtLote.Text = string.Empty;
+            maskConsDtLote.Text = string.Empty;
             txtAdcNmCompUsu.Text = string.Empty;
             txtAdcNmUsuUsu.Text = string.Empty;
             txtAdcSenhaUsu.Text = string.Empty;
@@ -657,7 +657,6 @@ namespace ProjTesteForm
         {
             pnAltLote.Visible = false;
         }
-
         public void CarregarCbLoteAlt()
         {
 
@@ -686,7 +685,6 @@ namespace ProjTesteForm
                 MessageBox.Show("Erro no comando sql: " + ex.Message);
             }
         }
-
         private void btnRotAltCarregarLote_Click(object sender, EventArgs e)
         {
 
@@ -694,7 +692,15 @@ namespace ProjTesteForm
             lote.ConsultarLote(int.Parse(cbAltIdLote.Text));
             txtAltKgBotijLote.Text = KgBotijaoLote;
             txtAltQtdeLote.Text = QtdeBotijLote;
-            txtAltDtLote.Text = DataBotijLote;
+            maskConsDtLote.Text = DataBotijLote;
+        }
+        private void btnRotAltLote_Click(object sender, EventArgs e)
+        {
+            Lote lote = new Lote(int.Parse(cbAltIdLote.Text), int.Parse(txtAltKgBotijLote.Text), int.Parse(txtAltQtdeLote.Text), maskConsDtLote.Text, SessaoSistema.UsuLoginSessao);
+            lote.AlterarLote(int.Parse(cbAltIdLote.Text), int.Parse(txtAltKgBotijLote.Text), int.Parse(txtAltQtdeLote.Text), maskConsDtLote.Text, SessaoSistema.UsuLoginSessao);
+            txtAdcKgBotijLote.Text = KgBotijLote;
+            txtAdcQtdeBotijLote.Text = QtdeEnvLote;
+            maskAdcDtLote.Text = DataLote;
         }
         #endregion
 
@@ -1012,5 +1018,6 @@ namespace ProjTesteForm
 
         #endregion
 
+        
     }
 }

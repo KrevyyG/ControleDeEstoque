@@ -133,5 +133,50 @@ namespace ProjTesteForm
                 MessageBox.Show("Erro no comando sql" + ex.Message);
             }
         }
+
+        public void AlterarLote(int idLote, int kgBotij, int qtdeEnv, string dataAtual, string nmUsu)
+        {
+            string sql;
+            int retorno;
+            AbrirConexaoLote();
+            try
+            {
+                sql = "SELECT * FROM BOTIJAO WHERE KGBOTIJ = " + kgBotij;
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Close();
+                    cmd.Dispose();
+                    sql = "UPDATE LOTE SET KGBOTIJENV = "+ kgBotij + ", QTDEENV = " + qtdeEnv + ", DATARECEB = '"+ dataAtual + "', USURESP = '" + nmUsu + "' WHERE ID = " + idLote;
+                    cmd = new SqlCommand(sql, conexao);
+                    retorno = cmd.ExecuteNonQuery();
+                    if (retorno > 0)
+                    {
+                        MessageBox.Show("Alteração efetuada !!!");
+                        Menu.KgBotijLote = string.Empty;
+                        Menu.QtdeEnvLote = string.Empty;
+                        Menu.DataLote = string.Empty;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Alteração não efetuada !!!");
+                        Menu.KgBotijLote = kgBotij.ToString();
+                        Menu.QtdeEnvLote = qtdeEnv.ToString();
+                        Menu.DataLote = dataAtual;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Permitido apenas o cadastro de lote \npara botijões previamente cadastrados!");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql" + ex.Message);
+            }
+        }
     }
 }
