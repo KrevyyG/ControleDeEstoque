@@ -221,7 +221,6 @@ namespace ProjTesteForm
             txtAdcKgBotij.Text = string.Empty;
             txtAltKgBotij.Text = string.Empty;
             txtRmvKgBotij.Text = string.Empty;
-            txtAdcIdLoteEstoque.Text = string.Empty;
             txtAdcKgBotijEstoque.Text = string.Empty;
             txtAdcIdBotijEstoque.Text = string.Empty;
             txtAdcKgBotijEstoque.Text = string.Empty;
@@ -229,6 +228,7 @@ namespace ProjTesteForm
             rdbAbtQtdeSBotijNao.Checked = false;
             txtRmvKgBotijEstoque.Text = string.Empty;
             txtRmvQtdeEstoque.Text = string.Empty;
+            txtAdcQtdeLoteEstoque.Text = string.Empty;
             rdbRetBotijSim.Checked = false;
             rdbRetBotijNao.Checked = false;
             txtAdcKgBotijLote.Text = string.Empty;
@@ -253,16 +253,20 @@ namespace ProjTesteForm
             txtConsKgBotijLote.Text = string.Empty;
             txtConsQtdeLote.Text = string.Empty;
             maskConsDtLote.Text = string.Empty;
+            txtConsKgBotijEstoque.Text = string.Empty;
+            txtConsQtdeCheiaEstoque.Text = string.Empty;
+            txtConsQtdeVaziaEstoque.Text = string.Empty;
+            txtConsQtdeSemBotijEstoque.Text = string.Empty;
+            txtConsIdUltLoteEstoque.Text = string.Empty;
+            txtConsUsuRespEstoque.Text = string.Empty;
         }
         #endregion
 
         #region Região de Botijão
-
+        public static string KgBotij { get; set; }
+        public static string IdBotij { get; set; }
 
         // Abrir/Fechar submenu
-
-        public static string KgBotij { get; set; }
-
         private void btnBotij_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(pnSubBotij);
@@ -281,7 +285,7 @@ namespace ProjTesteForm
         private void btnFecharRotAdcBotij_Click(object sender, EventArgs e)
         {
             pnAdcBotij.Visible = false;
-            txtAdcKgBotij.Text = "";
+            txtAdcKgBotij.Text = string.Empty;
         }
 
         // Botão para adicionar botijão
@@ -289,8 +293,8 @@ namespace ProjTesteForm
         {
             if (txtAdcKgBotij.Text != "2" && txtAdcKgBotij.Text != "5" && txtAdcKgBotij.Text != "8" && txtAdcKgBotij.Text != "13" && txtAdcKgBotij.Text != "20" && txtAdcKgBotij.Text != "45" && txtAdcKgBotij.Text != "90")
             {
-                MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
-                txtAdcKgBotij.Text = "";
+                MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg.");
+                txtAdcKgBotij.Text = string.Empty;
             }
             else
             {
@@ -311,8 +315,8 @@ namespace ProjTesteForm
         #endregion
 
         #region Região da rotina Consultar Botijão
-        // Botão para abrir rotina de consulta de botijões
 
+        // Método para carregar comboBox da rotina
         public void CarregarCbBotijCons()
         {
 
@@ -331,7 +335,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Imposível carregar comboBox!");
+                    MessageBox.Show("Imposível carregar comboBox.");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -342,6 +346,7 @@ namespace ProjTesteForm
             }
         }
 
+        // Botão para abrir rotina de consulta de botijões
         private void btnConsBotij_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
@@ -354,8 +359,9 @@ namespace ProjTesteForm
         private void btnFecharRotConsBotij_Click(object sender, EventArgs e)
         {
             pnConsBotij.Visible = false;
+            txtConsKgBotij.Text = string.Empty;
         }
-
+        // Botão para consultar de botijões
         private void btnRotConsBotij_Click(object sender, EventArgs e)
         {
             Botijao consBotij = new Botijao(int.Parse(cbConsIdBotij.Text));
@@ -366,7 +372,7 @@ namespace ProjTesteForm
         #endregion
 
         #region Região da rotina Alterar Botijão
-
+        // Médtodo para carregar comboBox da rotina
         public void CarregarCbBotijAlt()
         {
 
@@ -385,7 +391,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Imposível carregar comboBox!");
+                    MessageBox.Show("Imposível carregar comboBox.");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -409,16 +415,18 @@ namespace ProjTesteForm
         private void btnFecharRotAltBotij_Click(object sender, EventArgs e)
         {
             pnAltBotij.Visible = false;
+            txtAltKgBotij.Text = string.Empty;
         }
 
+        // Botão para Alterar botijões
         private void btnRotAltBotij_Click(object sender, EventArgs e)
         {
             if (SessaoSistema.UsuLoginSessao == "GERENTE")
             {
                 if (txtAltKgBotij.Text != "2" && txtAltKgBotij.Text != "5" && txtAltKgBotij.Text != "8" && txtAltKgBotij.Text != "13" && txtAltKgBotij.Text != "20" && txtAltKgBotij.Text != "45" && txtAltKgBotij.Text != "90")
                 {
-                    MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg");
-                    txtAltKgBotij.Text = "";
+                    MessageBox.Show("Só possível cadastrar botijões de \n2Kg, 5Kg, 8Kg, 13Kg, 20Kg, 45Kg e 90Kg.");
+                    txtAltKgBotij.Text = string.Empty;
                 }
                 else
                 {
@@ -433,6 +441,7 @@ namespace ProjTesteForm
             }
         }
 
+        // Evento para permitir apenas números no campo
         private void txtAltKgBotij_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -445,6 +454,7 @@ namespace ProjTesteForm
 
         #region Região da rotina Remover Botijão
 
+        // Método para cagar comboBox da rotina
         public void CarregarCbBotijRmv()
         {
 
@@ -463,7 +473,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Imposível carregar comboBox!");
+                    MessageBox.Show("Imposível carregar comboBox.");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -487,8 +497,10 @@ namespace ProjTesteForm
         private void btnFecharRotRmvBotij_Click(object sender, EventArgs e)
         {
             pnRmvBotij.Visible = false;
+            txtRmvKgBotij.Text = string.Empty;
         }
 
+        // Botão para carregar dados do botijão
         private void btnRotRmvCarregarBotij_Click(object sender, EventArgs e)
         {
             Botijao consBotij = new Botijao(int.Parse(cbRmvIdBotij.Text));
@@ -496,6 +508,7 @@ namespace ProjTesteForm
             txtRmvKgBotij.Text = KgBotij;
         }
 
+        // Botão para remover botijão
         private void btnRotRmvBotij_Click(object sender, EventArgs e)
         {
             if (SessaoSistema.UsuLoginSessao == "GERENTE")
@@ -507,8 +520,8 @@ namespace ProjTesteForm
             }
             else
             {
-                MessageBox.Show("Apenas o usuário GERENTE \npode realizar exclusões!");
-            }  
+                MessageBox.Show("Apenas o usuário GERENTE \npode realizar exclusões.");
+            }
         }
 
         #endregion
@@ -524,55 +537,285 @@ namespace ProjTesteForm
         }
 
         #region Região da rotina Adicionar estoque
+        public static bool abateSemBotij = false;
+
         //Abrir rotina para adição de estoque
         private void btnAdcEstoque_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
             MostrarRotinas(pnAdcEstoque);
             CamposPadrao();
+            CarregarCbAdcBotijIdLote();
         }
 
         // Botão para fechar rotina
         private void btnFecharRotAdcEstoque_Click(object sender, EventArgs e)
         {
             pnAdcEstoque.Visible = false;
-            txtAdcIdBotijEstoque.Text = "";
-            txtAdcKgBotijEstoque.Text = "";
-            txtAdcIdLoteEstoque.Text = "";
-            txtAdcQtdeLoteEstoque.Text = "";
+            txtAdcIdBotijEstoque.Text = string.Empty;
+            txtAdcKgBotijEstoque.Text = string.Empty;
+            txtAdcQtdeLoteEstoque.Text = string.Empty;
             rdbAbtQtdeSBotijSim.Checked = false;
             rdbAbtQtdeSBotijNao.Checked = false;
+        }
+
+        // Método para carregar comboBox da rotina
+        public void CarregarCbAdcBotijIdLote()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM LOTE ORDER BY ID DESC";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbAdcBotijIdLote.DataSource = dt;
+                    cbAdcBotijIdLote.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox.");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
+        // Botão para carregar dados
+        private void btnRotAdcBotijCarregarLote_Click(object sender, EventArgs e)
+        {
+            Lote lote = new Lote(int.Parse(cbAdcBotijIdLote.Text));
+            lote.ConsultarLote(int.Parse(cbAdcBotijIdLote.Text));
+            txtAdcKgBotijEstoque.Text = KgBotijaoLote;
+            txtAdcQtdeLoteEstoque.Text = QtdeBotijLote;
+            Botijao botij = new Botijao();
+            botij.ConsultarIDBotijao(int.Parse(KgBotijaoLote));
+            txtAdcIdBotijEstoque.Text = IdBotij;
+        }
+
+        // Botão para adicionar estoque
+        private void btnRotAdcEstoque_Click(object sender, EventArgs e)
+        {
+            if (rdbAbtQtdeSBotijSim.Checked == false && rdbAbtQtdeSBotijNao.Checked == false)
+            {
+                MessageBox.Show("Selecione uma opção para \nabate de botijão.");
+            }
+            else
+            {
+                if (rdbAbtQtdeSBotijSim.Checked == true)
+                {
+                    abateSemBotij = true;
+                    Botijao estoque = new Botijao();
+                    estoque.AdicionarEstoque(int.Parse(cbAdcBotijIdLote.Text), abateSemBotij, SessaoSistema.UsuLoginSessao);
+                    txtAdcKgBotijEstoque.Text = KgBotijaoLote;
+                    txtAdcQtdeLoteEstoque.Text = QtdeBotijLote;
+                    txtAdcIdBotijEstoque.Text = IdBotij;
+                    rdbAbtQtdeSBotijSim.Checked = false;
+                    rdbAbtQtdeSBotijNao.Checked = false;
+                }
+                else
+                {
+                    abateSemBotij = false;
+                    Botijao estoque = new Botijao();
+                    estoque.AdicionarEstoque(int.Parse(cbAdcBotijIdLote.Text), abateSemBotij, SessaoSistema.UsuLoginSessao);
+                    txtAdcKgBotijEstoque.Text = KgBotijaoLote;
+                    txtAdcQtdeLoteEstoque.Text = QtdeBotijLote;
+                    txtAdcIdBotijEstoque.Text = IdBotij;
+                    rdbAbtQtdeSBotijSim.Checked = false;
+                    rdbAbtQtdeSBotijNao.Checked = false;
+                }
+            }
         }
         #endregion
 
         #region Região da rotina Remover estoque
+        public static bool retBotij;
+
         //Abrir rotina para remoção de estoque
         private void btnRmvEstoque_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
             MostrarRotinas(pnRmvEstoque);
             CamposPadrao();
+            CarregarCbRmvIdBotijEstoque();
         }
 
+        //Botão x para fechar a rotina
         private void btnFecharRotRmvEstoque_Click(object sender, EventArgs e)
         {
             pnRmvEstoque.Visible = false;
+            txtRmvKgBotijEstoque.Text = string.Empty;
+            txtRmvQtdeEstoque.Text = string.Empty;
+            rdbRetBotijSim.Checked = false;
+            rdbRetBotijNao.Checked = false;
         }
+
+        //Método para carregar comboBox da rotina
+        public void CarregarCbRmvIdBotijEstoque()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM BOTIJAO";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbRmvIdBotijEstoque.DataSource = dt;
+                    cbRmvIdBotijEstoque.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox.");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
+        //Botão para carregar dados
+        private void btnRotRmvBotijCarregar_Click(object sender, EventArgs e)
+        {
+            Botijao consEstoque = new Botijao(int.Parse(cbRmvIdBotijEstoque.Text));
+            consEstoque.ConsultarEstoque(int.Parse(cbRmvIdBotijEstoque.Text));
+            txtRmvKgBotijEstoque.Text = KgBotijEstoque;
+        }
+
+        //Botão para remover estoque
+        private void btnRotRmvEstoque_Click(object sender, EventArgs e)
+        {
+            if (rdbRetBotijSim.Checked == false && rdbRetBotijNao.Checked == false)
+            {
+                MessageBox.Show("Selecione uma opção para \nretorno de botijão.");
+            }
+            else if (txtRmvQtdeEstoque.Text == "")
+            {
+                MessageBox.Show("Necessário adicionar uma quantidade \npara ser removida do estoque.");
+            }
+            else
+            {
+                if (rdbRetBotijSim.Checked == true)
+                {
+                    retBotij = true;
+                    Botijao estoque = new Botijao();
+                    estoque.RemoverEstoque(int.Parse(cbRmvIdBotijEstoque.Text), int.Parse(txtRmvQtdeEstoque.Text), retBotij);
+                    txtRmvKgBotijEstoque.Text = KgBotijaoLote;
+                    txtRmvQtdeEstoque.Text = QtdeBotijLote;
+                    rdbAbtQtdeSBotijSim.Checked = false;
+                    rdbAbtQtdeSBotijNao.Checked = false;
+                }
+                else
+                {
+                    retBotij = false;
+                    Botijao estoque = new Botijao();
+                    estoque.RemoverEstoque(int.Parse(cbRmvIdBotijEstoque.Text), int.Parse(txtRmvQtdeEstoque.Text), retBotij);
+                    txtRmvKgBotijEstoque.Text = KgBotijaoLote;
+                    txtRmvQtdeEstoque.Text = QtdeBotijLote;
+                    rdbAbtQtdeSBotijSim.Checked = false;
+                    rdbAbtQtdeSBotijNao.Checked = false;
+                }
+            }
+        }
+
+        //Evento para limitar campo para aceitar apenas números
+        private void txtRmvQtdeEstoque_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
         #endregion
 
         #region Região da rotina Consultar estoque
+        public static string IdBotijEstoque;
+        public static string KgBotijEstoque;
+        public static string QtdeCheiaEstoque;
+        public static string QtdeVaziaEstoque;
+        public static string QtdeSemBotijEstoque;
+        public static string IdUltLoteEstoque;
+        public static string UsuRespEstoque;
+
         //Abrir rotina para consulta de estoque
         private void btnConsEstoque_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
             MostrarRotinas(pnConsEstoque);
             CamposPadrao();
+            CarregarCbConsEstoqueIdBotij();
         }
 
+        //Botão x para fechar a rotina
         private void btnFecharRotConsEstoque_Click(object sender, EventArgs e)
         {
             pnConsEstoque.Visible = false;
+            txtConsKgBotijEstoque.Text = string.Empty;
+            txtConsQtdeCheiaEstoque.Text = string.Empty;
+            txtConsQtdeVaziaEstoque.Text = string.Empty;
+            txtConsQtdeSemBotijEstoque.Text = string.Empty;
+            txtConsIdUltLoteEstoque.Text = string.Empty;
+            txtConsUsuRespEstoque.Text = string.Empty;
         }
+
+        //Método para carregar comboBox da rotina
+        public void CarregarCbConsEstoqueIdBotij()
+        {
+
+            string sql;
+            try
+            {
+                sql = "SELECT ID FROM BOTIJAO";
+                cmd = new SqlCommand(sql, conexao);
+                dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                if (dr.HasRows)
+                {
+                    dt.Load(dr);
+                    cbConsEstoqueIdBotij.DataSource = dt;
+                    cbConsEstoqueIdBotij.DisplayMember = "ID";
+                }
+                else
+                {
+                    MessageBox.Show("Imposível carregar comboBox.");
+                }
+                dr.Close();
+                cmd.Dispose();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
+            }
+        }
+
+        //Botão para consultar estoque
+        private void btnRotConsEstoque_Click(object sender, EventArgs e)
+        {
+            Botijao consEstoque = new Botijao(int.Parse(cbConsEstoqueIdBotij.Text));
+            consEstoque.ConsultarEstoque(int.Parse(cbConsEstoqueIdBotij.Text));
+            txtConsKgBotijEstoque.Text = KgBotijEstoque;
+            txtConsQtdeCheiaEstoque.Text = QtdeCheiaEstoque;
+            txtConsQtdeVaziaEstoque.Text = QtdeVaziaEstoque;
+            txtConsQtdeSemBotijEstoque.Text = QtdeSemBotijEstoque;
+            txtConsIdUltLoteEstoque.Text = IdUltLoteEstoque;
+            txtConsUsuRespEstoque.Text = UsuRespEstoque;
+        }
+
         #endregion
 
         #endregion
@@ -590,12 +833,11 @@ namespace ProjTesteForm
         }
 
         #region Região da rotina Adicionar lote
-        // Abrir rotina para adição de lote
-
         public static string KgBotijLote { get; set; }
         public static string QtdeEnvLote { get; set; }
         public static string DataLote { get; set; }
 
+        // Abrir rotina para adição de lote
         private void btnAdcLote_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
@@ -603,11 +845,16 @@ namespace ProjTesteForm
             CamposPadrao();
         }
 
+        // Botão x para fechar a rotina
         private void btnFecharRotAdcLote_Click(object sender, EventArgs e)
         {
             pnAdcLote.Visible = false;
+            txtAdcKgBotijLote.Text = string.Empty;
+            txtAdcQtdeBotijLote.Text = string.Empty;
+            maskAdcDtLote.Text = string.Empty;
         }
 
+        // Evento para limitar campo aceitar apenas números
         private void txtAdcKgBotijLote_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -616,6 +863,7 @@ namespace ProjTesteForm
             }
         }
 
+        // Evento para limitar campo aceitar apenas números
         private void txtAdcQtdeBotijLote_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
@@ -624,11 +872,12 @@ namespace ProjTesteForm
             }
         }
 
+        // Botão para adicionar lote
         private void btnRotAdcLote_Click(object sender, EventArgs e)
         {
             if (txtAdcKgBotijLote.Text == string.Empty || txtAdcQtdeBotijLote.Text == string.Empty || maskAdcDtLote.Text == "  /  /")
             {
-                MessageBox.Show("Todos os campos são de \npreenchimento obrigatório!");
+                MessageBox.Show("Todos os campos são de \npreenchimento obrigatório.");
             }
             else
             {
@@ -640,7 +889,6 @@ namespace ProjTesteForm
 
             }
         }
-
         #endregion
 
         #region Região da rotina Alteração lote
@@ -653,10 +901,17 @@ namespace ProjTesteForm
             CamposPadrao();
             CarregarCbLoteAlt();
         }
+
+        // Botão x para fechar a rotina
         private void btnFecharRotAltLote_Click(object sender, EventArgs e)
         {
             pnAltLote.Visible = false;
+            txtAltKgBotijLote.Text = string.Empty;
+            txtAltQtdeLote.Text = string.Empty;
+            maskAltDtLote.Text = string.Empty;
         }
+
+        // Método para carregar comboBox da rotina
         public void CarregarCbLoteAlt()
         {
 
@@ -675,7 +930,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Imposível carregar comboBox!");
+                    MessageBox.Show("Imposível carregar comboBox.");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -685,6 +940,8 @@ namespace ProjTesteForm
                 MessageBox.Show("Erro no comando sql: " + ex.Message);
             }
         }
+
+        // Botão carregar dados
         private void btnRotAltCarregarLote_Click(object sender, EventArgs e)
         {
 
@@ -694,11 +951,13 @@ namespace ProjTesteForm
             txtAltQtdeLote.Text = QtdeBotijLote;
             maskAltDtLote.Text = DataBotijLote;
         }
+
+        // Botão para alterar Lote
         private void btnRotAltLote_Click(object sender, EventArgs e)
         {
             if (txtAltKgBotijLote.Text == string.Empty || txtAltQtdeLote.Text == string.Empty || maskAltDtLote.Text == "  /  /")
             {
-                MessageBox.Show("Todos os campos são de \npreenchimento obrigatório!");
+                MessageBox.Show("Todos os campos são de \npreenchimento obrigatório.");
             }
             else
             {
@@ -707,7 +966,25 @@ namespace ProjTesteForm
                 txtAltKgBotijLote.Text = KgBotijLote;
                 txtAltQtdeLote.Text = QtdeEnvLote;
                 maskAltDtLote.Text = DataLote;
-            }     
+            }
+        }
+
+        // Evento para limitar campo a aceitar apenas números
+        private void txtAltKgBotijLote_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        // Evento para limitar campo a aceitar apenas números
+        private void txtAltQtdeLote_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
         #endregion
 
@@ -720,11 +997,17 @@ namespace ProjTesteForm
             CarregarCbLoteCons();
             CamposPadrao();
         }
+
+        // Botão x para fechar a rotina
         private void btnFecharRotConsLote_Click(object sender, EventArgs e)
         {
             pnConsLote.Visible = false;
+            txtConsKgBotijLote.Text = string.Empty;
+            txtConsQtdeLote.Text = string.Empty;
+            maskConsDtLote.Text = string.Empty;
         }
 
+        // Método para carregar comboBox da rotina
         public void CarregarCbLoteCons()
         {
 
@@ -743,7 +1026,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Imposível carregar comboBox!");
+                    MessageBox.Show("Imposível carregar comboBox.");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -754,6 +1037,7 @@ namespace ProjTesteForm
             }
         }
 
+        // Botão para consultar Lote
         private void btnRotConsLote_Click(object sender, EventArgs e)
         {
             Lote lote = new Lote(int.Parse(cbConsIdLote.Text));
@@ -767,13 +1051,12 @@ namespace ProjTesteForm
         #endregion
 
         #region Região de Usuários
-        // Abrir/Fechar submenu
-
         public static string NomeCompUsu { get; set; }
         public static string NmUsuUsu { get; set; }
         public static string SenhaUsu { get; set; }
         public static string ConfSenhaUsu { get; set; }
 
+        // Abrir/Fechar submenu
         private void btnUsu_Click(object sender, EventArgs e)
         {
             MostrarSubMenu(pnSubUsu);
@@ -789,20 +1072,23 @@ namespace ProjTesteForm
             CamposPadrao();
 
         }
+
+        //Botão x para fechar a rotina
         private void btnFecharRotAdcUsuario_Click(object sender, EventArgs e)
         {
             pnAdcUsuario.Visible = false;
-            txtAdcNmCompUsu.Text = "";
-            txtAdcNmUsuUsu.Text = "";
-            txtAdcSenhaUsu.Text = "";
-            txtAdcConfirSenhaUsu.Text = "";
+            txtAdcNmCompUsu.Text = string.Empty;
+            txtAdcNmUsuUsu.Text = string.Empty;
+            txtAdcSenhaUsu.Text = string.Empty;
+            txtAdcConfirSenhaUsu.Text = string.Empty;
         }
 
+        //Botão para adicionar usuário
         private void btnRotAdcUsu_Click(object sender, EventArgs e)
         {
             if (txtAdcNmCompUsu.Text == "" || txtAdcNmUsuUsu.Text == "" || txtAdcSenhaUsu.Text == "")
             {
-                MessageBox.Show("Todsos os campos \nsão obrigatórios!");
+                MessageBox.Show("Todsos os campos \nsão obrigatórios.");
             }
             else
             {
@@ -813,14 +1099,12 @@ namespace ProjTesteForm
                 txtAdcSenhaUsu.Text = SenhaUsu;
                 txtAdcConfirSenhaUsu.Text = ConfSenhaUsu;
             }
-            
+
         }
         #endregion
 
         #region Região da rotina Consultar usuários
-        //Abrir rotina para consulta de usuários
         //Metodo para carregar ComboBox de Consulta de Usuario
-
         public void CarregarCbUsuCons()
         {
 
@@ -849,6 +1133,8 @@ namespace ProjTesteForm
                 MessageBox.Show("Erro no comando sql" + ex.Message);
             }
         }
+
+        //Abrir rotina para consulta de usuários
         private void btnConsUsu_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
@@ -856,12 +1142,16 @@ namespace ProjTesteForm
             CarregarCbUsuCons();
             CamposPadrao();
         }
+
+        //Botão x para fechar a rotina
         private void btnFecharRotConsUsuario_Click(object sender, EventArgs e)
         {
             pnConsUsuario.Visible = false;
-            txtConsNomeCompUsu.Text = "";
-            txtConsNmUsuUsu.Text = "";
+            txtConsNomeCompUsu.Text = string.Empty;
+            txtConsNmUsuUsu.Text = string.Empty;
         }
+
+        //Botão para consultar usuário
         private void btnRotConsUsu_Click(object sender, EventArgs e)
         {
             Usuarios usuario = new Usuarios(int.Parse(cbConsIdUsu.Text));
@@ -873,7 +1163,7 @@ namespace ProjTesteForm
         #endregion
 
         #region Região da rotina Alterar usuários
-        //Abrir rotina para alteração de usuários
+        //Método para carregar comboBox da rotina
         public void CarregarCbUsuAlt()
         {
 
@@ -892,7 +1182,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Imposível carregar comboBox!");
+                    MessageBox.Show("Imposível carregar comboBox.");
                 }
                 dr.Close();
                 cmd.Dispose();
@@ -902,6 +1192,8 @@ namespace ProjTesteForm
                 MessageBox.Show("Erro no comando sql" + ex.Message);
             }
         }
+
+        //Abrir rotina para alteração de usuários
         private void btnAltUsu_Click(object sender, EventArgs e)
         {
             EsconderSubMenu();
@@ -909,14 +1201,18 @@ namespace ProjTesteForm
             CarregarCbUsuAlt();
             CamposPadrao();
         }
+
+        //Botão x para fechar rotina
         private void btnFecharRotAltUsuario_Click(object sender, EventArgs e)
         {
             pnAltUsuario.Visible = false;
-            txtAltNomeCompUsu.Text = "";
-            txtAltNomeUsuUsu.Text = "";
-            txtAltSenhaUsu.Text = "";
-            txtAltConfirSenhaUsu.Text = "";
+            txtAltNomeCompUsu.Text = string.Empty;
+            txtAltNomeUsuUsu.Text = string.Empty;
+            txtAltSenhaUsu.Text = string.Empty;
+            txtAltConfirSenhaUsu.Text = string.Empty;
         }
+
+        //Botão para carregar dados
         private void btnRotAltCarregarUsu_Click(object sender, EventArgs e)
         {
             Usuarios usuario = new Usuarios(int.Parse(cbAltIdUsu.Text));
@@ -924,13 +1220,15 @@ namespace ProjTesteForm
             txtAltNomeCompUsu.Text = NomeCompUsu;
             txtAltNomeUsuUsu.Text = NmUsuUsu;
         }
+
+        //Botão para Alterar usuário
         private void btnRotAltUsu_Click(object sender, EventArgs e)
         {
             if (SessaoSistema.UsuLoginSessao == "GERENTE")
             {
                 if (txtAltNomeCompUsu.Text == "" || txtAltNomeUsuUsu.Text == "" || txtAltSenhaUsu.Text == "")
                 {
-                    MessageBox.Show("Todos os campos \nsão obrigatórios!");
+                    MessageBox.Show("Todos os campos \nsão obrigatórios.");
                 }
                 else
                 {
@@ -944,16 +1242,16 @@ namespace ProjTesteForm
             }
             else
             {
-                MessageBox.Show("Apenas o usuário GERENTE \npode realizar alterações!");
+                MessageBox.Show("Apenas o usuário GERENTE \npode realizar alterações.");
             }
-            
-            
+
+
         }
 
         #endregion
 
         #region Região da rotina Remover usuários
-
+        //Método para carregar combobox da rotina
         public void CarregarCbUsuRmv()
         {
 
@@ -991,12 +1289,16 @@ namespace ProjTesteForm
             CarregarCbUsuRmv();
             CamposPadrao();
         }
+
+        //Botão x para fechar a rotina
         private void btnFecharRotRmvUsuario_Click(object sender, EventArgs e)
         {
             pnRmvUsuario.Visible = false;
-            txtRmvNomeCompUsu.Text = "";
-            txtRmvNomeUsuUsu.Text = "";
+            txtRmvNomeCompUsu.Text = string.Empty;
+            txtRmvNomeUsuUsu.Text = string.Empty;
         }
+
+        //Botão para carregar dados
         private void btnRotRmvCarregarUsu_Click(object sender, EventArgs e)
         {
             Usuarios usuario = new Usuarios(int.Parse(cbRmvIdUsu.Text));
@@ -1004,6 +1306,8 @@ namespace ProjTesteForm
             txtRmvNomeCompUsu.Text = NomeCompUsu;
             txtRmvNomeUsuUsu.Text = NmUsuUsu;
         }
+
+        //Botão para remover usuário
         private void btnRotRmvUsu_Click(object sender, EventArgs e)
         {
 
@@ -1017,14 +1321,11 @@ namespace ProjTesteForm
             }
             else
             {
-                MessageBox.Show("Apenas o usuário GERENTE \npode realizar exclusões!");
+                MessageBox.Show("Apenas o usuário GERENTE \npode realizar exclusões.");
             }
-            
+
         }
         #endregion
-
-        #endregion
-
-        
+        #endregion  
     }
 }

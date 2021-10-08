@@ -74,14 +74,14 @@ namespace ProjTesteForm
                     }
                     else
                     {
-                        MessageBox.Show("Senha incorreta!");
+                        MessageBox.Show("Senha incorreta.");
                         
                     }
                     dr.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Usuário não encontrado!");
+                    MessageBox.Show("Usuário não encontrado.");
                 }
                 cmd.Dispose();
                 conexao.Close();
@@ -106,7 +106,7 @@ namespace ProjTesteForm
                 dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {
-                    MessageBox.Show("Nome de Usuário ja utilizado!");
+                    MessageBox.Show("Nome de Usuário ja utilizado.");
                     Menu.NomeCompUsu = nome;
                     Menu.NmUsuUsu = nmusu;
                     Menu.SenhaUsu = senha;
@@ -116,7 +116,7 @@ namespace ProjTesteForm
                 {
                     if (senha != confSenha)
                     {
-                        MessageBox.Show("Senhas não correspondem!");
+                        MessageBox.Show("Senhas não correspondem.");
                         Menu.NomeCompUsu = nome;
                         Menu.NmUsuUsu = nmusu;
                         Menu.SenhaUsu = senha;
@@ -131,7 +131,7 @@ namespace ProjTesteForm
                         retorno = cmd.ExecuteNonQuery();
                         if (retorno > 0)
                         {
-                            MessageBox.Show("Cadastro efetuado!");
+                            MessageBox.Show("Cadastro efetuado.");
                             Menu menu = new Menu();
                             menu.CamposPadrao();
                             Menu.NomeCompUsu = string.Empty;
@@ -141,7 +141,7 @@ namespace ProjTesteForm
                         }
                         else
                         {
-                            MessageBox.Show("Cadastro não realizado!");
+                            MessageBox.Show("Cadastro não realizado.");
                         }
                     }
                 }
@@ -172,14 +172,14 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Registro não encontrado!");
+                    MessageBox.Show("Registro não encontrado.");
                 }
                 dr.Close();
                 cmd.Dispose();
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro no comando sql" + ex.Message);
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
             }
         }
 
@@ -206,7 +206,7 @@ namespace ProjTesteForm
                         dr = cmd.ExecuteReader();
                         if (dr.HasRows)
                         {
-                            MessageBox.Show("Nome de Usuário ja utilizado!");
+                            MessageBox.Show("Nome de Usuário ja utilizado.");
                             Menu.NomeCompUsu = nome;
                             Menu.NmUsuUsu = nmusu;
                             Menu.SenhaUsu = senha;
@@ -216,7 +216,7 @@ namespace ProjTesteForm
                         {
                             if (senha == "")
                             {
-                                MessageBox.Show("Digite a mesma senha ou uma \nnova senha para continuar!");
+                                MessageBox.Show("Digite a mesma senha ou uma \nnova senha para continuar.");
                                 Menu.NomeCompUsu = nome;
                                 Menu.NmUsuUsu = nmusu;
                                 Menu.SenhaUsu = senha;
@@ -224,7 +224,7 @@ namespace ProjTesteForm
                             }
                             else if (senha != confSenha)
                             {
-                                MessageBox.Show("Senhas não correspondem!");
+                                MessageBox.Show("Senhas não correspondem.");
                                 Menu.NomeCompUsu = nome;
                                 Menu.NmUsuUsu = nmusu;
                                 Menu.SenhaUsu = senha;
@@ -239,7 +239,7 @@ namespace ProjTesteForm
                                 retorno = cmd.ExecuteNonQuery();
                                 if (retorno > 0)
                                 {
-                                    MessageBox.Show("Alteração efetuada!");
+                                    MessageBox.Show("Alteração efetuada.");
                                     Menu menu = new Menu();
                                     Menu.NomeCompUsu = string.Empty;
                                     Menu.NmUsuUsu = string.Empty;
@@ -248,7 +248,7 @@ namespace ProjTesteForm
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Alteração não realizada!");
+                                    MessageBox.Show("Alteração não realizada.");
                                     Menu.NomeCompUsu = nome;
                                     Menu.NmUsuUsu = nmusu;
                                     Menu.SenhaUsu = senha;
@@ -265,7 +265,7 @@ namespace ProjTesteForm
                     {
                         if (senha == "")
                         {
-                            MessageBox.Show("Digite a mesma senha ou uma \nnova senha para continuar!");
+                            MessageBox.Show("Digite a mesma senha ou uma \nnova senha para continuar.");
                             Menu.NomeCompUsu = nome;
                             Menu.NmUsuUsu = nmusu;
                             Menu.SenhaUsu = senha;
@@ -273,7 +273,7 @@ namespace ProjTesteForm
                         }
                         else if (senha != confSenha)
                         {
-                            MessageBox.Show("Senhas não correspondem!");
+                            MessageBox.Show("Senhas não correspondem.");
                             Menu.NomeCompUsu = nome;
                             Menu.NmUsuUsu = nmusu;
                             Menu.SenhaUsu = senha;
@@ -288,7 +288,7 @@ namespace ProjTesteForm
                             retorno = cmd.ExecuteNonQuery();
                             if (retorno > 0)
                             {
-                                MessageBox.Show("Alteração efetuada");
+                                MessageBox.Show("Alteração efetuada.");
                                 Menu.NomeCompUsu = string.Empty;
                                 Menu.NmUsuUsu = string.Empty;
                                 Menu.SenhaUsu = string.Empty;
@@ -296,7 +296,7 @@ namespace ProjTesteForm
                             }
                             else
                             {
-                                MessageBox.Show("Alteração não realizada!");
+                                MessageBox.Show("Alteração não realizada.");
                                 Menu.NomeCompUsu = nome;
                                 Menu.NmUsuUsu = nmusu;
                                 Menu.SenhaUsu = senha;
@@ -307,7 +307,7 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Usuário não encontrado!");
+                    MessageBox.Show("Usuário não encontrado.");
                 }
                 cmd.Dispose();
                 conexao.Close();
@@ -342,7 +342,7 @@ namespace ProjTesteForm
                         retorno = cmd.ExecuteNonQuery();
                         if (retorno > 0)
                         {
-                            MessageBox.Show("Registro excluído!");
+                            MessageBox.Show("Usuário excluído.");
                             Menu menu = new Menu();
                             Menu.NomeCompUsu = string.Empty;
                             Menu.NmUsuUsu = string.Empty;
@@ -351,19 +351,19 @@ namespace ProjTesteForm
                         }
                         else
                         {
-                            MessageBox.Show("Registro não excluído!");
+                            MessageBox.Show("Usuário não foi excluído.");
                         }
                         cmd.Dispose();
                     }
                     else
                     {
-                        MessageBox.Show("Não é possível excluir \no usuário GERENTE");
+                        MessageBox.Show("Não é possível excluir \no usuário GERENTE.");
                     }
                 }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("ERRO:" + ex.Message);
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
             }
         }
     }

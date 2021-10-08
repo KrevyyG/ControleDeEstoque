@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -78,14 +74,14 @@ namespace ProjTesteForm
                     retorno = cmd.ExecuteNonQuery();
                     if (retorno > 0)
                     {
-                        MessageBox.Show("Cadastro efetuado !!!");
+                        MessageBox.Show("Cadastro efetuado.");
                         Menu.KgBotijLote = string.Empty;
                         Menu.QtdeEnvLote = string.Empty;
                         Menu.DataLote = string.Empty;
                     }
                     else
                     {
-                        MessageBox.Show("Cadastro não realizado !!!");
+                        MessageBox.Show("Cadastro não realizado.");
                         Menu.KgBotijLote = kgBotij.ToString();
                         Menu.QtdeEnvLote = qtdeEnv.ToString();
                         Menu.DataLote = dataAtual;
@@ -93,14 +89,14 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Permitido apenas o cadastro de lote \npara botijões previamente cadastrados!");
+                    MessageBox.Show("Permitido apenas o cadastro de lote \npara botijões previamente cadastrados.");
                 }
                 dr.Close();
                 cmd.Dispose();
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro no comando sql" + ex.Message);
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
             }
 
         }
@@ -123,14 +119,14 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Registro não encontrado!!!");
+                    MessageBox.Show("Registro não encontrado.");
                 }
                 dr.Close();
                 cmd.Dispose();
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro no comando sql" + ex.Message);
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
             }
         }
 
@@ -153,14 +149,14 @@ namespace ProjTesteForm
                     retorno = cmd.ExecuteNonQuery();
                     if (retorno > 0)
                     {
-                        MessageBox.Show("Alteração efetuada !!!");
+                        MessageBox.Show("Alteração efetuada.");
                         Menu.KgBotijLote = string.Empty;
                         Menu.QtdeEnvLote = string.Empty;
                         Menu.DataLote = string.Empty;
                     }
                     else
                     {
-                        MessageBox.Show("Alteração não efetuada !!!");
+                        MessageBox.Show("Alteração não efetuada.");
                         Menu.KgBotijLote = kgBotij.ToString();
                         Menu.QtdeEnvLote = qtdeEnv.ToString();
                         Menu.DataLote = dataAtual;
@@ -168,14 +164,14 @@ namespace ProjTesteForm
                 }
                 else
                 {
-                    MessageBox.Show("Permitido apenas o cadastro de lote \npara botijões previamente cadastrados!");
+                    MessageBox.Show("Permitido apenas o cadastro de lote \npara botijões previamente cadastrados.");
                 }
                 dr.Close();
                 cmd.Dispose();
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Erro no comando sql" + ex.Message);
+                MessageBox.Show("Erro no comando sql: " + ex.Message);
             }
         }
     }

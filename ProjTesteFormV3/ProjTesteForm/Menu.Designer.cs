@@ -30,10 +30,6 @@ namespace ProjTesteForm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnCentro = new System.Windows.Forms.Panel();
             this.pnRmvUsuario = new System.Windows.Forms.Panel();
             this.btnRotRmvCarregarUsu = new System.Windows.Forms.Button();
@@ -96,6 +92,19 @@ namespace ProjTesteForm
             this.btnFecharRotAdcUsuario = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.pnConsLote = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.maskConsDtLote = new System.Windows.Forms.MaskedTextBox();
+            this.cbConsIdLote = new System.Windows.Forms.ComboBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.btnRotConsLote = new System.Windows.Forms.Button();
+            this.label64 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsQtdeLote = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsKgBotijLote = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
             this.btnFecharRotConsLote = new System.Windows.Forms.PictureBox();
             this.label24 = new System.Windows.Forms.Label();
             this.pnAltLote = new System.Windows.Forms.Panel();
@@ -123,21 +132,12 @@ namespace ProjTesteForm
             this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtAdcQtdeBotijLote = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
             this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtAdcKgBotijLote = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.btnFecharRotAdcLote = new System.Windows.Forms.PictureBox();
             this.label22 = new System.Windows.Forms.Label();
             this.pnConsEstoque = new System.Windows.Forms.Panel();
-            this.gridConsEstoque = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFecharRotConsEstoque = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.pnRmvEstoque = new System.Windows.Forms.Panel();
@@ -148,23 +148,20 @@ namespace ProjTesteForm
             this.rdbRetBotijSim = new System.Windows.Forms.RadioButton();
             this.label29 = new System.Windows.Forms.Label();
             this.rdbRetBotijNao = new System.Windows.Forms.RadioButton();
-            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtRmvIdBotijEstoque = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.btnRotRmvEstoque = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
             this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtRmvKgBotijEstoque = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.btnFecharRotRmvEstoque = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.pnAdcEstoque = new System.Windows.Forms.Panel();
+            this.btnRotAdcBotijCarregarLote = new System.Windows.Forms.Button();
+            this.cbAdcBotijIdLote = new System.Windows.Forms.ComboBox();
             this.gpboxAbtQtdeSBotij = new System.Windows.Forms.GroupBox();
             this.rdbAbtQtdeSBotijSim = new System.Windows.Forms.RadioButton();
             this.label19 = new System.Windows.Forms.Label();
             this.rdbAbtQtdeSBotijNao = new System.Windows.Forms.RadioButton();
-            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtAdcIdLoteEstoque = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
@@ -175,7 +172,6 @@ namespace ProjTesteForm
             this.label15 = new System.Windows.Forms.Label();
             this.btnFecharRotAdcEstoque = new System.Windows.Forms.PictureBox();
             this.btnRotAdcEstoque = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtAdcKgBotijEstoque = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -195,7 +191,6 @@ namespace ProjTesteForm
             this.cbAltIdBotij = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnRotAltBotij = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtAltKgBotij = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -203,7 +198,6 @@ namespace ProjTesteForm
             this.label10 = new System.Windows.Forms.Label();
             this.pnConsBotij = new System.Windows.Forms.Panel();
             this.cbConsIdBotij = new System.Windows.Forms.ComboBox();
-            this.label61 = new System.Windows.Forms.Label();
             this.flowLayoutPanel26 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtConsKgBotij = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
@@ -214,7 +208,6 @@ namespace ProjTesteForm
             this.pnAdcBotij = new System.Windows.Forms.Panel();
             this.btnFecharRotAdcBotij = new System.Windows.Forms.PictureBox();
             this.btnRotAdcBotij = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtAdcKgBotij = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -251,19 +244,36 @@ namespace ProjTesteForm
             this.btnAdcBotij = new System.Windows.Forms.Button();
             this.btnBotij = new System.Windows.Forms.Button();
             this.pnSeparador = new System.Windows.Forms.Panel();
-            this.cbConsIdLote = new System.Windows.Forms.ComboBox();
-            this.label60 = new System.Windows.Forms.Label();
-            this.btnRotConsLote = new System.Windows.Forms.Button();
-            this.label64 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtConsQtdeLote = new System.Windows.Forms.TextBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtConsKgBotijLote = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.maskConsDtLote = new System.Windows.Forms.MaskedTextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel27 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsKgBotijEstoque = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel38 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsIdUltLoteEstoque = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.btnRotConsEstoque = new System.Windows.Forms.Button();
+            this.cbConsEstoqueIdBotij = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsUsuRespEstoque = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel33 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsQtdeCheiaEstoque = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel36 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsQtdeVaziaEstoque = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel37 = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtConsQtdeSemBotijEstoque = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.cbRmvIdBotijEstoque = new System.Windows.Forms.ComboBox();
+            this.btnRotRmvBotijCarregar = new System.Windows.Forms.Button();
             this.pnCentro.SuspendLayout();
             this.pnRmvUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotRmvUsuario)).BeginInit();
@@ -280,7 +290,6 @@ namespace ProjTesteForm
             this.pnAdcLote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotAdcLote)).BeginInit();
             this.pnConsEstoque.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridConsEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotConsEstoque)).BeginInit();
             this.pnRmvEstoque.SuspendLayout();
             this.gpboxRetDeBotij.SuspendLayout();
@@ -347,9 +356,9 @@ namespace ProjTesteForm
             this.pnRmvUsuario.Controls.Add(this.btnFecharRotRmvUsuario);
             this.pnRmvUsuario.Controls.Add(this.label28);
             this.pnRmvUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnRmvUsuario.Location = new System.Drawing.Point(0, 1932);
+            this.pnRmvUsuario.Location = new System.Drawing.Point(0, 2325);
             this.pnRmvUsuario.Name = "pnRmvUsuario";
-            this.pnRmvUsuario.Size = new System.Drawing.Size(460, 143);
+            this.pnRmvUsuario.Size = new System.Drawing.Size(460, 171);
             this.pnRmvUsuario.TabIndex = 20;
             // 
             // btnRotRmvCarregarUsu
@@ -360,10 +369,10 @@ namespace ProjTesteForm
             this.btnRotRmvCarregarUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotRmvCarregarUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotRmvCarregarUsu.ForeColor = System.Drawing.Color.White;
-            this.btnRotRmvCarregarUsu.Location = new System.Drawing.Point(121, 47);
+            this.btnRotRmvCarregarUsu.Location = new System.Drawing.Point(126, 45);
             this.btnRotRmvCarregarUsu.Name = "btnRotRmvCarregarUsu";
             this.btnRotRmvCarregarUsu.Size = new System.Drawing.Size(93, 23);
-            this.btnRotRmvCarregarUsu.TabIndex = 117;
+            this.btnRotRmvCarregarUsu.TabIndex = 67;
             this.btnRotRmvCarregarUsu.TabStop = false;
             this.btnRotRmvCarregarUsu.Text = "Carregar dados";
             this.btnRotRmvCarregarUsu.UseVisualStyleBackColor = false;
@@ -377,10 +386,10 @@ namespace ProjTesteForm
             this.cbRmvIdUsu.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRmvIdUsu.ForeColor = System.Drawing.Color.White;
             this.cbRmvIdUsu.FormattingEnabled = true;
-            this.cbRmvIdUsu.Location = new System.Drawing.Point(35, 46);
+            this.cbRmvIdUsu.Location = new System.Drawing.Point(58, 44);
             this.cbRmvIdUsu.Name = "cbRmvIdUsu";
             this.cbRmvIdUsu.Size = new System.Drawing.Size(50, 24);
-            this.cbRmvIdUsu.TabIndex = 116;
+            this.cbRmvIdUsu.TabIndex = 66;
             this.cbRmvIdUsu.TabStop = false;
             // 
             // btnRotRmvUsu
@@ -391,10 +400,10 @@ namespace ProjTesteForm
             this.btnRotRmvUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotRmvUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotRmvUsu.ForeColor = System.Drawing.Color.White;
-            this.btnRotRmvUsu.Location = new System.Drawing.Point(371, 68);
+            this.btnRotRmvUsu.Location = new System.Drawing.Point(33, 137);
             this.btnRotRmvUsu.Name = "btnRotRmvUsu";
             this.btnRotRmvUsu.Size = new System.Drawing.Size(75, 23);
-            this.btnRotRmvUsu.TabIndex = 115;
+            this.btnRotRmvUsu.TabIndex = 70;
             this.btnRotRmvUsu.TabStop = false;
             this.btnRotRmvUsu.Text = "Remover";
             this.btnRotRmvUsu.UseVisualStyleBackColor = false;
@@ -405,7 +414,7 @@ namespace ProjTesteForm
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.White;
-            this.label52.Location = new System.Drawing.Point(7, 54);
+            this.label52.Location = new System.Drawing.Point(30, 52);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(22, 16);
             this.label52.TabIndex = 112;
@@ -414,7 +423,7 @@ namespace ProjTesteForm
             // flowLayoutPanel28
             // 
             this.flowLayoutPanel28.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel28.Location = new System.Drawing.Point(113, 123);
+            this.flowLayoutPanel28.Location = new System.Drawing.Point(136, 123);
             this.flowLayoutPanel28.Name = "flowLayoutPanel28";
             this.flowLayoutPanel28.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel28.TabIndex = 111;
@@ -426,13 +435,13 @@ namespace ProjTesteForm
             this.txtRmvNomeUsuUsu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRmvNomeUsuUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRmvNomeUsuUsu.ForeColor = System.Drawing.Color.White;
-            this.txtRmvNomeUsuUsu.Location = new System.Drawing.Point(113, 108);
+            this.txtRmvNomeUsuUsu.Location = new System.Drawing.Point(136, 108);
             this.txtRmvNomeUsuUsu.MaxLength = 10;
             this.txtRmvNomeUsuUsu.Name = "txtRmvNomeUsuUsu";
             this.txtRmvNomeUsuUsu.ReadOnly = true;
             this.txtRmvNomeUsuUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRmvNomeUsuUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtRmvNomeUsuUsu.TabIndex = 110;
+            this.txtRmvNomeUsuUsu.TabIndex = 69;
             this.txtRmvNomeUsuUsu.TabStop = false;
             // 
             // label53
@@ -440,7 +449,7 @@ namespace ProjTesteForm
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(7, 107);
+            this.label53.Location = new System.Drawing.Point(30, 107);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(102, 16);
             this.label53.TabIndex = 109;
@@ -449,7 +458,7 @@ namespace ProjTesteForm
             // flowLayoutPanel29
             // 
             this.flowLayoutPanel29.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel29.Location = new System.Drawing.Point(113, 93);
+            this.flowLayoutPanel29.Location = new System.Drawing.Point(136, 93);
             this.flowLayoutPanel29.Name = "flowLayoutPanel29";
             this.flowLayoutPanel29.Size = new System.Drawing.Size(195, 1);
             this.flowLayoutPanel29.TabIndex = 108;
@@ -460,13 +469,13 @@ namespace ProjTesteForm
             this.txtRmvNomeCompUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRmvNomeCompUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRmvNomeCompUsu.ForeColor = System.Drawing.Color.White;
-            this.txtRmvNomeCompUsu.Location = new System.Drawing.Point(113, 78);
+            this.txtRmvNomeCompUsu.Location = new System.Drawing.Point(136, 78);
             this.txtRmvNomeCompUsu.MaxLength = 40;
             this.txtRmvNomeCompUsu.Name = "txtRmvNomeCompUsu";
             this.txtRmvNomeCompUsu.ReadOnly = true;
             this.txtRmvNomeCompUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRmvNomeCompUsu.Size = new System.Drawing.Size(195, 13);
-            this.txtRmvNomeCompUsu.TabIndex = 107;
+            this.txtRmvNomeCompUsu.TabIndex = 68;
             this.txtRmvNomeCompUsu.TabStop = false;
             // 
             // label54
@@ -474,7 +483,7 @@ namespace ProjTesteForm
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.White;
-            this.label54.Location = new System.Drawing.Point(7, 79);
+            this.label54.Location = new System.Drawing.Point(30, 79);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(100, 16);
             this.label54.TabIndex = 106;
@@ -525,9 +534,9 @@ namespace ProjTesteForm
             this.pnAltUsuario.Controls.Add(this.btnFecharRotAltUsuario);
             this.pnAltUsuario.Controls.Add(this.label27);
             this.pnAltUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAltUsuario.Location = new System.Drawing.Point(0, 1760);
+            this.pnAltUsuario.Location = new System.Drawing.Point(0, 2086);
             this.pnAltUsuario.Name = "pnAltUsuario";
-            this.pnAltUsuario.Size = new System.Drawing.Size(460, 172);
+            this.pnAltUsuario.Size = new System.Drawing.Size(460, 239);
             this.pnAltUsuario.TabIndex = 19;
             // 
             // btnRotAltCarregarUsu
@@ -538,10 +547,10 @@ namespace ProjTesteForm
             this.btnRotAltCarregarUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAltCarregarUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAltCarregarUsu.ForeColor = System.Drawing.Color.White;
-            this.btnRotAltCarregarUsu.Location = new System.Drawing.Point(113, 40);
+            this.btnRotAltCarregarUsu.Location = new System.Drawing.Point(136, 44);
             this.btnRotAltCarregarUsu.Name = "btnRotAltCarregarUsu";
             this.btnRotAltCarregarUsu.Size = new System.Drawing.Size(93, 23);
-            this.btnRotAltCarregarUsu.TabIndex = 105;
+            this.btnRotAltCarregarUsu.TabIndex = 60;
             this.btnRotAltCarregarUsu.TabStop = false;
             this.btnRotAltCarregarUsu.Text = "Carregar dados";
             this.btnRotAltCarregarUsu.UseVisualStyleBackColor = false;
@@ -555,10 +564,10 @@ namespace ProjTesteForm
             this.cbAltIdUsu.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAltIdUsu.ForeColor = System.Drawing.Color.White;
             this.cbAltIdUsu.FormattingEnabled = true;
-            this.cbAltIdUsu.Location = new System.Drawing.Point(35, 39);
+            this.cbAltIdUsu.Location = new System.Drawing.Point(58, 43);
             this.cbAltIdUsu.Name = "cbAltIdUsu";
             this.cbAltIdUsu.Size = new System.Drawing.Size(50, 24);
-            this.cbAltIdUsu.TabIndex = 104;
+            this.cbAltIdUsu.TabIndex = 59;
             this.cbAltIdUsu.TabStop = false;
             // 
             // label51
@@ -566,7 +575,7 @@ namespace ProjTesteForm
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.White;
-            this.label51.Location = new System.Drawing.Point(7, 47);
+            this.label51.Location = new System.Drawing.Point(30, 51);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(22, 16);
             this.label51.TabIndex = 103;
@@ -580,10 +589,10 @@ namespace ProjTesteForm
             this.btnRotAltUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAltUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAltUsu.ForeColor = System.Drawing.Color.White;
-            this.btnRotAltUsu.Location = new System.Drawing.Point(371, 97);
+            this.btnRotAltUsu.Location = new System.Drawing.Point(33, 205);
             this.btnRotAltUsu.Name = "btnRotAltUsu";
             this.btnRotAltUsu.Size = new System.Drawing.Size(75, 23);
-            this.btnRotAltUsu.TabIndex = 102;
+            this.btnRotAltUsu.TabIndex = 65;
             this.btnRotAltUsu.TabStop = false;
             this.btnRotAltUsu.Text = "Alterar";
             this.btnRotAltUsu.UseVisualStyleBackColor = false;
@@ -592,7 +601,7 @@ namespace ProjTesteForm
             // flowLayoutPanel15
             // 
             this.flowLayoutPanel15.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel15.Location = new System.Drawing.Point(278, 155);
+            this.flowLayoutPanel15.Location = new System.Drawing.Point(137, 190);
             this.flowLayoutPanel15.Name = "flowLayoutPanel15";
             this.flowLayoutPanel15.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel15.TabIndex = 101;
@@ -602,13 +611,13 @@ namespace ProjTesteForm
             this.txtAltConfirSenhaUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAltConfirSenhaUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltConfirSenhaUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAltConfirSenhaUsu.Location = new System.Drawing.Point(278, 140);
+            this.txtAltConfirSenhaUsu.Location = new System.Drawing.Point(137, 175);
             this.txtAltConfirSenhaUsu.MaxLength = 10;
             this.txtAltConfirSenhaUsu.Name = "txtAltConfirSenhaUsu";
             this.txtAltConfirSenhaUsu.PasswordChar = '*';
             this.txtAltConfirSenhaUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAltConfirSenhaUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtAltConfirSenhaUsu.TabIndex = 100;
+            this.txtAltConfirSenhaUsu.TabIndex = 64;
             this.txtAltConfirSenhaUsu.TabStop = false;
             // 
             // label47
@@ -616,7 +625,7 @@ namespace ProjTesteForm
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.White;
-            this.label47.Location = new System.Drawing.Point(171, 141);
+            this.label47.Location = new System.Drawing.Point(30, 176);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(101, 16);
             this.label47.TabIndex = 99;
@@ -625,7 +634,7 @@ namespace ProjTesteForm
             // flowLayoutPanel16
             // 
             this.flowLayoutPanel16.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel16.Location = new System.Drawing.Point(59, 155);
+            this.flowLayoutPanel16.Location = new System.Drawing.Point(82, 159);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
             this.flowLayoutPanel16.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel16.TabIndex = 98;
@@ -635,13 +644,13 @@ namespace ProjTesteForm
             this.txtAltSenhaUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAltSenhaUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltSenhaUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAltSenhaUsu.Location = new System.Drawing.Point(59, 140);
+            this.txtAltSenhaUsu.Location = new System.Drawing.Point(82, 144);
             this.txtAltSenhaUsu.MaxLength = 10;
             this.txtAltSenhaUsu.Name = "txtAltSenhaUsu";
             this.txtAltSenhaUsu.PasswordChar = '*';
             this.txtAltSenhaUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAltSenhaUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtAltSenhaUsu.TabIndex = 97;
+            this.txtAltSenhaUsu.TabIndex = 63;
             this.txtAltSenhaUsu.TabStop = false;
             // 
             // label48
@@ -649,7 +658,7 @@ namespace ProjTesteForm
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.White;
-            this.label48.Location = new System.Drawing.Point(7, 139);
+            this.label48.Location = new System.Drawing.Point(30, 143);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(46, 16);
             this.label48.TabIndex = 96;
@@ -658,7 +667,7 @@ namespace ProjTesteForm
             // flowLayoutPanel24
             // 
             this.flowLayoutPanel24.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel24.Location = new System.Drawing.Point(113, 125);
+            this.flowLayoutPanel24.Location = new System.Drawing.Point(136, 129);
             this.flowLayoutPanel24.Name = "flowLayoutPanel24";
             this.flowLayoutPanel24.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel24.TabIndex = 95;
@@ -669,12 +678,12 @@ namespace ProjTesteForm
             this.txtAltNomeUsuUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltNomeUsuUsu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAltNomeUsuUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAltNomeUsuUsu.Location = new System.Drawing.Point(113, 110);
+            this.txtAltNomeUsuUsu.Location = new System.Drawing.Point(136, 114);
             this.txtAltNomeUsuUsu.MaxLength = 10;
             this.txtAltNomeUsuUsu.Name = "txtAltNomeUsuUsu";
             this.txtAltNomeUsuUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAltNomeUsuUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtAltNomeUsuUsu.TabIndex = 94;
+            this.txtAltNomeUsuUsu.TabIndex = 62;
             this.txtAltNomeUsuUsu.TabStop = false;
             // 
             // label49
@@ -682,7 +691,7 @@ namespace ProjTesteForm
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.White;
-            this.label49.Location = new System.Drawing.Point(7, 109);
+            this.label49.Location = new System.Drawing.Point(30, 113);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(102, 16);
             this.label49.TabIndex = 93;
@@ -691,7 +700,7 @@ namespace ProjTesteForm
             // flowLayoutPanel25
             // 
             this.flowLayoutPanel25.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel25.Location = new System.Drawing.Point(113, 94);
+            this.flowLayoutPanel25.Location = new System.Drawing.Point(136, 98);
             this.flowLayoutPanel25.Name = "flowLayoutPanel25";
             this.flowLayoutPanel25.Size = new System.Drawing.Size(195, 1);
             this.flowLayoutPanel25.TabIndex = 92;
@@ -701,12 +710,12 @@ namespace ProjTesteForm
             this.txtAltNomeCompUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAltNomeCompUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltNomeCompUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAltNomeCompUsu.Location = new System.Drawing.Point(113, 79);
+            this.txtAltNomeCompUsu.Location = new System.Drawing.Point(136, 83);
             this.txtAltNomeCompUsu.MaxLength = 40;
             this.txtAltNomeCompUsu.Name = "txtAltNomeCompUsu";
             this.txtAltNomeCompUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAltNomeCompUsu.Size = new System.Drawing.Size(195, 13);
-            this.txtAltNomeCompUsu.TabIndex = 91;
+            this.txtAltNomeCompUsu.TabIndex = 61;
             this.txtAltNomeCompUsu.TabStop = false;
             // 
             // label50
@@ -714,7 +723,7 @@ namespace ProjTesteForm
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.White;
-            this.label50.Location = new System.Drawing.Point(7, 80);
+            this.label50.Location = new System.Drawing.Point(30, 84);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(100, 16);
             this.label50.TabIndex = 90;
@@ -758,7 +767,7 @@ namespace ProjTesteForm
             this.pnConsUsuario.Controls.Add(this.btnFecharRotConsUsuario);
             this.pnConsUsuario.Controls.Add(this.label26);
             this.pnConsUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnConsUsuario.Location = new System.Drawing.Point(0, 1608);
+            this.pnConsUsuario.Location = new System.Drawing.Point(0, 1934);
             this.pnConsUsuario.Name = "pnConsUsuario";
             this.pnConsUsuario.Size = new System.Drawing.Size(460, 152);
             this.pnConsUsuario.TabIndex = 18;
@@ -771,16 +780,16 @@ namespace ProjTesteForm
             this.cbConsIdUsu.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbConsIdUsu.ForeColor = System.Drawing.Color.White;
             this.cbConsIdUsu.FormattingEnabled = true;
-            this.cbConsIdUsu.Location = new System.Drawing.Point(35, 38);
+            this.cbConsIdUsu.Location = new System.Drawing.Point(58, 40);
             this.cbConsIdUsu.Name = "cbConsIdUsu";
             this.cbConsIdUsu.Size = new System.Drawing.Size(50, 24);
-            this.cbConsIdUsu.TabIndex = 97;
+            this.cbConsIdUsu.TabIndex = 55;
             this.cbConsIdUsu.TabStop = false;
             // 
             // flowLayoutPanel34
             // 
             this.flowLayoutPanel34.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel34.Location = new System.Drawing.Point(113, 118);
+            this.flowLayoutPanel34.Location = new System.Drawing.Point(136, 121);
             this.flowLayoutPanel34.Name = "flowLayoutPanel34";
             this.flowLayoutPanel34.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel34.TabIndex = 96;
@@ -792,13 +801,13 @@ namespace ProjTesteForm
             this.txtConsNmUsuUsu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtConsNmUsuUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtConsNmUsuUsu.ForeColor = System.Drawing.Color.White;
-            this.txtConsNmUsuUsu.Location = new System.Drawing.Point(113, 103);
+            this.txtConsNmUsuUsu.Location = new System.Drawing.Point(136, 106);
             this.txtConsNmUsuUsu.MaxLength = 10;
             this.txtConsNmUsuUsu.Name = "txtConsNmUsuUsu";
             this.txtConsNmUsuUsu.ReadOnly = true;
             this.txtConsNmUsuUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtConsNmUsuUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtConsNmUsuUsu.TabIndex = 95;
+            this.txtConsNmUsuUsu.TabIndex = 58;
             this.txtConsNmUsuUsu.TabStop = false;
             // 
             // label58
@@ -806,7 +815,7 @@ namespace ProjTesteForm
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.White;
-            this.label58.Location = new System.Drawing.Point(7, 102);
+            this.label58.Location = new System.Drawing.Point(30, 105);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(102, 16);
             this.label58.TabIndex = 94;
@@ -815,7 +824,7 @@ namespace ProjTesteForm
             // flowLayoutPanel35
             // 
             this.flowLayoutPanel35.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel35.Location = new System.Drawing.Point(113, 90);
+            this.flowLayoutPanel35.Location = new System.Drawing.Point(136, 93);
             this.flowLayoutPanel35.Name = "flowLayoutPanel35";
             this.flowLayoutPanel35.Size = new System.Drawing.Size(225, 1);
             this.flowLayoutPanel35.TabIndex = 93;
@@ -826,13 +835,13 @@ namespace ProjTesteForm
             this.txtConsNomeCompUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsNomeCompUsu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtConsNomeCompUsu.ForeColor = System.Drawing.Color.White;
-            this.txtConsNomeCompUsu.Location = new System.Drawing.Point(113, 75);
+            this.txtConsNomeCompUsu.Location = new System.Drawing.Point(136, 78);
             this.txtConsNomeCompUsu.MaxLength = 40;
             this.txtConsNomeCompUsu.Name = "txtConsNomeCompUsu";
             this.txtConsNomeCompUsu.ReadOnly = true;
             this.txtConsNomeCompUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtConsNomeCompUsu.Size = new System.Drawing.Size(225, 13);
-            this.txtConsNomeCompUsu.TabIndex = 92;
+            this.txtConsNomeCompUsu.TabIndex = 57;
             this.txtConsNomeCompUsu.TabStop = false;
             // 
             // label59
@@ -840,7 +849,7 @@ namespace ProjTesteForm
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.White;
-            this.label59.Location = new System.Drawing.Point(7, 74);
+            this.label59.Location = new System.Drawing.Point(30, 77);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(100, 16);
             this.label59.TabIndex = 91;
@@ -854,10 +863,10 @@ namespace ProjTesteForm
             this.btnRotConsUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotConsUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotConsUsu.ForeColor = System.Drawing.Color.White;
-            this.btnRotConsUsu.Location = new System.Drawing.Point(371, 70);
+            this.btnRotConsUsu.Location = new System.Drawing.Point(130, 41);
             this.btnRotConsUsu.Name = "btnRotConsUsu";
             this.btnRotConsUsu.Size = new System.Drawing.Size(75, 23);
-            this.btnRotConsUsu.TabIndex = 90;
+            this.btnRotConsUsu.TabIndex = 56;
             this.btnRotConsUsu.TabStop = false;
             this.btnRotConsUsu.Text = "Consultar";
             this.btnRotConsUsu.UseVisualStyleBackColor = false;
@@ -868,7 +877,7 @@ namespace ProjTesteForm
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.White;
-            this.label57.Location = new System.Drawing.Point(7, 46);
+            this.label57.Location = new System.Drawing.Point(30, 48);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(22, 16);
             this.label57.TabIndex = 83;
@@ -916,9 +925,9 @@ namespace ProjTesteForm
             this.pnAdcUsuario.Controls.Add(this.btnFecharRotAdcUsuario);
             this.pnAdcUsuario.Controls.Add(this.label25);
             this.pnAdcUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAdcUsuario.Location = new System.Drawing.Point(0, 1435);
+            this.pnAdcUsuario.Location = new System.Drawing.Point(0, 1741);
             this.pnAdcUsuario.Name = "pnAdcUsuario";
-            this.pnAdcUsuario.Size = new System.Drawing.Size(460, 173);
+            this.pnAdcUsuario.Size = new System.Drawing.Size(460, 193);
             this.pnAdcUsuario.TabIndex = 17;
             // 
             // btnRotAdcUsu
@@ -929,10 +938,10 @@ namespace ProjTesteForm
             this.btnRotAdcUsu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAdcUsu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAdcUsu.ForeColor = System.Drawing.Color.White;
-            this.btnRotAdcUsu.Location = new System.Drawing.Point(371, 72);
+            this.btnRotAdcUsu.Location = new System.Drawing.Point(33, 154);
             this.btnRotAdcUsu.Name = "btnRotAdcUsu";
             this.btnRotAdcUsu.Size = new System.Drawing.Size(75, 23);
-            this.btnRotAdcUsu.TabIndex = 89;
+            this.btnRotAdcUsu.TabIndex = 54;
             this.btnRotAdcUsu.TabStop = false;
             this.btnRotAdcUsu.Text = "Adicionar";
             this.btnRotAdcUsu.UseVisualStyleBackColor = false;
@@ -941,7 +950,7 @@ namespace ProjTesteForm
             // flowLayoutPanel23
             // 
             this.flowLayoutPanel23.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel23.Location = new System.Drawing.Point(255, 117);
+            this.flowLayoutPanel23.Location = new System.Drawing.Point(137, 143);
             this.flowLayoutPanel23.Name = "flowLayoutPanel23";
             this.flowLayoutPanel23.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel23.TabIndex = 88;
@@ -951,13 +960,13 @@ namespace ProjTesteForm
             this.txtAdcConfirSenhaUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcConfirSenhaUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcConfirSenhaUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAdcConfirSenhaUsu.Location = new System.Drawing.Point(255, 102);
+            this.txtAdcConfirSenhaUsu.Location = new System.Drawing.Point(137, 128);
             this.txtAdcConfirSenhaUsu.MaxLength = 10;
             this.txtAdcConfirSenhaUsu.Name = "txtAdcConfirSenhaUsu";
             this.txtAdcConfirSenhaUsu.PasswordChar = '*';
             this.txtAdcConfirSenhaUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcConfirSenhaUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtAdcConfirSenhaUsu.TabIndex = 87;
+            this.txtAdcConfirSenhaUsu.TabIndex = 53;
             this.txtAdcConfirSenhaUsu.TabStop = false;
             // 
             // label46
@@ -965,7 +974,7 @@ namespace ProjTesteForm
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.White;
-            this.label46.Location = new System.Drawing.Point(148, 103);
+            this.label46.Location = new System.Drawing.Point(30, 129);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(101, 16);
             this.label46.TabIndex = 86;
@@ -974,7 +983,7 @@ namespace ProjTesteForm
             // flowLayoutPanel22
             // 
             this.flowLayoutPanel22.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel22.Location = new System.Drawing.Point(59, 117);
+            this.flowLayoutPanel22.Location = new System.Drawing.Point(82, 116);
             this.flowLayoutPanel22.Name = "flowLayoutPanel22";
             this.flowLayoutPanel22.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel22.TabIndex = 85;
@@ -984,13 +993,13 @@ namespace ProjTesteForm
             this.txtAdcSenhaUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcSenhaUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcSenhaUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAdcSenhaUsu.Location = new System.Drawing.Point(59, 102);
+            this.txtAdcSenhaUsu.Location = new System.Drawing.Point(82, 101);
             this.txtAdcSenhaUsu.MaxLength = 10;
             this.txtAdcSenhaUsu.Name = "txtAdcSenhaUsu";
             this.txtAdcSenhaUsu.PasswordChar = '*';
             this.txtAdcSenhaUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcSenhaUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtAdcSenhaUsu.TabIndex = 84;
+            this.txtAdcSenhaUsu.TabIndex = 52;
             this.txtAdcSenhaUsu.TabStop = false;
             // 
             // label45
@@ -998,7 +1007,7 @@ namespace ProjTesteForm
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.White;
-            this.label45.Location = new System.Drawing.Point(7, 101);
+            this.label45.Location = new System.Drawing.Point(30, 100);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(46, 16);
             this.label45.TabIndex = 83;
@@ -1007,7 +1016,7 @@ namespace ProjTesteForm
             // flowLayoutPanel21
             // 
             this.flowLayoutPanel21.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel21.Location = new System.Drawing.Point(113, 87);
+            this.flowLayoutPanel21.Location = new System.Drawing.Point(136, 88);
             this.flowLayoutPanel21.Name = "flowLayoutPanel21";
             this.flowLayoutPanel21.Size = new System.Drawing.Size(83, 1);
             this.flowLayoutPanel21.TabIndex = 82;
@@ -1018,12 +1027,12 @@ namespace ProjTesteForm
             this.txtAdcNmUsuUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcNmUsuUsu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAdcNmUsuUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAdcNmUsuUsu.Location = new System.Drawing.Point(113, 72);
+            this.txtAdcNmUsuUsu.Location = new System.Drawing.Point(136, 73);
             this.txtAdcNmUsuUsu.MaxLength = 10;
             this.txtAdcNmUsuUsu.Name = "txtAdcNmUsuUsu";
             this.txtAdcNmUsuUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcNmUsuUsu.Size = new System.Drawing.Size(83, 13);
-            this.txtAdcNmUsuUsu.TabIndex = 81;
+            this.txtAdcNmUsuUsu.TabIndex = 51;
             this.txtAdcNmUsuUsu.TabStop = false;
             // 
             // label44
@@ -1031,7 +1040,7 @@ namespace ProjTesteForm
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(7, 71);
+            this.label44.Location = new System.Drawing.Point(30, 72);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(102, 16);
             this.label44.TabIndex = 80;
@@ -1040,7 +1049,7 @@ namespace ProjTesteForm
             // flowLayoutPanel20
             // 
             this.flowLayoutPanel20.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel20.Location = new System.Drawing.Point(113, 59);
+            this.flowLayoutPanel20.Location = new System.Drawing.Point(136, 59);
             this.flowLayoutPanel20.Name = "flowLayoutPanel20";
             this.flowLayoutPanel20.Size = new System.Drawing.Size(225, 1);
             this.flowLayoutPanel20.TabIndex = 79;
@@ -1050,12 +1059,12 @@ namespace ProjTesteForm
             this.txtAdcNmCompUsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcNmCompUsu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcNmCompUsu.ForeColor = System.Drawing.Color.White;
-            this.txtAdcNmCompUsu.Location = new System.Drawing.Point(113, 44);
+            this.txtAdcNmCompUsu.Location = new System.Drawing.Point(136, 44);
             this.txtAdcNmCompUsu.MaxLength = 40;
             this.txtAdcNmCompUsu.Name = "txtAdcNmCompUsu";
             this.txtAdcNmCompUsu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcNmCompUsu.Size = new System.Drawing.Size(225, 13);
-            this.txtAdcNmCompUsu.TabIndex = 78;
+            this.txtAdcNmCompUsu.TabIndex = 50;
             this.txtAdcNmCompUsu.TabStop = false;
             // 
             // label43
@@ -1063,7 +1072,7 @@ namespace ProjTesteForm
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.White;
-            this.label43.Location = new System.Drawing.Point(7, 43);
+            this.label43.Location = new System.Drawing.Point(30, 43);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(100, 16);
             this.label43.TabIndex = 77;
@@ -1111,10 +1120,165 @@ namespace ProjTesteForm
             this.pnConsLote.Controls.Add(this.btnFecharRotConsLote);
             this.pnConsLote.Controls.Add(this.label24);
             this.pnConsLote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnConsLote.Location = new System.Drawing.Point(0, 1316);
+            this.pnConsLote.Location = new System.Drawing.Point(0, 1581);
             this.pnConsLote.Name = "pnConsLote";
-            this.pnConsLote.Size = new System.Drawing.Size(460, 119);
+            this.pnConsLote.Size = new System.Drawing.Size(460, 160);
             this.pnConsLote.TabIndex = 16;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(107, 147);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(68, 1);
+            this.flowLayoutPanel4.TabIndex = 122;
+            // 
+            // maskConsDtLote
+            // 
+            this.maskConsDtLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.maskConsDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskConsDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskConsDtLote.ForeColor = System.Drawing.Color.White;
+            this.maskConsDtLote.Location = new System.Drawing.Point(107, 134);
+            this.maskConsDtLote.Mask = "00/00/0000";
+            this.maskConsDtLote.Name = "maskConsDtLote";
+            this.maskConsDtLote.Size = new System.Drawing.Size(68, 14);
+            this.maskConsDtLote.TabIndex = 49;
+            this.maskConsDtLote.TabStop = false;
+            this.maskConsDtLote.ValidatingType = typeof(System.DateTime);
+            // 
+            // cbConsIdLote
+            // 
+            this.cbConsIdLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.cbConsIdLote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbConsIdLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbConsIdLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbConsIdLote.ForeColor = System.Drawing.Color.White;
+            this.cbConsIdLote.FormattingEnabled = true;
+            this.cbConsIdLote.Location = new System.Drawing.Point(94, 41);
+            this.cbConsIdLote.Name = "cbConsIdLote";
+            this.cbConsIdLote.Size = new System.Drawing.Size(50, 24);
+            this.cbConsIdLote.TabIndex = 45;
+            this.cbConsIdLote.TabStop = false;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.White;
+            this.label60.Location = new System.Drawing.Point(30, 49);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(66, 16);
+            this.label60.TabIndex = 117;
+            this.label60.Text = "ID do Lote:";
+            // 
+            // btnRotConsLote
+            // 
+            this.btnRotConsLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.btnRotConsLote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRotConsLote.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRotConsLote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
+            this.btnRotConsLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRotConsLote.ForeColor = System.Drawing.Color.White;
+            this.btnRotConsLote.Location = new System.Drawing.Point(163, 42);
+            this.btnRotConsLote.Name = "btnRotConsLote";
+            this.btnRotConsLote.Size = new System.Drawing.Size(75, 23);
+            this.btnRotConsLote.TabIndex = 46;
+            this.btnRotConsLote.TabStop = false;
+            this.btnRotConsLote.Text = "Consultar";
+            this.btnRotConsLote.UseVisualStyleBackColor = false;
+            this.btnRotConsLote.Click += new System.EventHandler(this.btnRotConsLote_Click);
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.White;
+            this.label64.Location = new System.Drawing.Point(30, 135);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(71, 16);
+            this.label64.TabIndex = 115;
+            this.label64.Text = "Data atual:";
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(116, 121);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel5.TabIndex = 114;
+            // 
+            // txtConsQtdeLote
+            // 
+            this.txtConsQtdeLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsQtdeLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsQtdeLote.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsQtdeLote.ForeColor = System.Drawing.Color.White;
+            this.txtConsQtdeLote.Location = new System.Drawing.Point(116, 106);
+            this.txtConsQtdeLote.MaxLength = 4;
+            this.txtConsQtdeLote.Name = "txtConsQtdeLote";
+            this.txtConsQtdeLote.ReadOnly = true;
+            this.txtConsQtdeLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsQtdeLote.Size = new System.Drawing.Size(23, 13);
+            this.txtConsQtdeLote.TabIndex = 48;
+            this.txtConsQtdeLote.TabStop = false;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.White;
+            this.label65.Location = new System.Drawing.Point(30, 106);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(80, 16);
+            this.label65.TabIndex = 112;
+            this.label65.Text = "Quantidade:";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ForeColor = System.Drawing.Color.White;
+            this.label66.Location = new System.Drawing.Point(147, 78);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(22, 16);
+            this.label66.TabIndex = 111;
+            this.label66.Text = "Kg";
+            // 
+            // flowLayoutPanel19
+            // 
+            this.flowLayoutPanel19.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel19.Location = new System.Drawing.Point(118, 93);
+            this.flowLayoutPanel19.Name = "flowLayoutPanel19";
+            this.flowLayoutPanel19.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel19.TabIndex = 110;
+            // 
+            // txtConsKgBotijLote
+            // 
+            this.txtConsKgBotijLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsKgBotijLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsKgBotijLote.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsKgBotijLote.ForeColor = System.Drawing.Color.White;
+            this.txtConsKgBotijLote.Location = new System.Drawing.Point(118, 78);
+            this.txtConsKgBotijLote.MaxLength = 2;
+            this.txtConsKgBotijLote.Name = "txtConsKgBotijLote";
+            this.txtConsKgBotijLote.ReadOnly = true;
+            this.txtConsKgBotijLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsKgBotijLote.Size = new System.Drawing.Size(23, 13);
+            this.txtConsKgBotijLote.TabIndex = 47;
+            this.txtConsKgBotijLote.TabStop = false;
+            this.txtConsKgBotijLote.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.White;
+            this.label67.Location = new System.Drawing.Point(30, 78);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(82, 16);
+            this.label67.TabIndex = 108;
+            this.label67.Text = "Kg do Botijão:";
             // 
             // btnFecharRotConsLote
             // 
@@ -1159,9 +1323,9 @@ namespace ProjTesteForm
             this.pnAltLote.Controls.Add(this.btnFecharRotAltLote);
             this.pnAltLote.Controls.Add(this.label23);
             this.pnAltLote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAltLote.Location = new System.Drawing.Point(0, 1170);
+            this.pnAltLote.Location = new System.Drawing.Point(0, 1383);
             this.pnAltLote.Name = "pnAltLote";
-            this.pnAltLote.Size = new System.Drawing.Size(460, 146);
+            this.pnAltLote.Size = new System.Drawing.Size(460, 198);
             this.pnAltLote.TabIndex = 15;
             // 
             // btnRotAltCarregarLote
@@ -1172,10 +1336,10 @@ namespace ProjTesteForm
             this.btnRotAltCarregarLote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAltCarregarLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAltCarregarLote.ForeColor = System.Drawing.Color.White;
-            this.btnRotAltCarregarLote.Location = new System.Drawing.Point(148, 39);
+            this.btnRotAltCarregarLote.Location = new System.Drawing.Point(162, 44);
             this.btnRotAltCarregarLote.Name = "btnRotAltCarregarLote";
             this.btnRotAltCarregarLote.Size = new System.Drawing.Size(93, 23);
-            this.btnRotAltCarregarLote.TabIndex = 107;
+            this.btnRotAltCarregarLote.TabIndex = 40;
             this.btnRotAltCarregarLote.TabStop = false;
             this.btnRotAltCarregarLote.Text = "Carregar dados";
             this.btnRotAltCarregarLote.UseVisualStyleBackColor = false;
@@ -1189,16 +1353,16 @@ namespace ProjTesteForm
             this.cbAltIdLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAltIdLote.ForeColor = System.Drawing.Color.White;
             this.cbAltIdLote.FormattingEnabled = true;
-            this.cbAltIdLote.Location = new System.Drawing.Point(78, 38);
+            this.cbAltIdLote.Location = new System.Drawing.Point(94, 43);
             this.cbAltIdLote.Name = "cbAltIdLote";
             this.cbAltIdLote.Size = new System.Drawing.Size(50, 24);
-            this.cbAltIdLote.TabIndex = 100;
+            this.cbAltIdLote.TabIndex = 39;
             this.cbAltIdLote.TabStop = false;
             // 
             // flowLayoutPanel32
             // 
             this.flowLayoutPanel32.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel32.Location = new System.Drawing.Point(392, 89);
+            this.flowLayoutPanel32.Location = new System.Drawing.Point(107, 145);
             this.flowLayoutPanel32.Name = "flowLayoutPanel32";
             this.flowLayoutPanel32.Size = new System.Drawing.Size(68, 1);
             this.flowLayoutPanel32.TabIndex = 78;
@@ -1209,11 +1373,11 @@ namespace ProjTesteForm
             this.maskAltDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskAltDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskAltDtLote.ForeColor = System.Drawing.Color.White;
-            this.maskAltDtLote.Location = new System.Drawing.Point(392, 76);
+            this.maskAltDtLote.Location = new System.Drawing.Point(107, 132);
             this.maskAltDtLote.Mask = "00/00/0000";
             this.maskAltDtLote.Name = "maskAltDtLote";
             this.maskAltDtLote.Size = new System.Drawing.Size(68, 14);
-            this.maskAltDtLote.TabIndex = 77;
+            this.maskAltDtLote.TabIndex = 43;
             this.maskAltDtLote.TabStop = false;
             this.maskAltDtLote.ValidatingType = typeof(System.DateTime);
             // 
@@ -1222,7 +1386,7 @@ namespace ProjTesteForm
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(14, 46);
+            this.label42.Location = new System.Drawing.Point(30, 51);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(66, 16);
             this.label42.TabIndex = 74;
@@ -1236,10 +1400,10 @@ namespace ProjTesteForm
             this.btnRotAltLote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAltLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAltLote.ForeColor = System.Drawing.Color.White;
-            this.btnRotAltLote.Location = new System.Drawing.Point(207, 109);
+            this.btnRotAltLote.Location = new System.Drawing.Point(33, 157);
             this.btnRotAltLote.Name = "btnRotAltLote";
             this.btnRotAltLote.Size = new System.Drawing.Size(75, 23);
-            this.btnRotAltLote.TabIndex = 73;
+            this.btnRotAltLote.TabIndex = 44;
             this.btnRotAltLote.TabStop = false;
             this.btnRotAltLote.Text = "Alterar";
             this.btnRotAltLote.UseVisualStyleBackColor = false;
@@ -1250,7 +1414,7 @@ namespace ProjTesteForm
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(315, 76);
+            this.label38.Location = new System.Drawing.Point(30, 132);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(71, 16);
             this.label38.TabIndex = 70;
@@ -1259,7 +1423,7 @@ namespace ProjTesteForm
             // flowLayoutPanel17
             // 
             this.flowLayoutPanel17.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel17.Location = new System.Drawing.Point(258, 91);
+            this.flowLayoutPanel17.Location = new System.Drawing.Point(116, 121);
             this.flowLayoutPanel17.Name = "flowLayoutPanel17";
             this.flowLayoutPanel17.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel17.TabIndex = 69;
@@ -1269,20 +1433,21 @@ namespace ProjTesteForm
             this.txtAltQtdeLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAltQtdeLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltQtdeLote.ForeColor = System.Drawing.Color.White;
-            this.txtAltQtdeLote.Location = new System.Drawing.Point(258, 76);
-            this.txtAltQtdeLote.MaxLength = 2;
+            this.txtAltQtdeLote.Location = new System.Drawing.Point(116, 106);
+            this.txtAltQtdeLote.MaxLength = 4;
             this.txtAltQtdeLote.Name = "txtAltQtdeLote";
             this.txtAltQtdeLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAltQtdeLote.Size = new System.Drawing.Size(23, 13);
-            this.txtAltQtdeLote.TabIndex = 68;
+            this.txtAltQtdeLote.TabIndex = 42;
             this.txtAltQtdeLote.TabStop = false;
+            this.txtAltQtdeLote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltQtdeLote_KeyPress);
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.White;
-            this.label39.Location = new System.Drawing.Point(172, 76);
+            this.label39.Location = new System.Drawing.Point(30, 106);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(80, 16);
             this.label39.TabIndex = 67;
@@ -1293,7 +1458,7 @@ namespace ProjTesteForm
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(131, 75);
+            this.label40.Location = new System.Drawing.Point(147, 79);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(22, 16);
             this.label40.TabIndex = 66;
@@ -1302,7 +1467,7 @@ namespace ProjTesteForm
             // flowLayoutPanel18
             // 
             this.flowLayoutPanel18.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel18.Location = new System.Drawing.Point(102, 90);
+            this.flowLayoutPanel18.Location = new System.Drawing.Point(118, 94);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
             this.flowLayoutPanel18.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel18.TabIndex = 65;
@@ -1312,21 +1477,22 @@ namespace ProjTesteForm
             this.txtAltKgBotijLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAltKgBotijLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltKgBotijLote.ForeColor = System.Drawing.Color.White;
-            this.txtAltKgBotijLote.Location = new System.Drawing.Point(102, 75);
+            this.txtAltKgBotijLote.Location = new System.Drawing.Point(118, 79);
             this.txtAltKgBotijLote.MaxLength = 2;
             this.txtAltKgBotijLote.Name = "txtAltKgBotijLote";
             this.txtAltKgBotijLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAltKgBotijLote.Size = new System.Drawing.Size(23, 13);
-            this.txtAltKgBotijLote.TabIndex = 64;
+            this.txtAltKgBotijLote.TabIndex = 41;
             this.txtAltKgBotijLote.TabStop = false;
             this.txtAltKgBotijLote.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAltKgBotijLote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltKgBotijLote_KeyPress);
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(14, 75);
+            this.label41.Location = new System.Drawing.Point(30, 79);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(82, 16);
             this.label41.TabIndex = 63;
@@ -1358,6 +1524,7 @@ namespace ProjTesteForm
             // 
             // pnAdcLote
             // 
+            this.pnAdcLote.Controls.Add(this.label31);
             this.pnAdcLote.Controls.Add(this.flowLayoutPanel31);
             this.pnAdcLote.Controls.Add(this.maskAdcDtLote);
             this.pnAdcLote.Controls.Add(this.btnRotAdcLote);
@@ -1365,22 +1532,21 @@ namespace ProjTesteForm
             this.pnAdcLote.Controls.Add(this.flowLayoutPanel13);
             this.pnAdcLote.Controls.Add(this.txtAdcQtdeBotijLote);
             this.pnAdcLote.Controls.Add(this.label33);
-            this.pnAdcLote.Controls.Add(this.label35);
             this.pnAdcLote.Controls.Add(this.flowLayoutPanel14);
             this.pnAdcLote.Controls.Add(this.txtAdcKgBotijLote);
             this.pnAdcLote.Controls.Add(this.label36);
             this.pnAdcLote.Controls.Add(this.btnFecharRotAdcLote);
             this.pnAdcLote.Controls.Add(this.label22);
             this.pnAdcLote.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnAdcLote.Location = new System.Drawing.Point(0, 1052);
+            this.pnAdcLote.Location = new System.Drawing.Point(0, 1216);
             this.pnAdcLote.Name = "pnAdcLote";
-            this.pnAdcLote.Size = new System.Drawing.Size(460, 118);
+            this.pnAdcLote.Size = new System.Drawing.Size(460, 167);
             this.pnAdcLote.TabIndex = 14;
             // 
             // flowLayoutPanel31
             // 
             this.flowLayoutPanel31.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel31.Location = new System.Drawing.Point(389, 55);
+            this.flowLayoutPanel31.Location = new System.Drawing.Point(107, 110);
             this.flowLayoutPanel31.Name = "flowLayoutPanel31";
             this.flowLayoutPanel31.Size = new System.Drawing.Size(68, 1);
             this.flowLayoutPanel31.TabIndex = 64;
@@ -1391,11 +1557,11 @@ namespace ProjTesteForm
             this.maskAdcDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskAdcDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskAdcDtLote.ForeColor = System.Drawing.Color.White;
-            this.maskAdcDtLote.Location = new System.Drawing.Point(389, 42);
+            this.maskAdcDtLote.Location = new System.Drawing.Point(107, 97);
             this.maskAdcDtLote.Mask = "00/00/0000";
             this.maskAdcDtLote.Name = "maskAdcDtLote";
             this.maskAdcDtLote.Size = new System.Drawing.Size(68, 14);
-            this.maskAdcDtLote.TabIndex = 63;
+            this.maskAdcDtLote.TabIndex = 37;
             this.maskAdcDtLote.TabStop = false;
             this.maskAdcDtLote.ValidatingType = typeof(System.DateTime);
             // 
@@ -1407,10 +1573,10 @@ namespace ProjTesteForm
             this.btnRotAdcLote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAdcLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAdcLote.ForeColor = System.Drawing.Color.White;
-            this.btnRotAdcLote.Location = new System.Drawing.Point(208, 78);
+            this.btnRotAdcLote.Location = new System.Drawing.Point(33, 130);
             this.btnRotAdcLote.Name = "btnRotAdcLote";
             this.btnRotAdcLote.Size = new System.Drawing.Size(75, 23);
-            this.btnRotAdcLote.TabIndex = 62;
+            this.btnRotAdcLote.TabIndex = 38;
             this.btnRotAdcLote.TabStop = false;
             this.btnRotAdcLote.Text = "Adicionar";
             this.btnRotAdcLote.UseVisualStyleBackColor = false;
@@ -1421,7 +1587,7 @@ namespace ProjTesteForm
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(312, 42);
+            this.label37.Location = new System.Drawing.Point(30, 97);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(71, 16);
             this.label37.TabIndex = 59;
@@ -1430,7 +1596,7 @@ namespace ProjTesteForm
             // flowLayoutPanel13
             // 
             this.flowLayoutPanel13.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(253, 56);
+            this.flowLayoutPanel13.Location = new System.Drawing.Point(116, 84);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
             this.flowLayoutPanel13.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel13.TabIndex = 58;
@@ -1440,12 +1606,12 @@ namespace ProjTesteForm
             this.txtAdcQtdeBotijLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcQtdeBotijLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcQtdeBotijLote.ForeColor = System.Drawing.Color.White;
-            this.txtAdcQtdeBotijLote.Location = new System.Drawing.Point(253, 41);
+            this.txtAdcQtdeBotijLote.Location = new System.Drawing.Point(116, 69);
             this.txtAdcQtdeBotijLote.MaxLength = 4;
             this.txtAdcQtdeBotijLote.Name = "txtAdcQtdeBotijLote";
             this.txtAdcQtdeBotijLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcQtdeBotijLote.Size = new System.Drawing.Size(23, 13);
-            this.txtAdcQtdeBotijLote.TabIndex = 57;
+            this.txtAdcQtdeBotijLote.TabIndex = 36;
             this.txtAdcQtdeBotijLote.TabStop = false;
             this.txtAdcQtdeBotijLote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdcQtdeBotijLote_KeyPress);
             // 
@@ -1454,27 +1620,16 @@ namespace ProjTesteForm
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(167, 41);
+            this.label33.Location = new System.Drawing.Point(30, 69);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(80, 16);
             this.label33.TabIndex = 56;
             this.label33.Text = "Quantidade:";
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.White;
-            this.label35.Location = new System.Drawing.Point(129, 42);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(22, 16);
-            this.label35.TabIndex = 55;
-            this.label35.Text = "Kg";
-            // 
             // flowLayoutPanel14
             // 
             this.flowLayoutPanel14.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel14.Location = new System.Drawing.Point(100, 57);
+            this.flowLayoutPanel14.Location = new System.Drawing.Point(118, 57);
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
             this.flowLayoutPanel14.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel14.TabIndex = 54;
@@ -1484,12 +1639,12 @@ namespace ProjTesteForm
             this.txtAdcKgBotijLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcKgBotijLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcKgBotijLote.ForeColor = System.Drawing.Color.White;
-            this.txtAdcKgBotijLote.Location = new System.Drawing.Point(100, 42);
+            this.txtAdcKgBotijLote.Location = new System.Drawing.Point(118, 42);
             this.txtAdcKgBotijLote.MaxLength = 2;
             this.txtAdcKgBotijLote.Name = "txtAdcKgBotijLote";
             this.txtAdcKgBotijLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcKgBotijLote.Size = new System.Drawing.Size(23, 13);
-            this.txtAdcKgBotijLote.TabIndex = 53;
+            this.txtAdcKgBotijLote.TabIndex = 35;
             this.txtAdcKgBotijLote.TabStop = false;
             this.txtAdcKgBotijLote.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAdcKgBotijLote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdcKgBotijLote_KeyPress);
@@ -1499,7 +1654,7 @@ namespace ProjTesteForm
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(12, 42);
+            this.label36.Location = new System.Drawing.Point(30, 42);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(82, 16);
             this.label36.TabIndex = 52;
@@ -1531,109 +1686,35 @@ namespace ProjTesteForm
             // 
             // pnConsEstoque
             // 
-            this.pnConsEstoque.Controls.Add(this.gridConsEstoque);
+            this.pnConsEstoque.Controls.Add(this.label11);
+            this.pnConsEstoque.Controls.Add(this.flowLayoutPanel37);
+            this.pnConsEstoque.Controls.Add(this.txtConsQtdeSemBotijEstoque);
+            this.pnConsEstoque.Controls.Add(this.flowLayoutPanel36);
+            this.pnConsEstoque.Controls.Add(this.txtConsQtdeVaziaEstoque);
+            this.pnConsEstoque.Controls.Add(this.flowLayoutPanel33);
+            this.pnConsEstoque.Controls.Add(this.txtConsQtdeCheiaEstoque);
+            this.pnConsEstoque.Controls.Add(this.flowLayoutPanel8);
+            this.pnConsEstoque.Controls.Add(this.txtConsUsuRespEstoque);
+            this.pnConsEstoque.Controls.Add(this.cbConsEstoqueIdBotij);
+            this.pnConsEstoque.Controls.Add(this.btnRotConsEstoque);
+            this.pnConsEstoque.Controls.Add(this.label74);
+            this.pnConsEstoque.Controls.Add(this.flowLayoutPanel38);
+            this.pnConsEstoque.Controls.Add(this.txtConsIdUltLoteEstoque);
+            this.pnConsEstoque.Controls.Add(this.label73);
+            this.pnConsEstoque.Controls.Add(this.label72);
+            this.pnConsEstoque.Controls.Add(this.label71);
+            this.pnConsEstoque.Controls.Add(this.label70);
+            this.pnConsEstoque.Controls.Add(this.flowLayoutPanel27);
+            this.pnConsEstoque.Controls.Add(this.txtConsKgBotijEstoque);
+            this.pnConsEstoque.Controls.Add(this.label69);
+            this.pnConsEstoque.Controls.Add(this.label68);
             this.pnConsEstoque.Controls.Add(this.btnFecharRotConsEstoque);
             this.pnConsEstoque.Controls.Add(this.label21);
             this.pnConsEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnConsEstoque.Location = new System.Drawing.Point(0, 672);
+            this.pnConsEstoque.Location = new System.Drawing.Point(0, 958);
             this.pnConsEstoque.Name = "pnConsEstoque";
-            this.pnConsEstoque.Size = new System.Drawing.Size(460, 380);
+            this.pnConsEstoque.Size = new System.Drawing.Size(460, 258);
             this.pnConsEstoque.TabIndex = 13;
-            // 
-            // gridConsEstoque
-            // 
-            this.gridConsEstoque.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsEstoque.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.gridConsEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.gridConsEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridConsEstoque.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridConsEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.gridConsEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridConsEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridConsEstoque.DefaultCellStyle = dataGridViewCellStyle7;
-            this.gridConsEstoque.GridColor = System.Drawing.Color.White;
-            this.gridConsEstoque.Location = new System.Drawing.Point(10, 42);
-            this.gridConsEstoque.Name = "gridConsEstoque";
-            this.gridConsEstoque.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.gridConsEstoque.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.gridConsEstoque.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.gridConsEstoque.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridConsEstoque.Size = new System.Drawing.Size(447, 320);
-            this.gridConsEstoque.TabIndex = 19;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID do Botijão";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Botijão (Kg)";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Qtde em Estoque";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Qtde Vazia em Estoque";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Qtde Vazia Sem Botijão em Estoque ";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ult. Usuário Resp.";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Ult. Lote Recebido";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // btnFecharRotConsEstoque
             // 
@@ -1661,30 +1742,30 @@ namespace ProjTesteForm
             // 
             // pnRmvEstoque
             // 
+            this.pnRmvEstoque.Controls.Add(this.btnRotRmvBotijCarregar);
+            this.pnRmvEstoque.Controls.Add(this.cbRmvIdBotijEstoque);
+            this.pnRmvEstoque.Controls.Add(this.label5);
             this.pnRmvEstoque.Controls.Add(this.flowLayoutPanel12);
             this.pnRmvEstoque.Controls.Add(this.txtRmvQtdeEstoque);
             this.pnRmvEstoque.Controls.Add(this.label34);
             this.pnRmvEstoque.Controls.Add(this.gpboxRetDeBotij);
-            this.pnRmvEstoque.Controls.Add(this.flowLayoutPanel10);
-            this.pnRmvEstoque.Controls.Add(this.txtRmvIdBotijEstoque);
             this.pnRmvEstoque.Controls.Add(this.label30);
             this.pnRmvEstoque.Controls.Add(this.btnRotRmvEstoque);
-            this.pnRmvEstoque.Controls.Add(this.label31);
             this.pnRmvEstoque.Controls.Add(this.flowLayoutPanel11);
             this.pnRmvEstoque.Controls.Add(this.txtRmvKgBotijEstoque);
             this.pnRmvEstoque.Controls.Add(this.label32);
             this.pnRmvEstoque.Controls.Add(this.btnFecharRotRmvEstoque);
             this.pnRmvEstoque.Controls.Add(this.label20);
             this.pnRmvEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnRmvEstoque.Location = new System.Drawing.Point(0, 561);
+            this.pnRmvEstoque.Location = new System.Drawing.Point(0, 772);
             this.pnRmvEstoque.Name = "pnRmvEstoque";
-            this.pnRmvEstoque.Size = new System.Drawing.Size(460, 111);
+            this.pnRmvEstoque.Size = new System.Drawing.Size(460, 186);
             this.pnRmvEstoque.TabIndex = 12;
             // 
             // flowLayoutPanel12
             // 
             this.flowLayoutPanel12.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel12.Location = new System.Drawing.Point(395, 54);
+            this.flowLayoutPanel12.Location = new System.Drawing.Point(118, 104);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
             this.flowLayoutPanel12.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel12.TabIndex = 51;
@@ -1694,20 +1775,21 @@ namespace ProjTesteForm
             this.txtRmvQtdeEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtRmvQtdeEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRmvQtdeEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtRmvQtdeEstoque.Location = new System.Drawing.Point(395, 39);
+            this.txtRmvQtdeEstoque.Location = new System.Drawing.Point(118, 89);
             this.txtRmvQtdeEstoque.MaxLength = 4;
             this.txtRmvQtdeEstoque.Name = "txtRmvQtdeEstoque";
             this.txtRmvQtdeEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRmvQtdeEstoque.Size = new System.Drawing.Size(23, 13);
-            this.txtRmvQtdeEstoque.TabIndex = 50;
+            this.txtRmvQtdeEstoque.TabIndex = 23;
             this.txtRmvQtdeEstoque.TabStop = false;
+            this.txtRmvQtdeEstoque.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRmvQtdeEstoque_KeyPress);
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.White;
-            this.label34.Location = new System.Drawing.Point(309, 39);
+            this.label34.Location = new System.Drawing.Point(32, 89);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(80, 16);
             this.label34.TabIndex = 49;
@@ -1718,7 +1800,7 @@ namespace ProjTesteForm
             this.gpboxRetDeBotij.Controls.Add(this.rdbRetBotijSim);
             this.gpboxRetDeBotij.Controls.Add(this.label29);
             this.gpboxRetDeBotij.Controls.Add(this.rdbRetBotijNao);
-            this.gpboxRetDeBotij.Location = new System.Drawing.Point(40, 62);
+            this.gpboxRetDeBotij.Location = new System.Drawing.Point(35, 111);
             this.gpboxRetDeBotij.Name = "gpboxRetDeBotij";
             this.gpboxRetDeBotij.Size = new System.Drawing.Size(247, 32);
             this.gpboxRetDeBotij.TabIndex = 48;
@@ -1739,7 +1821,7 @@ namespace ProjTesteForm
             this.rdbRetBotijSim.Location = new System.Drawing.Point(145, 9);
             this.rdbRetBotijSim.Name = "rdbRetBotijSim";
             this.rdbRetBotijSim.Size = new System.Drawing.Size(43, 20);
-            this.rdbRetBotijSim.TabIndex = 36;
+            this.rdbRetBotijSim.TabIndex = 24;
             this.rdbRetBotijSim.Text = "Sim";
             this.rdbRetBotijSim.UseVisualStyleBackColor = true;
             // 
@@ -1767,36 +1849,16 @@ namespace ProjTesteForm
             this.rdbRetBotijNao.Location = new System.Drawing.Point(194, 9);
             this.rdbRetBotijNao.Name = "rdbRetBotijNao";
             this.rdbRetBotijNao.Size = new System.Drawing.Size(48, 20);
-            this.rdbRetBotijNao.TabIndex = 37;
+            this.rdbRetBotijNao.TabIndex = 25;
             this.rdbRetBotijNao.Text = "Não";
             this.rdbRetBotijNao.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel10
-            // 
-            this.flowLayoutPanel10.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(115, 55);
-            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(23, 1);
-            this.flowLayoutPanel10.TabIndex = 47;
-            // 
-            // txtRmvIdBotijEstoque
-            // 
-            this.txtRmvIdBotijEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.txtRmvIdBotijEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRmvIdBotijEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtRmvIdBotijEstoque.Location = new System.Drawing.Point(115, 40);
-            this.txtRmvIdBotijEstoque.MaxLength = 2;
-            this.txtRmvIdBotijEstoque.Name = "txtRmvIdBotijEstoque";
-            this.txtRmvIdBotijEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtRmvIdBotijEstoque.Size = new System.Drawing.Size(23, 13);
-            this.txtRmvIdBotijEstoque.TabIndex = 9;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(30, 40);
+            this.label30.Location = new System.Drawing.Point(32, 39);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(79, 16);
             this.label30.TabIndex = 45;
@@ -1810,29 +1872,19 @@ namespace ProjTesteForm
             this.btnRotRmvEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotRmvEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotRmvEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnRotRmvEstoque.Location = new System.Drawing.Point(316, 69);
+            this.btnRotRmvEstoque.Location = new System.Drawing.Point(35, 154);
             this.btnRotRmvEstoque.Name = "btnRotRmvEstoque";
             this.btnRotRmvEstoque.Size = new System.Drawing.Size(75, 23);
-            this.btnRotRmvEstoque.TabIndex = 44;
+            this.btnRotRmvEstoque.TabIndex = 26;
             this.btnRotRmvEstoque.TabStop = false;
             this.btnRotRmvEstoque.Text = "Remover";
             this.btnRotRmvEstoque.UseVisualStyleBackColor = false;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(271, 40);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(22, 16);
-            this.label31.TabIndex = 43;
-            this.label31.Text = "Kg";
+            this.btnRotRmvEstoque.Click += new System.EventHandler(this.btnRotRmvEstoque_Click);
             // 
             // flowLayoutPanel11
             // 
             this.flowLayoutPanel11.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(242, 55);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(120, 80);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             this.flowLayoutPanel11.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel11.TabIndex = 42;
@@ -1841,13 +1893,15 @@ namespace ProjTesteForm
             // 
             this.txtRmvKgBotijEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtRmvKgBotijEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRmvKgBotijEstoque.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRmvKgBotijEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtRmvKgBotijEstoque.Location = new System.Drawing.Point(242, 40);
+            this.txtRmvKgBotijEstoque.Location = new System.Drawing.Point(120, 65);
             this.txtRmvKgBotijEstoque.MaxLength = 2;
             this.txtRmvKgBotijEstoque.Name = "txtRmvKgBotijEstoque";
+            this.txtRmvKgBotijEstoque.ReadOnly = true;
             this.txtRmvKgBotijEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRmvKgBotijEstoque.Size = new System.Drawing.Size(23, 13);
-            this.txtRmvKgBotijEstoque.TabIndex = 41;
+            this.txtRmvKgBotijEstoque.TabIndex = 22;
             this.txtRmvKgBotijEstoque.TabStop = false;
             this.txtRmvKgBotijEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -1856,7 +1910,7 @@ namespace ProjTesteForm
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(154, 40);
+            this.label32.Location = new System.Drawing.Point(32, 65);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(82, 16);
             this.label32.TabIndex = 40;
@@ -1888,9 +1942,10 @@ namespace ProjTesteForm
             // 
             // pnAdcEstoque
             // 
+            this.pnAdcEstoque.Controls.Add(this.label4);
+            this.pnAdcEstoque.Controls.Add(this.btnRotAdcBotijCarregarLote);
+            this.pnAdcEstoque.Controls.Add(this.cbAdcBotijIdLote);
             this.pnAdcEstoque.Controls.Add(this.gpboxAbtQtdeSBotij);
-            this.pnAdcEstoque.Controls.Add(this.flowLayoutPanel8);
-            this.pnAdcEstoque.Controls.Add(this.txtAdcIdLoteEstoque);
             this.pnAdcEstoque.Controls.Add(this.label16);
             this.pnAdcEstoque.Controls.Add(this.label17);
             this.pnAdcEstoque.Controls.Add(this.flowLayoutPanel9);
@@ -1901,24 +1956,54 @@ namespace ProjTesteForm
             this.pnAdcEstoque.Controls.Add(this.label15);
             this.pnAdcEstoque.Controls.Add(this.btnFecharRotAdcEstoque);
             this.pnAdcEstoque.Controls.Add(this.btnRotAdcEstoque);
-            this.pnAdcEstoque.Controls.Add(this.label11);
             this.pnAdcEstoque.Controls.Add(this.flowLayoutPanel6);
             this.pnAdcEstoque.Controls.Add(this.txtAdcKgBotijEstoque);
             this.pnAdcEstoque.Controls.Add(this.label12);
             this.pnAdcEstoque.Controls.Add(this.label14);
             this.pnAdcEstoque.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnAdcEstoque.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnAdcEstoque.Location = new System.Drawing.Point(0, 423);
+            this.pnAdcEstoque.Location = new System.Drawing.Point(0, 536);
             this.pnAdcEstoque.Name = "pnAdcEstoque";
-            this.pnAdcEstoque.Size = new System.Drawing.Size(460, 138);
+            this.pnAdcEstoque.Size = new System.Drawing.Size(460, 236);
             this.pnAdcEstoque.TabIndex = 11;
+            // 
+            // btnRotAdcBotijCarregarLote
+            // 
+            this.btnRotAdcBotijCarregarLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.btnRotAdcBotijCarregarLote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRotAdcBotijCarregarLote.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRotAdcBotijCarregarLote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
+            this.btnRotAdcBotijCarregarLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRotAdcBotijCarregarLote.ForeColor = System.Drawing.Color.White;
+            this.btnRotAdcBotijCarregarLote.Location = new System.Drawing.Point(186, 41);
+            this.btnRotAdcBotijCarregarLote.Name = "btnRotAdcBotijCarregarLote";
+            this.btnRotAdcBotijCarregarLote.Size = new System.Drawing.Size(92, 23);
+            this.btnRotAdcBotijCarregarLote.TabIndex = 14;
+            this.btnRotAdcBotijCarregarLote.TabStop = false;
+            this.btnRotAdcBotijCarregarLote.Text = "Carregar Dados";
+            this.btnRotAdcBotijCarregarLote.UseVisualStyleBackColor = false;
+            this.btnRotAdcBotijCarregarLote.Click += new System.EventHandler(this.btnRotAdcBotijCarregarLote_Click);
+            // 
+            // cbAdcBotijIdLote
+            // 
+            this.cbAdcBotijIdLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.cbAdcBotijIdLote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbAdcBotijIdLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbAdcBotijIdLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAdcBotijIdLote.ForeColor = System.Drawing.Color.White;
+            this.cbAdcBotijIdLote.FormattingEnabled = true;
+            this.cbAdcBotijIdLote.Location = new System.Drawing.Point(102, 40);
+            this.cbAdcBotijIdLote.Name = "cbAdcBotijIdLote";
+            this.cbAdcBotijIdLote.Size = new System.Drawing.Size(65, 24);
+            this.cbAdcBotijIdLote.TabIndex = 13;
+            this.cbAdcBotijIdLote.TabStop = false;
             // 
             // gpboxAbtQtdeSBotij
             // 
             this.gpboxAbtQtdeSBotij.Controls.Add(this.rdbAbtQtdeSBotijSim);
             this.gpboxAbtQtdeSBotij.Controls.Add(this.label19);
             this.gpboxAbtQtdeSBotij.Controls.Add(this.rdbAbtQtdeSBotijNao);
-            this.gpboxAbtQtdeSBotij.Location = new System.Drawing.Point(33, 96);
+            this.gpboxAbtQtdeSBotij.Location = new System.Drawing.Point(33, 156);
             this.gpboxAbtQtdeSBotij.Name = "gpboxAbtQtdeSBotij";
             this.gpboxAbtQtdeSBotij.Size = new System.Drawing.Size(321, 32);
             this.gpboxAbtQtdeSBotij.TabIndex = 39;
@@ -1939,7 +2024,7 @@ namespace ProjTesteForm
             this.rdbAbtQtdeSBotijSim.Location = new System.Drawing.Point(218, 9);
             this.rdbAbtQtdeSBotijSim.Name = "rdbAbtQtdeSBotijSim";
             this.rdbAbtQtdeSBotijSim.Size = new System.Drawing.Size(43, 20);
-            this.rdbAbtQtdeSBotijSim.TabIndex = 36;
+            this.rdbAbtQtdeSBotijSim.TabIndex = 18;
             this.rdbAbtQtdeSBotijSim.Text = "Sim";
             this.rdbAbtQtdeSBotijSim.UseVisualStyleBackColor = true;
             // 
@@ -1967,36 +2052,16 @@ namespace ProjTesteForm
             this.rdbAbtQtdeSBotijNao.Location = new System.Drawing.Point(267, 9);
             this.rdbAbtQtdeSBotijNao.Name = "rdbAbtQtdeSBotijNao";
             this.rdbAbtQtdeSBotijNao.Size = new System.Drawing.Size(48, 20);
-            this.rdbAbtQtdeSBotijNao.TabIndex = 37;
+            this.rdbAbtQtdeSBotijNao.TabIndex = 19;
             this.rdbAbtQtdeSBotijNao.Text = "Não";
             this.rdbAbtQtdeSBotijNao.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel8
-            // 
-            this.flowLayoutPanel8.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(102, 62);
-            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(52, 1);
-            this.flowLayoutPanel8.TabIndex = 35;
-            // 
-            // txtAdcIdLoteEstoque
-            // 
-            this.txtAdcIdLoteEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.txtAdcIdLoteEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAdcIdLoteEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtAdcIdLoteEstoque.Location = new System.Drawing.Point(102, 47);
-            this.txtAdcIdLoteEstoque.MaxLength = 10;
-            this.txtAdcIdLoteEstoque.Name = "txtAdcIdLoteEstoque";
-            this.txtAdcIdLoteEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAdcIdLoteEstoque.Size = new System.Drawing.Size(52, 13);
-            this.txtAdcIdLoteEstoque.TabIndex = 5;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(30, 46);
+            this.label16.Location = new System.Drawing.Point(30, 48);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 16);
             this.label16.TabIndex = 33;
@@ -2007,7 +2072,7 @@ namespace ProjTesteForm
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(261, 46);
+            this.label17.Location = new System.Drawing.Point(137, 75);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(47, 16);
             this.label17.TabIndex = 32;
@@ -2016,30 +2081,32 @@ namespace ProjTesteForm
             // flowLayoutPanel9
             // 
             this.flowLayoutPanel9.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(232, 61);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(93, 90);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(39, 1);
             this.flowLayoutPanel9.TabIndex = 31;
             // 
             // txtAdcQtdeLoteEstoque
             // 
             this.txtAdcQtdeLoteEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcQtdeLoteEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdcQtdeLoteEstoque.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtAdcQtdeLoteEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtAdcQtdeLoteEstoque.Location = new System.Drawing.Point(232, 46);
+            this.txtAdcQtdeLoteEstoque.Location = new System.Drawing.Point(93, 75);
             this.txtAdcQtdeLoteEstoque.MaxLength = 4;
             this.txtAdcQtdeLoteEstoque.Name = "txtAdcQtdeLoteEstoque";
             this.txtAdcQtdeLoteEstoque.ReadOnly = true;
             this.txtAdcQtdeLoteEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAdcQtdeLoteEstoque.Size = new System.Drawing.Size(23, 13);
-            this.txtAdcQtdeLoteEstoque.TabIndex = 6;
+            this.txtAdcQtdeLoteEstoque.Size = new System.Drawing.Size(39, 13);
+            this.txtAdcQtdeLoteEstoque.TabIndex = 15;
+            this.txtAdcQtdeLoteEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(169, 46);
+            this.label18.Location = new System.Drawing.Point(30, 75);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 16);
             this.label18.TabIndex = 29;
@@ -2048,7 +2115,7 @@ namespace ProjTesteForm
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(115, 89);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(115, 117);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel7.TabIndex = 28;
@@ -2057,21 +2124,22 @@ namespace ProjTesteForm
             // 
             this.txtAdcIdBotijEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcIdBotijEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdcIdBotijEstoque.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtAdcIdBotijEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtAdcIdBotijEstoque.Location = new System.Drawing.Point(115, 74);
+            this.txtAdcIdBotijEstoque.Location = new System.Drawing.Point(115, 102);
             this.txtAdcIdBotijEstoque.MaxLength = 2;
             this.txtAdcIdBotijEstoque.Name = "txtAdcIdBotijEstoque";
             this.txtAdcIdBotijEstoque.ReadOnly = true;
             this.txtAdcIdBotijEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcIdBotijEstoque.Size = new System.Drawing.Size(23, 13);
-            this.txtAdcIdBotijEstoque.TabIndex = 7;
+            this.txtAdcIdBotijEstoque.TabIndex = 16;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(30, 74);
+            this.label15.Location = new System.Drawing.Point(30, 102);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(79, 16);
             this.label15.TabIndex = 26;
@@ -2097,29 +2165,19 @@ namespace ProjTesteForm
             this.btnRotAdcEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAdcEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAdcEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnRotAdcEstoque.Location = new System.Drawing.Point(354, 61);
+            this.btnRotAdcEstoque.Location = new System.Drawing.Point(33, 199);
             this.btnRotAdcEstoque.Name = "btnRotAdcEstoque";
-            this.btnRotAdcEstoque.Size = new System.Drawing.Size(75, 23);
-            this.btnRotAdcEstoque.TabIndex = 16;
+            this.btnRotAdcEstoque.Size = new System.Drawing.Size(92, 23);
+            this.btnRotAdcEstoque.TabIndex = 20;
             this.btnRotAdcEstoque.TabStop = false;
             this.btnRotAdcEstoque.Text = "Adicionar";
             this.btnRotAdcEstoque.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(286, 74);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 16);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Kg";
+            this.btnRotAdcEstoque.Click += new System.EventHandler(this.btnRotAdcEstoque_Click);
             // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(257, 89);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(118, 145);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel6.TabIndex = 14;
@@ -2128,14 +2186,15 @@ namespace ProjTesteForm
             // 
             this.txtAdcKgBotijEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcKgBotijEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAdcKgBotijEstoque.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtAdcKgBotijEstoque.ForeColor = System.Drawing.Color.White;
-            this.txtAdcKgBotijEstoque.Location = new System.Drawing.Point(257, 74);
+            this.txtAdcKgBotijEstoque.Location = new System.Drawing.Point(118, 130);
             this.txtAdcKgBotijEstoque.MaxLength = 2;
             this.txtAdcKgBotijEstoque.Name = "txtAdcKgBotijEstoque";
             this.txtAdcKgBotijEstoque.ReadOnly = true;
             this.txtAdcKgBotijEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAdcKgBotijEstoque.Size = new System.Drawing.Size(23, 13);
-            this.txtAdcKgBotijEstoque.TabIndex = 8;
+            this.txtAdcKgBotijEstoque.TabIndex = 17;
             this.txtAdcKgBotijEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
@@ -2143,7 +2202,7 @@ namespace ProjTesteForm
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(169, 74);
+            this.label12.Location = new System.Drawing.Point(30, 130);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(82, 16);
             this.label12.TabIndex = 12;
@@ -2175,9 +2234,9 @@ namespace ProjTesteForm
             this.pnRmvBotij.Controls.Add(this.btnRotRmvBotij);
             this.pnRmvBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnRmvBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnRmvBotij.Location = new System.Drawing.Point(0, 308);
+            this.pnRmvBotij.Location = new System.Drawing.Point(0, 395);
             this.pnRmvBotij.Name = "pnRmvBotij";
-            this.pnRmvBotij.Size = new System.Drawing.Size(460, 115);
+            this.pnRmvBotij.Size = new System.Drawing.Size(460, 141);
             this.pnRmvBotij.TabIndex = 10;
             // 
             // btnRotRmvCarregarBotij
@@ -2188,10 +2247,10 @@ namespace ProjTesteForm
             this.btnRotRmvCarregarBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotRmvCarregarBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotRmvCarregarBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotRmvCarregarBotij.Location = new System.Drawing.Point(271, 41);
+            this.btnRotRmvCarregarBotij.Location = new System.Drawing.Point(186, 40);
             this.btnRotRmvCarregarBotij.Name = "btnRotRmvCarregarBotij";
-            this.btnRotRmvCarregarBotij.Size = new System.Drawing.Size(93, 23);
-            this.btnRotRmvCarregarBotij.TabIndex = 106;
+            this.btnRotRmvCarregarBotij.Size = new System.Drawing.Size(92, 23);
+            this.btnRotRmvCarregarBotij.TabIndex = 10;
             this.btnRotRmvCarregarBotij.TabStop = false;
             this.btnRotRmvCarregarBotij.Text = "Carregar dados";
             this.btnRotRmvCarregarBotij.UseVisualStyleBackColor = false;
@@ -2205,10 +2264,10 @@ namespace ProjTesteForm
             this.cbRmvIdBotij.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRmvIdBotij.ForeColor = System.Drawing.Color.White;
             this.cbRmvIdBotij.FormattingEnabled = true;
-            this.cbRmvIdBotij.Location = new System.Drawing.Point(198, 40);
+            this.cbRmvIdBotij.Location = new System.Drawing.Point(115, 40);
             this.cbRmvIdBotij.Name = "cbRmvIdBotij";
             this.cbRmvIdBotij.Size = new System.Drawing.Size(50, 24);
-            this.cbRmvIdBotij.TabIndex = 100;
+            this.cbRmvIdBotij.TabIndex = 9;
             this.cbRmvIdBotij.TabStop = false;
             // 
             // label55
@@ -2216,7 +2275,7 @@ namespace ProjTesteForm
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.White;
-            this.label55.Location = new System.Drawing.Point(230, 81);
+            this.label55.Location = new System.Drawing.Point(147, 77);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(22, 16);
             this.label55.TabIndex = 37;
@@ -2225,7 +2284,7 @@ namespace ProjTesteForm
             // flowLayoutPanel30
             // 
             this.flowLayoutPanel30.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel30.Location = new System.Drawing.Point(201, 96);
+            this.flowLayoutPanel30.Location = new System.Drawing.Point(118, 92);
             this.flowLayoutPanel30.Name = "flowLayoutPanel30";
             this.flowLayoutPanel30.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel30.TabIndex = 36;
@@ -2236,13 +2295,13 @@ namespace ProjTesteForm
             this.txtRmvKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRmvKgBotij.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtRmvKgBotij.ForeColor = System.Drawing.Color.White;
-            this.txtRmvKgBotij.Location = new System.Drawing.Point(201, 81);
+            this.txtRmvKgBotij.Location = new System.Drawing.Point(118, 77);
             this.txtRmvKgBotij.MaxLength = 2;
             this.txtRmvKgBotij.Name = "txtRmvKgBotij";
             this.txtRmvKgBotij.ReadOnly = true;
             this.txtRmvKgBotij.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRmvKgBotij.Size = new System.Drawing.Size(23, 13);
-            this.txtRmvKgBotij.TabIndex = 4;
+            this.txtRmvKgBotij.TabIndex = 11;
             this.txtRmvKgBotij.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label56
@@ -2250,7 +2309,7 @@ namespace ProjTesteForm
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.White;
-            this.label56.Location = new System.Drawing.Point(113, 81);
+            this.label56.Location = new System.Drawing.Point(30, 77);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(82, 16);
             this.label56.TabIndex = 34;
@@ -2285,7 +2344,7 @@ namespace ProjTesteForm
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(113, 48);
+            this.label9.Location = new System.Drawing.Point(30, 48);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 16);
             this.label9.TabIndex = 31;
@@ -2299,10 +2358,10 @@ namespace ProjTesteForm
             this.btnRotRmvBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotRmvBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotRmvBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotRmvBotij.Location = new System.Drawing.Point(271, 76);
+            this.btnRotRmvBotij.Location = new System.Drawing.Point(33, 105);
             this.btnRotRmvBotij.Name = "btnRotRmvBotij";
-            this.btnRotRmvBotij.Size = new System.Drawing.Size(75, 23);
-            this.btnRotRmvBotij.TabIndex = 30;
+            this.btnRotRmvBotij.Size = new System.Drawing.Size(93, 23);
+            this.btnRotRmvBotij.TabIndex = 12;
             this.btnRotRmvBotij.TabStop = false;
             this.btnRotRmvBotij.Text = "Remover";
             this.btnRotRmvBotij.UseVisualStyleBackColor = false;
@@ -2310,10 +2369,10 @@ namespace ProjTesteForm
             // 
             // pnAltBotij
             // 
+            this.pnAltBotij.Controls.Add(this.label35);
             this.pnAltBotij.Controls.Add(this.cbAltIdBotij);
             this.pnAltBotij.Controls.Add(this.label8);
             this.pnAltBotij.Controls.Add(this.btnRotAltBotij);
-            this.pnAltBotij.Controls.Add(this.label5);
             this.pnAltBotij.Controls.Add(this.flowLayoutPanel3);
             this.pnAltBotij.Controls.Add(this.txtAltKgBotij);
             this.pnAltBotij.Controls.Add(this.label6);
@@ -2321,9 +2380,9 @@ namespace ProjTesteForm
             this.pnAltBotij.Controls.Add(this.label10);
             this.pnAltBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnAltBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnAltBotij.Location = new System.Drawing.Point(0, 220);
+            this.pnAltBotij.Location = new System.Drawing.Point(0, 246);
             this.pnAltBotij.Name = "pnAltBotij";
-            this.pnAltBotij.Size = new System.Drawing.Size(460, 88);
+            this.pnAltBotij.Size = new System.Drawing.Size(460, 149);
             this.pnAltBotij.TabIndex = 9;
             // 
             // cbAltIdBotij
@@ -2334,10 +2393,10 @@ namespace ProjTesteForm
             this.cbAltIdBotij.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAltIdBotij.ForeColor = System.Drawing.Color.White;
             this.cbAltIdBotij.FormattingEnabled = true;
-            this.cbAltIdBotij.Location = new System.Drawing.Point(108, 37);
+            this.cbAltIdBotij.Location = new System.Drawing.Point(115, 41);
             this.cbAltIdBotij.Name = "cbAltIdBotij";
             this.cbAltIdBotij.Size = new System.Drawing.Size(50, 24);
-            this.cbAltIdBotij.TabIndex = 99;
+            this.cbAltIdBotij.TabIndex = 6;
             this.cbAltIdBotij.TabStop = false;
             // 
             // label8
@@ -2345,7 +2404,7 @@ namespace ProjTesteForm
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(23, 47);
+            this.label8.Location = new System.Drawing.Point(30, 51);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 16);
             this.label8.TabIndex = 23;
@@ -2359,30 +2418,19 @@ namespace ProjTesteForm
             this.btnRotAltBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAltBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAltBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotAltBotij.Location = new System.Drawing.Point(374, 42);
+            this.btnRotAltBotij.Location = new System.Drawing.Point(33, 103);
             this.btnRotAltBotij.Name = "btnRotAltBotij";
             this.btnRotAltBotij.Size = new System.Drawing.Size(75, 23);
-            this.btnRotAltBotij.TabIndex = 22;
+            this.btnRotAltBotij.TabIndex = 8;
             this.btnRotAltBotij.TabStop = false;
             this.btnRotAltBotij.Text = "Alterar";
             this.btnRotAltBotij.UseVisualStyleBackColor = false;
             this.btnRotAltBotij.Click += new System.EventHandler(this.btnRotAltBotij_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(332, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 16);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Kg";
-            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(303, 61);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(151, 94);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel3.TabIndex = 20;
@@ -2392,12 +2440,12 @@ namespace ProjTesteForm
             this.txtAltKgBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAltKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAltKgBotij.ForeColor = System.Drawing.Color.White;
-            this.txtAltKgBotij.Location = new System.Drawing.Point(303, 46);
+            this.txtAltKgBotij.Location = new System.Drawing.Point(151, 79);
             this.txtAltKgBotij.MaxLength = 2;
             this.txtAltKgBotij.Name = "txtAltKgBotij";
             this.txtAltKgBotij.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAltKgBotij.Size = new System.Drawing.Size(23, 13);
-            this.txtAltKgBotij.TabIndex = 3;
+            this.txtAltKgBotij.TabIndex = 7;
             this.txtAltKgBotij.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAltKgBotij.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAltKgBotij_KeyPress);
             // 
@@ -2406,7 +2454,7 @@ namespace ProjTesteForm
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(182, 45);
+            this.label6.Location = new System.Drawing.Point(30, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 16);
             this.label6.TabIndex = 18;
@@ -2438,8 +2486,8 @@ namespace ProjTesteForm
             // 
             // pnConsBotij
             // 
-            this.pnConsBotij.Controls.Add(this.cbConsIdBotij);
             this.pnConsBotij.Controls.Add(this.label61);
+            this.pnConsBotij.Controls.Add(this.cbConsIdBotij);
             this.pnConsBotij.Controls.Add(this.flowLayoutPanel26);
             this.pnConsBotij.Controls.Add(this.txtConsKgBotij);
             this.pnConsBotij.Controls.Add(this.label62);
@@ -2450,9 +2498,9 @@ namespace ProjTesteForm
             this.pnConsBotij.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnConsBotij.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnConsBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pnConsBotij.Location = new System.Drawing.Point(0, 133);
+            this.pnConsBotij.Location = new System.Drawing.Point(0, 142);
             this.pnConsBotij.Name = "pnConsBotij";
-            this.pnConsBotij.Size = new System.Drawing.Size(460, 87);
+            this.pnConsBotij.Size = new System.Drawing.Size(460, 104);
             this.pnConsBotij.TabIndex = 8;
             // 
             // cbConsIdBotij
@@ -2463,27 +2511,16 @@ namespace ProjTesteForm
             this.cbConsIdBotij.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbConsIdBotij.ForeColor = System.Drawing.Color.White;
             this.cbConsIdBotij.FormattingEnabled = true;
-            this.cbConsIdBotij.Location = new System.Drawing.Point(133, 40);
+            this.cbConsIdBotij.Location = new System.Drawing.Point(115, 40);
             this.cbConsIdBotij.Name = "cbConsIdBotij";
             this.cbConsIdBotij.Size = new System.Drawing.Size(50, 24);
-            this.cbConsIdBotij.TabIndex = 98;
+            this.cbConsIdBotij.TabIndex = 3;
             this.cbConsIdBotij.TabStop = false;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ForeColor = System.Drawing.Color.White;
-            this.label61.Location = new System.Drawing.Point(319, 48);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(22, 16);
-            this.label61.TabIndex = 45;
-            this.label61.Text = "Kg";
             // 
             // flowLayoutPanel26
             // 
             this.flowLayoutPanel26.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel26.Location = new System.Drawing.Point(290, 63);
+            this.flowLayoutPanel26.Location = new System.Drawing.Point(118, 88);
             this.flowLayoutPanel26.Name = "flowLayoutPanel26";
             this.flowLayoutPanel26.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel26.TabIndex = 44;
@@ -2494,13 +2531,13 @@ namespace ProjTesteForm
             this.txtConsKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsKgBotij.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtConsKgBotij.ForeColor = System.Drawing.Color.White;
-            this.txtConsKgBotij.Location = new System.Drawing.Point(290, 48);
+            this.txtConsKgBotij.Location = new System.Drawing.Point(118, 73);
             this.txtConsKgBotij.MaxLength = 2;
             this.txtConsKgBotij.Name = "txtConsKgBotij";
             this.txtConsKgBotij.ReadOnly = true;
             this.txtConsKgBotij.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtConsKgBotij.Size = new System.Drawing.Size(23, 13);
-            this.txtConsKgBotij.TabIndex = 2;
+            this.txtConsKgBotij.TabIndex = 5;
             this.txtConsKgBotij.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label62
@@ -2508,7 +2545,7 @@ namespace ProjTesteForm
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.Color.White;
-            this.label62.Location = new System.Drawing.Point(202, 48);
+            this.label62.Location = new System.Drawing.Point(30, 73);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(82, 16);
             this.label62.TabIndex = 42;
@@ -2519,7 +2556,7 @@ namespace ProjTesteForm
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.ForeColor = System.Drawing.Color.White;
-            this.label63.Location = new System.Drawing.Point(48, 48);
+            this.label63.Location = new System.Drawing.Point(30, 48);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(79, 16);
             this.label63.TabIndex = 39;
@@ -2533,7 +2570,7 @@ namespace ProjTesteForm
             this.btnRotConsBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotConsBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotConsBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotConsBotij.Location = new System.Drawing.Point(354, 44);
+            this.btnRotConsBotij.Location = new System.Drawing.Point(180, 41);
             this.btnRotConsBotij.Name = "btnRotConsBotij";
             this.btnRotConsBotij.Size = new System.Drawing.Size(75, 23);
             this.btnRotConsBotij.TabIndex = 4;
@@ -2568,9 +2605,9 @@ namespace ProjTesteForm
             // 
             // pnAdcBotij
             // 
+            this.pnAdcBotij.Controls.Add(this.label75);
             this.pnAdcBotij.Controls.Add(this.btnFecharRotAdcBotij);
             this.pnAdcBotij.Controls.Add(this.btnRotAdcBotij);
-            this.pnAdcBotij.Controls.Add(this.label4);
             this.pnAdcBotij.Controls.Add(this.flowLayoutPanel2);
             this.pnAdcBotij.Controls.Add(this.txtAdcKgBotij);
             this.pnAdcBotij.Controls.Add(this.label3);
@@ -2580,7 +2617,7 @@ namespace ProjTesteForm
             this.pnAdcBotij.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnAdcBotij.Location = new System.Drawing.Point(0, 39);
             this.pnAdcBotij.Name = "pnAdcBotij";
-            this.pnAdcBotij.Size = new System.Drawing.Size(460, 94);
+            this.pnAdcBotij.Size = new System.Drawing.Size(460, 103);
             this.pnAdcBotij.TabIndex = 7;
             // 
             // btnFecharRotAdcBotij
@@ -2603,7 +2640,7 @@ namespace ProjTesteForm
             this.btnRotAdcBotij.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.btnRotAdcBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRotAdcBotij.ForeColor = System.Drawing.Color.White;
-            this.btnRotAdcBotij.Location = new System.Drawing.Point(289, 48);
+            this.btnRotAdcBotij.Location = new System.Drawing.Point(33, 68);
             this.btnRotAdcBotij.Name = "btnRotAdcBotij";
             this.btnRotAdcBotij.Size = new System.Drawing.Size(75, 23);
             this.btnRotAdcBotij.TabIndex = 2;
@@ -2611,21 +2648,10 @@ namespace ProjTesteForm
             this.btnRotAdcBotij.UseVisualStyleBackColor = false;
             this.btnRotAdcBotij.Click += new System.EventHandler(this.btnRotAdcBotij_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(247, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Kg";
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(218, 67);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(118, 56);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(23, 1);
             this.flowLayoutPanel2.TabIndex = 14;
@@ -2635,7 +2661,7 @@ namespace ProjTesteForm
             this.txtAdcKgBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
             this.txtAdcKgBotij.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAdcKgBotij.ForeColor = System.Drawing.Color.White;
-            this.txtAdcKgBotij.Location = new System.Drawing.Point(218, 52);
+            this.txtAdcKgBotij.Location = new System.Drawing.Point(118, 41);
             this.txtAdcKgBotij.MaxLength = 2;
             this.txtAdcKgBotij.Name = "txtAdcKgBotij";
             this.txtAdcKgBotij.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2650,7 +2676,7 @@ namespace ProjTesteForm
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(130, 52);
+            this.label3.Location = new System.Drawing.Point(30, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 12;
@@ -2698,6 +2724,7 @@ namespace ProjTesteForm
             // 
             this.txtUsuMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
             this.txtUsuMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuMenu.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtUsuMenu.ForeColor = System.Drawing.Color.White;
             this.txtUsuMenu.Location = new System.Drawing.Point(329, 15);
             this.txtUsuMenu.MaxLength = 10;
@@ -2705,7 +2732,7 @@ namespace ProjTesteForm
             this.txtUsuMenu.ReadOnly = true;
             this.txtUsuMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUsuMenu.Size = new System.Drawing.Size(81, 13);
-            this.txtUsuMenu.TabIndex = 10;
+            this.txtUsuMenu.TabIndex = 0;
             this.txtUsuMenu.TabStop = false;
             // 
             // label1
@@ -3252,160 +3279,356 @@ namespace ProjTesteForm
             this.pnSeparador.Size = new System.Drawing.Size(134, 31);
             this.pnSeparador.TabIndex = 1;
             // 
-            // cbConsIdLote
+            // label68
             // 
-            this.cbConsIdLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.cbConsIdLote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbConsIdLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbConsIdLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbConsIdLote.ForeColor = System.Drawing.Color.White;
-            this.cbConsIdLote.FormattingEnabled = true;
-            this.cbConsIdLote.Location = new System.Drawing.Point(75, 41);
-            this.cbConsIdLote.Name = "cbConsIdLote";
-            this.cbConsIdLote.Size = new System.Drawing.Size(50, 24);
-            this.cbConsIdLote.TabIndex = 120;
-            this.cbConsIdLote.TabStop = false;
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.White;
+            this.label68.Location = new System.Drawing.Point(30, 52);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(79, 16);
+            this.label68.TabIndex = 49;
+            this.label68.Text = "ID do Botijão:";
             // 
-            // label60
+            // flowLayoutPanel27
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.White;
-            this.label60.Location = new System.Drawing.Point(11, 49);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(66, 16);
-            this.label60.TabIndex = 117;
-            this.label60.Text = "ID do Lote:";
+            this.flowLayoutPanel27.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel27.Location = new System.Drawing.Point(115, 96);
+            this.flowLayoutPanel27.Name = "flowLayoutPanel27";
+            this.flowLayoutPanel27.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel27.TabIndex = 53;
             // 
-            // btnRotConsLote
+            // txtConsKgBotijEstoque
             // 
-            this.btnRotConsLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.btnRotConsLote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRotConsLote.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRotConsLote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
-            this.btnRotConsLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRotConsLote.ForeColor = System.Drawing.Color.White;
-            this.btnRotConsLote.Location = new System.Drawing.Point(153, 42);
-            this.btnRotConsLote.Name = "btnRotConsLote";
-            this.btnRotConsLote.Size = new System.Drawing.Size(75, 23);
-            this.btnRotConsLote.TabIndex = 116;
-            this.btnRotConsLote.TabStop = false;
-            this.btnRotConsLote.Text = "Consultar";
-            this.btnRotConsLote.UseVisualStyleBackColor = false;
-            this.btnRotConsLote.Click += new System.EventHandler(this.btnRotConsLote_Click);
+            this.txtConsKgBotijEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsKgBotijEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsKgBotijEstoque.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsKgBotijEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtConsKgBotijEstoque.Location = new System.Drawing.Point(115, 81);
+            this.txtConsKgBotijEstoque.MaxLength = 2;
+            this.txtConsKgBotijEstoque.Name = "txtConsKgBotijEstoque";
+            this.txtConsKgBotijEstoque.ReadOnly = true;
+            this.txtConsKgBotijEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsKgBotijEstoque.Size = new System.Drawing.Size(23, 13);
+            this.txtConsKgBotijEstoque.TabIndex = 29;
+            this.txtConsKgBotijEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label64
+            // label69
             // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.White;
-            this.label64.Location = new System.Drawing.Point(312, 79);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(71, 16);
-            this.label64.TabIndex = 115;
-            this.label64.Text = "Data atual:";
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.White;
+            this.label69.Location = new System.Drawing.Point(30, 81);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(82, 16);
+            this.label69.TabIndex = 52;
+            this.label69.Text = "Kg do Botijão:";
             // 
-            // flowLayoutPanel5
+            // label70
             // 
-            this.flowLayoutPanel5.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(255, 94);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(23, 1);
-            this.flowLayoutPanel5.TabIndex = 114;
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.Location = new System.Drawing.Point(30, 135);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(179, 16);
+            this.label70.TabIndex = 55;
+            this.label70.Text = "Quantidade Vazia em Estoque:";
             // 
-            // txtConsQtdeLote
+            // label71
             // 
-            this.txtConsQtdeLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.txtConsQtdeLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConsQtdeLote.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtConsQtdeLote.ForeColor = System.Drawing.Color.White;
-            this.txtConsQtdeLote.Location = new System.Drawing.Point(255, 79);
-            this.txtConsQtdeLote.MaxLength = 2;
-            this.txtConsQtdeLote.Name = "txtConsQtdeLote";
-            this.txtConsQtdeLote.ReadOnly = true;
-            this.txtConsQtdeLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtConsQtdeLote.Size = new System.Drawing.Size(23, 13);
-            this.txtConsQtdeLote.TabIndex = 113;
-            this.txtConsQtdeLote.TabStop = false;
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.White;
+            this.label71.Location = new System.Drawing.Point(30, 108);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(146, 16);
+            this.label71.TabIndex = 58;
+            this.label71.Text = "Quantidade em Estoque:";
             // 
-            // label65
+            // label72
             // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.ForeColor = System.Drawing.Color.White;
-            this.label65.Location = new System.Drawing.Point(169, 79);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(80, 16);
-            this.label65.TabIndex = 112;
-            this.label65.Text = "Quantidade:";
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Location = new System.Drawing.Point(30, 164);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(211, 16);
+            this.label72.TabIndex = 61;
+            this.label72.Text = "Quantidade Sem Botijão em Estoque:";
             // 
-            // label66
+            // flowLayoutPanel38
             // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ForeColor = System.Drawing.Color.White;
-            this.label66.Location = new System.Drawing.Point(128, 78);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(22, 16);
-            this.label66.TabIndex = 111;
-            this.label66.Text = "Kg";
+            this.flowLayoutPanel38.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel38.Location = new System.Drawing.Point(137, 209);
+            this.flowLayoutPanel38.Name = "flowLayoutPanel38";
+            this.flowLayoutPanel38.Size = new System.Drawing.Size(38, 1);
+            this.flowLayoutPanel38.TabIndex = 65;
             // 
-            // flowLayoutPanel19
+            // txtConsIdUltLoteEstoque
             // 
-            this.flowLayoutPanel19.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel19.Location = new System.Drawing.Point(99, 93);
-            this.flowLayoutPanel19.Name = "flowLayoutPanel19";
-            this.flowLayoutPanel19.Size = new System.Drawing.Size(23, 1);
-            this.flowLayoutPanel19.TabIndex = 110;
+            this.txtConsIdUltLoteEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsIdUltLoteEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsIdUltLoteEstoque.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsIdUltLoteEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtConsIdUltLoteEstoque.Location = new System.Drawing.Point(137, 194);
+            this.txtConsIdUltLoteEstoque.MaxLength = 4;
+            this.txtConsIdUltLoteEstoque.Name = "txtConsIdUltLoteEstoque";
+            this.txtConsIdUltLoteEstoque.ReadOnly = true;
+            this.txtConsIdUltLoteEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsIdUltLoteEstoque.Size = new System.Drawing.Size(38, 13);
+            this.txtConsIdUltLoteEstoque.TabIndex = 33;
             // 
-            // txtConsKgBotijLote
+            // label73
             // 
-            this.txtConsKgBotijLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.txtConsKgBotijLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConsKgBotijLote.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtConsKgBotijLote.ForeColor = System.Drawing.Color.White;
-            this.txtConsKgBotijLote.Location = new System.Drawing.Point(99, 78);
-            this.txtConsKgBotijLote.MaxLength = 2;
-            this.txtConsKgBotijLote.Name = "txtConsKgBotijLote";
-            this.txtConsKgBotijLote.ReadOnly = true;
-            this.txtConsKgBotijLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtConsKgBotijLote.Size = new System.Drawing.Size(23, 13);
-            this.txtConsKgBotijLote.TabIndex = 109;
-            this.txtConsKgBotijLote.TabStop = false;
-            this.txtConsKgBotijLote.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ForeColor = System.Drawing.Color.White;
+            this.label73.Location = new System.Drawing.Point(30, 193);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(101, 16);
+            this.label73.TabIndex = 64;
+            this.label73.Text = "ID do último Lote:";
             // 
-            // label67
+            // label74
             // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.White;
-            this.label67.Location = new System.Drawing.Point(11, 78);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(82, 16);
-            this.label67.TabIndex = 108;
-            this.label67.Text = "Kg do Botijão:";
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.ForeColor = System.Drawing.Color.White;
+            this.label74.Location = new System.Drawing.Point(30, 221);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(241, 16);
+            this.label74.TabIndex = 67;
+            this.label74.Text = "Usuário resp. pelo ult. cadastro de estoque:";
             // 
-            // flowLayoutPanel4
+            // btnRotConsEstoque
             // 
-            this.flowLayoutPanel4.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(389, 91);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(68, 1);
-            this.flowLayoutPanel4.TabIndex = 122;
+            this.btnRotConsEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.btnRotConsEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRotConsEstoque.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRotConsEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
+            this.btnRotConsEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRotConsEstoque.ForeColor = System.Drawing.Color.White;
+            this.btnRotConsEstoque.Location = new System.Drawing.Point(193, 45);
+            this.btnRotConsEstoque.Name = "btnRotConsEstoque";
+            this.btnRotConsEstoque.Size = new System.Drawing.Size(75, 23);
+            this.btnRotConsEstoque.TabIndex = 28;
+            this.btnRotConsEstoque.TabStop = false;
+            this.btnRotConsEstoque.Text = "Consultar";
+            this.btnRotConsEstoque.UseVisualStyleBackColor = false;
+            this.btnRotConsEstoque.Click += new System.EventHandler(this.btnRotConsEstoque_Click);
             // 
-            // maskConsDtLote
+            // cbConsEstoqueIdBotij
             // 
-            this.maskConsDtLote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
-            this.maskConsDtLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskConsDtLote.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskConsDtLote.ForeColor = System.Drawing.Color.White;
-            this.maskConsDtLote.Location = new System.Drawing.Point(389, 78);
-            this.maskConsDtLote.Mask = "00/00/0000";
-            this.maskConsDtLote.Name = "maskConsDtLote";
-            this.maskConsDtLote.Size = new System.Drawing.Size(68, 14);
-            this.maskConsDtLote.TabIndex = 121;
-            this.maskConsDtLote.TabStop = false;
-            this.maskConsDtLote.ValidatingType = typeof(System.DateTime);
+            this.cbConsEstoqueIdBotij.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.cbConsEstoqueIdBotij.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbConsEstoqueIdBotij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbConsEstoqueIdBotij.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbConsEstoqueIdBotij.ForeColor = System.Drawing.Color.White;
+            this.cbConsEstoqueIdBotij.FormattingEnabled = true;
+            this.cbConsEstoqueIdBotij.Location = new System.Drawing.Point(115, 44);
+            this.cbConsEstoqueIdBotij.Name = "cbConsEstoqueIdBotij";
+            this.cbConsEstoqueIdBotij.Size = new System.Drawing.Size(50, 24);
+            this.cbConsEstoqueIdBotij.TabIndex = 27;
+            this.cbConsEstoqueIdBotij.TabStop = false;
+            // 
+            // flowLayoutPanel8
+            // 
+            this.flowLayoutPanel8.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(277, 237);
+            this.flowLayoutPanel8.Name = "flowLayoutPanel8";
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(83, 1);
+            this.flowLayoutPanel8.TabIndex = 103;
+            // 
+            // txtConsUsuRespEstoque
+            // 
+            this.txtConsUsuRespEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsUsuRespEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsUsuRespEstoque.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConsUsuRespEstoque.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsUsuRespEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtConsUsuRespEstoque.Location = new System.Drawing.Point(277, 222);
+            this.txtConsUsuRespEstoque.MaxLength = 10;
+            this.txtConsUsuRespEstoque.Name = "txtConsUsuRespEstoque";
+            this.txtConsUsuRespEstoque.ReadOnly = true;
+            this.txtConsUsuRespEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsUsuRespEstoque.Size = new System.Drawing.Size(83, 13);
+            this.txtConsUsuRespEstoque.TabIndex = 34;
+            this.txtConsUsuRespEstoque.TabStop = false;
+            // 
+            // flowLayoutPanel33
+            // 
+            this.flowLayoutPanel33.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel33.Location = new System.Drawing.Point(182, 124);
+            this.flowLayoutPanel33.Name = "flowLayoutPanel33";
+            this.flowLayoutPanel33.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel33.TabIndex = 105;
+            // 
+            // txtConsQtdeCheiaEstoque
+            // 
+            this.txtConsQtdeCheiaEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsQtdeCheiaEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsQtdeCheiaEstoque.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsQtdeCheiaEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtConsQtdeCheiaEstoque.Location = new System.Drawing.Point(182, 109);
+            this.txtConsQtdeCheiaEstoque.MaxLength = 4;
+            this.txtConsQtdeCheiaEstoque.Name = "txtConsQtdeCheiaEstoque";
+            this.txtConsQtdeCheiaEstoque.ReadOnly = true;
+            this.txtConsQtdeCheiaEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsQtdeCheiaEstoque.Size = new System.Drawing.Size(23, 13);
+            this.txtConsQtdeCheiaEstoque.TabIndex = 30;
+            // 
+            // flowLayoutPanel36
+            // 
+            this.flowLayoutPanel36.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel36.Location = new System.Drawing.Point(215, 151);
+            this.flowLayoutPanel36.Name = "flowLayoutPanel36";
+            this.flowLayoutPanel36.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel36.TabIndex = 107;
+            // 
+            // txtConsQtdeVaziaEstoque
+            // 
+            this.txtConsQtdeVaziaEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsQtdeVaziaEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsQtdeVaziaEstoque.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsQtdeVaziaEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtConsQtdeVaziaEstoque.Location = new System.Drawing.Point(215, 136);
+            this.txtConsQtdeVaziaEstoque.MaxLength = 4;
+            this.txtConsQtdeVaziaEstoque.Name = "txtConsQtdeVaziaEstoque";
+            this.txtConsQtdeVaziaEstoque.ReadOnly = true;
+            this.txtConsQtdeVaziaEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsQtdeVaziaEstoque.Size = new System.Drawing.Size(23, 13);
+            this.txtConsQtdeVaziaEstoque.TabIndex = 31;
+            // 
+            // flowLayoutPanel37
+            // 
+            this.flowLayoutPanel37.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel37.Location = new System.Drawing.Point(247, 180);
+            this.flowLayoutPanel37.Name = "flowLayoutPanel37";
+            this.flowLayoutPanel37.Size = new System.Drawing.Size(23, 1);
+            this.flowLayoutPanel37.TabIndex = 109;
+            // 
+            // txtConsQtdeSemBotijEstoque
+            // 
+            this.txtConsQtdeSemBotijEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.txtConsQtdeSemBotijEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsQtdeSemBotijEstoque.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtConsQtdeSemBotijEstoque.ForeColor = System.Drawing.Color.White;
+            this.txtConsQtdeSemBotijEstoque.Location = new System.Drawing.Point(247, 165);
+            this.txtConsQtdeSemBotijEstoque.MaxLength = 4;
+            this.txtConsQtdeSemBotijEstoque.Name = "txtConsQtdeSemBotijEstoque";
+            this.txtConsQtdeSemBotijEstoque.ReadOnly = true;
+            this.txtConsQtdeSemBotijEstoque.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtConsQtdeSemBotijEstoque.Size = new System.Drawing.Size(23, 13);
+            this.txtConsQtdeSemBotijEstoque.TabIndex = 32;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(147, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 16);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Kg";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(149, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 16);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Kg";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(144, 81);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(22, 16);
+            this.label11.TabIndex = 110;
+            this.label11.Text = "Kg";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(147, 42);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(22, 16);
+            this.label31.TabIndex = 65;
+            this.label31.Text = "Kg";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.White;
+            this.label35.Location = new System.Drawing.Point(180, 78);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(22, 16);
+            this.label35.TabIndex = 38;
+            this.label35.Text = "Kg";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.White;
+            this.label61.Location = new System.Drawing.Point(147, 73);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(22, 16);
+            this.label61.TabIndex = 45;
+            this.label61.Text = "Kg";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.ForeColor = System.Drawing.Color.White;
+            this.label75.Location = new System.Drawing.Point(147, 41);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(22, 16);
+            this.label75.TabIndex = 38;
+            this.label75.Text = "Kg";
+            // 
+            // cbRmvIdBotijEstoque
+            // 
+            this.cbRmvIdBotijEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.cbRmvIdBotijEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbRmvIdBotijEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbRmvIdBotijEstoque.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRmvIdBotijEstoque.ForeColor = System.Drawing.Color.White;
+            this.cbRmvIdBotijEstoque.FormattingEnabled = true;
+            this.cbRmvIdBotijEstoque.Location = new System.Drawing.Point(113, 31);
+            this.cbRmvIdBotijEstoque.Name = "cbRmvIdBotijEstoque";
+            this.cbRmvIdBotijEstoque.Size = new System.Drawing.Size(50, 24);
+            this.cbRmvIdBotijEstoque.TabIndex = 53;
+            this.cbRmvIdBotijEstoque.TabStop = false;
+            // 
+            // btnRotRmvBotijCarregar
+            // 
+            this.btnRotRmvBotijCarregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(62)))));
+            this.btnRotRmvBotijCarregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRotRmvBotijCarregar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRotRmvBotijCarregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(3)))), ((int)(((byte)(59)))));
+            this.btnRotRmvBotijCarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRotRmvBotijCarregar.ForeColor = System.Drawing.Color.White;
+            this.btnRotRmvBotijCarregar.Location = new System.Drawing.Point(186, 32);
+            this.btnRotRmvBotijCarregar.Name = "btnRotRmvBotijCarregar";
+            this.btnRotRmvBotijCarregar.Size = new System.Drawing.Size(91, 23);
+            this.btnRotRmvBotijCarregar.TabIndex = 54;
+            this.btnRotRmvBotijCarregar.TabStop = false;
+            this.btnRotRmvBotijCarregar.Text = "Carregar dados";
+            this.btnRotRmvBotijCarregar.UseVisualStyleBackColor = false;
+            this.btnRotRmvBotijCarregar.Click += new System.EventHandler(this.btnRotRmvBotijCarregar_Click);
             // 
             // Menu
             // 
@@ -3446,7 +3669,6 @@ namespace ProjTesteForm
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotAdcLote)).EndInit();
             this.pnConsEstoque.ResumeLayout(false);
             this.pnConsEstoque.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridConsEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecharRotConsEstoque)).EndInit();
             this.pnRmvEstoque.ResumeLayout(false);
             this.pnRmvEstoque.PerformLayout();
@@ -3521,7 +3743,6 @@ namespace ProjTesteForm
         private System.Windows.Forms.Panel pnAdcBotij;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRotAdcBotij;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.TextBox txtAdcKgBotij;
         private System.Windows.Forms.Label label3;
@@ -3537,15 +3758,12 @@ namespace ProjTesteForm
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnRotAltBotij;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.TextBox txtAltKgBotij;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnRotRmvBotij;
         private System.Windows.Forms.Panel pnAdcEstoque;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.TextBox txtAdcIdLoteEstoque;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
@@ -3556,7 +3774,6 @@ namespace ProjTesteForm
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox btnFecharRotAdcEstoque;
         private System.Windows.Forms.Button btnRotAdcEstoque;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.TextBox txtAdcKgBotijEstoque;
         private System.Windows.Forms.Label label12;
@@ -3592,14 +3809,6 @@ namespace ProjTesteForm
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox btnFecharRotRmvEstoque;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DataGridView gridConsEstoque;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
         private System.Windows.Forms.TextBox txtRmvQtdeEstoque;
         private System.Windows.Forms.Label label34;
@@ -3607,11 +3816,8 @@ namespace ProjTesteForm
         private System.Windows.Forms.RadioButton rdbRetBotijSim;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.RadioButton rdbRetBotijNao;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
-        private System.Windows.Forms.TextBox txtRmvIdBotijEstoque;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btnRotRmvEstoque;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
         private System.Windows.Forms.TextBox txtRmvKgBotijEstoque;
         private System.Windows.Forms.Label label32;
@@ -3620,7 +3826,6 @@ namespace ProjTesteForm
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
         private System.Windows.Forms.TextBox txtAdcQtdeBotijLote;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
         private System.Windows.Forms.TextBox txtAdcKgBotijLote;
         private System.Windows.Forms.Label label36;
@@ -3691,7 +3896,6 @@ namespace ProjTesteForm
         private System.Windows.Forms.ComboBox cbRmvIdUsu;
         private System.Windows.Forms.Button btnRotRmvCarregarUsu;
         private System.Windows.Forms.ComboBox cbConsIdBotij;
-        private System.Windows.Forms.Label label61;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel26;
         private System.Windows.Forms.TextBox txtConsKgBotij;
         private System.Windows.Forms.Label label62;
@@ -3715,5 +3919,37 @@ namespace ProjTesteForm
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.MaskedTextBox maskConsDtLote;
+        private System.Windows.Forms.ComboBox cbAdcBotijIdLote;
+        private System.Windows.Forms.Button btnRotAdcBotijCarregarLote;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.TextBox txtConsUsuRespEstoque;
+        private System.Windows.Forms.ComboBox cbConsEstoqueIdBotij;
+        private System.Windows.Forms.Button btnRotConsEstoque;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel38;
+        private System.Windows.Forms.TextBox txtConsIdUltLoteEstoque;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel27;
+        private System.Windows.Forms.TextBox txtConsKgBotijEstoque;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel37;
+        private System.Windows.Forms.TextBox txtConsQtdeSemBotijEstoque;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel36;
+        private System.Windows.Forms.TextBox txtConsQtdeVaziaEstoque;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel33;
+        private System.Windows.Forms.TextBox txtConsQtdeCheiaEstoque;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.ComboBox cbRmvIdBotijEstoque;
+        private System.Windows.Forms.Button btnRotRmvBotijCarregar;
     }
 }
